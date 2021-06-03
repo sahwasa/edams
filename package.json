@@ -1,0 +1,30 @@
+{
+  "name": "edams",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.2.2"
+  },
+  "dependencies": {
+    "fontello-cli": "^0.6.2",
+    "jqGrid": "^5.4.0",
+    "jquery": "^3.6.0",
+    "jquery-ui": "v1.12.1"
+  },
+  "description": "행안부 경남 연구과제, 지진피해평가 관리시스템 (Earthquake Damage Assessment&Management System)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahwasa/edams.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sahwasa/edams/issues"
+  },
+  "homepage": "https://github.com/sahwasa/edams#readme"
+}

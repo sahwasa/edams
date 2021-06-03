@@ -1,0 +1,51 @@
+{
+  "_from": "jqGrid",
+  "_id": "jqGrid@5.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-z/uem0PCuxkOnpWWLRTZPYjLwbF1TX+Ns/KRt/QJsGrXe871gtx6z0k8L+e3S94V0IANGjhjvhImVhJLpve62A==",
+  "_location": "/jqGrid",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jqGrid",
+    "name": "jqGrid",
+    "escapedName": "jqGrid",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jqGrid/-/jqGrid-5.4.0.tgz",
+  "_shasum": "a268775de4de97b5d0f9fae681b22f5852083012",
+  "_spec": "jqGrid",
+  "_where": "D:\\work\\가스공사\\2020\\지진통합관리시스템성능개선사업\\web",
+  "author": {
+    "name": "Tony Tomov",
+    "email": "tony@trirand.com",
+    "url": "http://www.guriddo.net"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "jqGrid is an Ajax-enabled JavaScript control that provides solutions for representing and manipulating tabular data on the web.",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.7.0"
+  },
+  "homepage": "http://www.guriddo.net",
+  "licenses": [
+    {
+      "type": "Creative Commons Attribution-Non-Commercial 3.0 License",
+      "url": "http://guriddo.net/?page_id=103334"
+    }
+  ],
+  "name": "jqGrid",
+  "title": "Guriddo jqGrid",
+  "version": "5.4.0"
+}

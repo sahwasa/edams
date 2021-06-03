@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상남도:지진피해평가관리시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="util">
+  <b>관리자님 반갑습니다.</b>
+  <ul class="util_list">
+    <li><button type="button">내정보</button></li>
+    <li><button type="button">로그아웃</button></li>
+  </ul>
+</div>
+<div class="nav">
+  <h1><a href="">지진피해평가 · 관리시스템</a></h1>
+  <ul class="gnb" role="navigation">
+    <li><a href="../dist/acc01.html">가속도 계측자료 관리</a>
+      <ul class="sub">
+        <li><a href="../dist/acc01.html">계측 가속도 DB</a></li>
+        <li><a href="../dist/acc02.html">지진 통보문 관리</a></li>
+        <li><a href="../dist/acc03.html">관측소 관리</a></li>
+        <li><a href="../dist/acc04.html">관측자료 업로드</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="../dist/fac01.html">시설물 관리</a>
+      <ul class="sub">
+        <li class="on"><a href="../dist/fac01.html">시설물정보 관리</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/dam01.html">지진피해평가</a>
+      <ul class="sub">
+        <li><a href="../dist/dam01.html">안전성 평가 모니터링</a></li>
+        <li><a href="../dist/dam02.html">지진피해평가 실행</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/admin01.html">관리자 지원</a>
+      <ul class="sub">
+        <li><a href="../dist/admin01.html">사용자관리</a></li>
+        <li><a href="../dist/admin02.html">매뉴얼(자료실)</a></li>
+      </ul>
+    </li>
+    <li><a href="">안전성평가 훈련</a>
+      <ul class="sub">
+        <li><a href="">지진피해평가 시뮬레이션</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="cont acc01">
+   <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">가속도 계측자료 관리</a></li>
+        <li>계측가속도 DB</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>계측가속도 DB</h2>
+    </div>
+   <div class="flex_wrap f_sb">
+      <div class="section section_l">
+         <div class="tit_h3">
+            <h3 class="blind">진도분포도</h3>
+            <div class="btn_wrap">
+               <button type="button" class="btn btn_blueline">다른 지진 선택</button>
+            </div>
+         </div>
+         <table class="tbl_row tbl_quakeinfo">
+            <caption>지진정보</caption>
+            <tr>
+               <th scope="row">지진번호</th>
+               <td>20210602001</td>
+               <th scope="row">규모</th>
+               <td>2.6</td>
+               <th scope="row">발생시각</th>
+               <td>2021-06-02 12:34:56</td>
+            </tr>
+            <tr>
+               <th scope="row">발생위치</th>
+               <td colspan="6">경북 포항시 북구 북쪽 9km지역</td>
+            </tr>
+         </table>
+         <div class="gis_wrap">
+            <div class="gis_area">
+              <img src="http://placehold.it/649x505" width="100%" height="100%" alt="지도 영역" />
+              <i class="i_mag mag1" style="left:100px;top:200px;">Ⅰ</i>     
+              <i class="i_status i_check" style="left:200px;top:350px;">미수신</i> 
+            </div>
+            <div class="legend">
+              <h3 class="blind">진도분포도 범례</h3>
+              <ul>
+               <li class="i_mag mag11">Ⅺ</li>
+               <li class="i_mag mag10">Ⅹ</li>
+               <li class="i_mag mag9">Ⅸ</li>
+               <li class="i_mag mag8">Ⅷ</li>
+               <li class="i_mag mag7">Ⅶ</li>
+               <li class="i_mag mag6">Ⅵ</li>
+               <li class="i_mag mag5">Ⅴ</li>
+               <li class="i_mag mag4">Ⅳ</li>
+               <li class="i_mag mag3">Ⅲ</li>
+               <li class="i_mag mag2">Ⅱ</li>
+               <li class="i_mag mag1">Ⅰ</li>
+                <li class="i_status i_all">미수신</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="section section_r">
+         <div class="article">
+            <div class="tit_h3">
+               <h3 class="blind">이벤트 발생정보</h3>
+            </div>
+            <div class="tbl_wrap">
+               <table id="jqGrid1" class="jq-grid"></table>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <p>Copyright(c) Gyeongsangnamdo All Rights Reserved.</p>
+</div>
+
+</div>
+<script>
+function evtDivision(cellValue, options, rowdata, action){
+   var html, txt = "";
+   switch (cellValue) {
+   case "evt1": 
+      txt = "관심";        
+      break;
+   case "evt2": 
+      txt = "주의";        
+      break;
+   case "evt3": 
+      txt = "경계";        
+      break;
+   default:
+      txt = "심각";        
+      break;
+   }
+   html = '<span class="tbl_tag_evt ' + cellValue+'">'+ txt +'</span>';
+   return html;
+}
+function dataSink(cellValue, options, rowdata, action){
+   var html, txt = "";
+   switch (cellValue) {
+   case "all": 
+      txt = "전체";        
+      break;
+   case "mini-SEED": 
+      txt = "mini-SEED";        
+      break;
+   default : 
+      txt = "MMA";        
+      break;
+   }
+   html = '<span class="tbl_tag ' + cellValue+'">'+ txt +'</span>';
+   return html;
+}
+function btn_confirm(cellValue, options, rowdata, action){
+   var html;
+   if (cellValue === "미확인"){
+      html = '<button type="button" class="btn btn_s btn_pinkline" onclick="' + cellValue + ' "title="미확인">미확인</button>';
+   }else{
+      html = cellValue;
+   }
+   return html;
+}
+function btn_dtl(cellValue, options, rowdata, action){
+   var html;
+   html = '<button type="button" class="btn_ico_only btn_dtl" onclick="' + cellValue + ' "title="상세보기">상세보기</button>';
+   return html;
+}
+var mydata1=[
+  {"status":'unconfirmed',"t1":"evt1","t2":"경기","t3":"발안","t4":"BAG","t5":"2013-05-15 22:12:32","t6":"6.068","t7":"-","t8":"미확인"},
+  {"status":'confirmed',"t1":"evt2","t2":"경기","t3":"분당","t4":"BOG","t5":"2013-05-15 22:12:32","t6":"7.002","t7":"홍길동","t8":"2020-09-10 12:34:56"},
+  {"status":'unconfirmed',"t1":"evt3","t2":"경기","t3":"발안","t4":"BAG","t5":"2013-05-15 22:12:32","t6":"6.068","t7":"-","t8":"미확인"},
+  {"status":'confirmed',"t1":"evt4","t2":"경기","t3":"분당","t4":"BOG","t5":"2013-05-15 22:12:32","t6":"7.002","t7":"홍길동","t8":"2020-09-10 12:34:56"}
+];
+var grid1 = $("#jqGrid1");
+grid1.jqGrid({
+  data: mydata1,
+  datatype: "local",
+  colModel: [
+   {name : 'status', hidden:true},
+   { label: "구분", name: 't1', width: 80, formatter:evtDivision},
+   { label: "관측소명", name: 't3', width: 100 },
+   { label : "관측소코드", name: 't4', width: 80 },
+   { label : "발생시각", name: 't5',width: 130 },
+   { label : "PGA(gal)", name: 't6', width: 130},
+   { label : "확인자", name: 't7', width: 80},
+   { label: "확인시각", name: "t8", width: 120, formatter : btn_confirm}
+  ],
+  loadonce : true,
+  viewrecords: true,
+  height: 547,
+  rowTotal: -1
+});
+
+jqgridInit();  
+</script>
+</body>
+</html>
