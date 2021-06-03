@@ -40,13 +40,15 @@
          <div class="gis_wrap">
             <div class="gis_area">
               <img src="http://placehold.it/649x505" width="100%" height="100%" alt="지도 영역" />
-              <i class="i_mag mag1" style="left:100px;top:200px;">Ⅰ</i>     
-              <i class="i_status i_check" style="left:200px;top:350px;">미수신</i> 
+              <i class="i_mag mag1" style="left:100px;top:150px;">Ⅰ</i>     
+              <i class="i_mag mag2" style="left:200px;top:150px;">Ⅱ</i>     
+              <i class="i_mag mag3" style="left:100px;top:250px;">Ⅲ</i>     
+              <i class="i_mag mag4" style="left:300px;top:150px;">Ⅳ</i>     
+              <i class="i_status i_noreceive" style="left:200px;top:350px;">미수신</i> 
             </div>
             <div class="legend">
               <h3 class="blind">진도분포도 범례</h3>
               <ul>
-               <li class="i_mag mag11">Ⅺ</li>
                <li class="i_mag mag10">Ⅹ</li>
                <li class="i_mag mag9">Ⅸ</li>
                <li class="i_mag mag8">Ⅷ</li>
@@ -57,7 +59,7 @@
                <li class="i_mag mag3">Ⅲ</li>
                <li class="i_mag mag2">Ⅱ</li>
                <li class="i_mag mag1">Ⅰ</li>
-                <li class="i_status i_all">미수신</li>
+                <li class="i_status i_noreceive">미수신</li>
               </ul>
             </div>
         </div>
@@ -77,50 +79,7 @@
   @@include('inc/footer.html')
 </div>
 <script>
-function evtDivision(cellValue, options, rowdata, action){
-   var html, txt = "";
-   switch (cellValue) {
-   case "evt1": 
-      txt = "관심";        
-      break;
-   case "evt2": 
-      txt = "주의";        
-      break;
-   case "evt3": 
-      txt = "경계";        
-      break;
-   default:
-      txt = "심각";        
-      break;
-   }
-   html = '<span class="tbl_tag_evt ' + cellValue+'">'+ txt +'</span>';
-   return html;
-}
-function dataSink(cellValue, options, rowdata, action){
-   var html, txt = "";
-   switch (cellValue) {
-   case "all": 
-      txt = "전체";        
-      break;
-   case "mini-SEED": 
-      txt = "mini-SEED";        
-      break;
-   default : 
-      txt = "MMA";        
-      break;
-   }
-   html = '<span class="tbl_tag ' + cellValue+'">'+ txt +'</span>';
-   return html;
-}
-function btn_confirm(cellValue, options, rowdata, action){
-   var html;
-   if (cellValue === "미확인"){
-      html = '<button type="button" class="btn btn_s btn_pinkline" onclick="' + cellValue + ' "title="미확인">미확인</button>';
-   }else{
-      html = cellValue;
-   }
-   return html;
-}
+
 function btn_dtl(cellValue, options, rowdata, action){
    var html;
    html = '<button type="button" class="btn_ico_only btn_dtl" onclick="' + cellValue + ' "title="상세보기">상세보기</button>';
@@ -138,13 +97,13 @@ grid1.jqGrid({
   datatype: "local",
   colModel: [
    {name : 'status', hidden:true},
-   { label: "구분", name: 't1', width: 80, formatter:evtDivision},
+   { label: "구분", name: 't1', width: 80},
    { label: "관측소명", name: 't3', width: 100 },
    { label : "관측소코드", name: 't4', width: 80 },
    { label : "발생시각", name: 't5',width: 130 },
    { label : "PGA(gal)", name: 't6', width: 130},
    { label : "확인자", name: 't7', width: 80},
-   { label: "확인시각", name: "t8", width: 120, formatter : btn_confirm}
+   { label: "확인시각", name: "t8", width: 120}
   ],
   loadonce : true,
   viewrecords: true,
