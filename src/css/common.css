@@ -395,7 +395,7 @@ dd.btn_wrap{display:flex;align-items:center;}
 
 /* jquery-ui custom */
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
-.ui-datepicker{z-index:9000!important;;}
+.ui-datepicker{z-index:9000!important;}
 .ui-datepicker-title{display:block;width:auto;margin:0 2em;}
 .ui-datepicker-title select{min-width:auto;height:auto;}
 .ui-datepicker select.ui-datepicker-month,

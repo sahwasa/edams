@@ -1,5 +1,5 @@
 <div class="pop_overlay">
-  <div class="pop_wrap pop_register_user width_350">
+  <div class="pop_wrap pop_register_user">
     <div class="pop_tit">
       <h1>사용자 추가 / 수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -9,28 +9,28 @@
         <table class="tbl_pop table_border">
           <caption>사용자 추가 / 수정</caption>
           <tr>
-            <th scope="row"><label for="user_id" required>ID</label></th>
+            <th scope="row"><label for="user_id" class="required">ID</label></th>
             <td><input type="text" id="user_id"></td>
             <td><button type="button" class="btn_pop btn_gray">중복</button></td>
           </tr>
           <tr>
-            <th><label for="user_name" required>이름</label></th>
+            <th><label for="user_name" class="required">이름</label></th>
             <td colspan="2"><input type="text" id="user_name"></td>
           </tr>
           <tr>
-            <th><label for="user_pw" required>비밀번호</label></th>
+            <th><label for="user_pw" class="required">비밀번호</label></th>
             <td colspan="2"><input type="text" id="user_pw"></td>
           </tr>
           <tr>
-            <th><label for="user_pwcheck" required>비밀번호 확인</label></th>
+            <th><label for="user_pwcheck" class="required">비밀번호 확인</label></th>
             <td colspan="2"><input type="text" id="user_pwcheck"></td>
           </tr>
           <tr>
-            <th><label for="user_division" required>소속기관</label></th>
+            <th><label for="user_division" class="required">소속기관</label></th>
             <td colspan="2"><input type="text" id="user_division"></td>
           </tr>
           <tr>
-            <th><label for="user_team" required>부서</label></th>
+            <th><label for="user_team" class="required">부서</label></th>
             <td colspan="2"><input type="text" id="user_team"></td>
           </tr>
           <tr>
@@ -42,7 +42,7 @@
             <td colspan="2"><input type="text" id="user_number"></td>
           </tr>
           <tr>
-            <th><label for="user_phonenumber" required>핸드폰</label></th>
+            <th><label for="user_phonenumber" class="required">핸드폰</label></th>
             <td colspan="2"><input type="text" id="user_phonenumber"></td>
           </tr>
           <tr>
@@ -50,7 +50,7 @@
             <td colspan="2"><input type="text" id="user_email"></td>
           </tr>
           <tr>
-            <th><label for="user_authority" required>권한</label></th>
+            <th><label for="user_authority" class="required">권한</label></th>
             <td colspan="2">
               <select name="authority" title="user_authority">
                 <option value="권한선택">권한선택</option>
