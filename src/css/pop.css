@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* overlay */
-.pop_overlay{position:fixed;z-index:9999; top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
+.pop_overlay{position:fixed;z-index:8000; top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
 .pop_wrap{width:728px;position:fixed;top:50%;left:50%;background-color:#fff;transform:translateX(-50%) translateY(-50%);}
 .pop_tit{display:flex;justify-content:space-between;padding:10px 15px;background-color:#005aab;}
 .pop_tit h1{font-size:16px;font-weight:bold;color:#fff;}
@@ -9,39 +9,54 @@
 
 /* pop_common */
 .btn_wrap{padding-top:16px;}
-.btn_pop{padding:5px 16px 6px;border-radius:3px;vertical-align:middle;font-size:13px;color:#fff;}
+.btn_pop{padding:4px 16px 5px;border-radius:3px;vertical-align:middle;font-size:13px;color:#fff;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
-.pop_register_fac, .pop_upload_acc, .pop_upload_fac{width:500px;}
-.pop_upload_acc_done, .pop_register_user{width:350px;}
 
-/* input */
-.pop_cont .tbl_pop .input_20{width:19%;}
-.pop_cont .tbl_pop .input_33{width:32%;}
-.pop_cont .tbl_pop .input_60{width:60%;}
+.width_728{width:728px;}
+.width_500{width:500px;}
+.width_350{width:350px;}
+/* 
+.pop_register_fac,
+.pop_upload_acc,
+.pop_upload_fac{width:500px;}
+.pop_upload_acc_done,
+.pop_register_user,
+.pop_register_userinfo,
+.pop_userinfo_edit,
+.pop_userinfo_pw{width:350px;}
+ */
 
 /* pop_dbSelect */
 .pop_body{padding:22px 20px;}
 .pop_ul{margin-bottom:21px;padding:8px 10px 12px;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;}
 .pop_ul input[type = date],.pop_ul input[type = text]{width:105px;line-height:21px;}
 .pop_ul label{line-height:30px;}
-.btn_search{background-color:#727272;padding:4px 13px 5px;border-radius:3px;color:#fff;}
+.btn_search{position:relative;top:1px;background-color:#727272;padding:4px 13px 5px;border-radius:3px;color:#fff;}
 
 /* pop_register_sensor */
 .email_file #upFile{display:none;}
-.email_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../img/ico_upload.png)no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.email_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png)no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
 .email_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
 .email_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
 
-/*  */
+/* pop_upload_acc_done */
 .upload_done{padding:0 0 30px 50px;}
 .upload_done::before{position:relative;top:12px; content:'\e6c6';font-family:'axicon';font-size:40px;color:#555;padding-right:15px;}
+.pop_register_userinfo .tbl_pop input[type = text]{padding:0;border:1px solid transparent;}
+#info_pw{padding-left:5px;border:1px solid #bbb;color:#bbb;}
+.pop_register_userinfo .tbl_pop th{width:27%;text-align:left;padding-left:8px;}
+#info_number,
+#info_phonenumber{padding-left:30px;}
+.info_number,
+.info_phonenumber{position:relative;}
+.info_number::before,
+.info_phonenumber::before{position:absolute;top:50%;font-size:16px;font-family:'axicon';transform:translateY(-50%);color:#777;}
+.info_number::before{content:'\f095';left:10px;}
+.info_phonenumber::before{content:'\e865';left:7px;}
 
-/* pop_register_user */
-.pop_register_user .tbl_pop,
-.pop_register_user .tbl_pop th,
-.pop_register_user .tbl_pop td{border:1px solid transparent;}
-.pop_register_user .tbl_pop th{width:25%;text-align:left;padding-left:8px;}
+/* jquery-ui custom */
+.ui-datepicker{z-index:9000!important;;}
 
 /* jqgrid custom */
 .ui-jqgrid.ui-corner-all{border-radius:0;border-color:#e8e8e8;}
@@ -63,6 +78,12 @@
 .ui-jqgrid .ui-icon-asc{margin-top:-17px;}
 .ui-jqgrid .ui-icon-desc{margin-top:-10px;margin-left:0;}
 
+/* input */
+.pop_cont .tbl_pop .input_20{width:19%;}
+.pop_cont .tbl_pop .input_50{width:47%;}
+.pop_cont .tbl_pop .input_33{width:32%;}
+.pop_cont .tbl_pop .input_60{width:60%;}
+
 /* table */
 .tbl_pop,
 .tbl_pop th,
@@ -80,3 +101,11 @@
 .tbl_pop input[type = date]{width:100%;line-height:22px;}
 .tbl_pop label{font-weight:600;}
 .pop_wrap .tbl_pop .datepicker{width:99%;}
+.table_border,
+.table_border th,
+.table_border td{border:1px solid transparent;}
+.pop_userinfo .tbl_pop th,
+.pop_userinfo_edit .tbl_pop th{width:25%;text-align:left;padding-left:8px;}
+.pop_register_user .tbl_pop th{width:29%;text-align:left;}
+.pop_userinfo_pw .tbl_pop th,
+.pop_register_user .tbl_pop th{width:29%;}

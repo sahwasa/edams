@@ -1,0 +1,56 @@
+<div class="pop_overlay">
+  <div class="pop_wrap pop_register_userinfo width_350">
+    <div class="pop_tit">
+      <h1>내정보</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_pop table_border">
+          <caption>내정보</caption>
+          <tr>
+            <th><label for="info_id">ID</label></th>
+            <td colspan="2" class="alignL">admin</td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="info_pw">비밀번호</label></th>
+            <td><input type="text" id="info_pw" value="************" disabled></td>
+            <td><button type="button" class="btn_pop btn_gray btn_change">변경</button></td>
+          </tr>
+          <tr>
+            <th><label for="info_name">이름</label></th>
+            <td colspan="2"><input type="text" id="info_name" value="홍길동" disabled></td>
+          </tr>
+          <tr>
+            <th><label for="info_division">소속기관</label></th>
+            <td colspan="2" class="alignL">경남도청</td>
+          </tr>
+          <tr>
+            <th><label for="info_team">부서 / 직급</label></th>
+            <td colspan="2"><input type="text" id="info_team" class="input_50" value="시설물유지" disabled>
+            <input type="text" id="info_position" class="input_50" value="과장" disabled>
+            </td>
+          </tr>
+          <tr>
+            <th rowspan="2"><label for="info_number">연락처</label></th>
+            <td colspan="2" class="info_number">
+              <input type="text" id="info_number" placeholder="부서전화" value="02-899-7894" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="info_phonenumber">
+              <input type="text" id="info_phonenumber" placeholder="휴대전화" value="010-1234-5678" disabled>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="info_authority">권한</label></th>
+            <td colspan="2" class="alignL">사용자</td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
