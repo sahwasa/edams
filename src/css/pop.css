@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* overlay */
+.pop_overlay{position:fixed;z-index:9999; top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
+.pop_wrap{width:728px;position:fixed;top:50%;left:50%;background-color:#fff;transform:translateX(-50%) translateY(-50%);}
+.pop_tit{display:flex;justify-content:space-between;padding:10px 15px;background-color:#005aab;}
+.pop_tit h1{font-size:16px;font-weight:bold;color:#fff;}
+.btn_pop_close{position:relative;top:1px;width:17px;height:17px;}
+.btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../images/btn_pop_close.png);}
+
+/* pop_common */
+.btn_wrap{padding-top:16px;}
+.btn_pop{padding:5px 16px 6px;border-radius:3px;vertical-align:middle;font-size:13px;color:#fff;}
+.pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
+.pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
+.pop_register_fac, .pop_upload_acc, .pop_upload_fac{width:500px;}
+.pop_upload_acc_done, .pop_register_user{width:350px;}
+
+/* input */
+.pop_cont .tbl_pop .input_20{width:19%;}
+.pop_cont .tbl_pop .input_33{width:32%;}
+.pop_cont .tbl_pop .input_60{width:60%;}
+
+/* pop_dbSelect */
+.pop_body{padding:22px 20px;}
+.pop_ul{margin-bottom:21px;padding:8px 10px 12px;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;}
+.pop_ul input[type = date],.pop_ul input[type = text]{width:105px;line-height:21px;}
+.pop_ul label{line-height:30px;}
+.btn_search{background-color:#727272;padding:4px 13px 5px;border-radius:3px;color:#fff;}
+
+/* pop_register_sensor */
+.email_file #upFile{display:none;}
+.email_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../img/ico_upload.png)no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.email_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
+.email_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
+
+/*  */
+.upload_done{padding:0 0 30px 50px;}
+.upload_done::before{position:relative;top:12px; content:'\e6c6';font-family:'axicon';font-size:40px;color:#555;padding-right:15px;}
+
+/* pop_register_user */
+.pop_register_user .tbl_pop,
+.pop_register_user .tbl_pop th,
+.pop_register_user .tbl_pop td{border:1px solid transparent;}
+.pop_register_user .tbl_pop th{width:25%;text-align:left;padding-left:8px;}
+
+/* jqgrid custom */
+.ui-jqgrid.ui-corner-all{border-radius:0;border-color:#e8e8e8;}
+.ui-jqgrid .ui-jqgrid-hdiv{border-radius:0;background:transparent;}
+.ui-jqgrid .jqgrid-rownum,
+.ui-jqgrid .ui-jqgrid-hbox th{background:#fff;color:#333;font-weight: 600;border-color:#c4cdd3;vertical-align:middle;height:30px;}
+.ui-jqgrid .ui-jqgrid-hbox th[colspan]{background:#e0e6ec;}
+.ui-jqgrid tr{border-color:#e8e8e8;}
+.ui-jqgrid tr.ui-row-ltr td{text-align:center;border-top:1px solid transparent;}
+.ui-jqgrid tr.jqgrow td, .ui-jqgrid tr.jqgroup td{height:26px;}
+.ui-jqgrid tr.ui-state-hover{background-color:#f5f6f7;}
+.ui-jqgrid tr.ui-state-hover td{border-top-color:#ccc;}
+.ui-jqgrid tr.ui-state-highlight,
+.ui-jqgrid tr.ui-state-highlight td{border-color:#fad42e;}
+.ui-jqgrid .ui-jqgrid-pager{background:#eff2f5;border-radius:0;}
+.ui-jqgrid .ui-jqgrid-pager td{padding:0;border:none;background:transparent;}
+.ui-jqgrid .ui-jqgrid-pager input{height:16px;border-radius:0;vertical-align:baseline;padding:3px 8px;}
+.ui-jqgrid .ui-jqgrid-hdiv{border-bottom:1px solid #000;}
+.ui-jqgrid .ui-icon-asc{margin-top:-17px;}
+.ui-jqgrid .ui-icon-desc{margin-top:-10px;margin-left:0;}
+
+/* table */
+.tbl_pop,
+.tbl_pop th,
+.tbl_pop td{padding:3px 0;border:1px solid #aaa;}
+.tbl_pop th{width:20%;}
+.tbl_pop{border:1px solid #d7d7d7;}
+.tbl_pop th,
+.tbl_pop td{height:25px;border:1px solid #d7d7d7;}
+.tbl_pop td{padding:3px;}
+.tbl_pop input[type = text],
+.tbl_pop input[type = date],
+.tbl_pop select,
+.tbl_pop textarea{width:100%;}
+.tbl_pop textarea{line-height:22px;}
+.tbl_pop input[type = date]{width:100%;line-height:22px;}
+.tbl_pop label{font-weight:600;}
+.pop_wrap .tbl_pop .datepicker{width:99%;}

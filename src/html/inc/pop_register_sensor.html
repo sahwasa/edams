@@ -1,0 +1,121 @@
+<div class="pop_overlay">
+  <div class="pop_wrap pop_register_sensor">
+    <div class="pop_tit">
+      <h1>센서 등록/수정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <div class="tit">
+          <h2>경남도청(GN)</h2>
+        </div>
+        <table class="tbl_pop">
+          <caption>센서 등록/수정</caption>
+          <tr>
+            <th scope="row"><label for="sensor_number">기록계 고유번호</label></th>
+            <td title="sensor_number">GS_IC_R01</td>
+            <th>
+              <label for="sensor_number_2" required>센서 고유번호</label>
+            </th>
+            <td>
+              <select name="number" id="sensor_number_2">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="sensor_latitude"required>위도</label>
+            </th>
+            <td>
+              <input type="text" id="sensor_latitude">
+            </td>
+            <th>
+              <label for="sensor_longitude" required>경도</label>
+            </th>
+            <td>
+              <input type="text" id="sensor_longitude">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="sensor_make" required>제작사</label>
+            </th>
+            <td>
+              <select name="make" id="sensor_make">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="sensor_model" required>모델</label>
+            </th>
+            <td>
+              <select name="model" id="sensor_model">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <th>
+              <label for="sensor_state">운영상태</label>
+            </th>
+            <td>
+              <select name="state" id="sensor_state">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="sensor_serial">serial</label>
+            </th>
+            <td>
+              <input type="text" id="sensor_serial">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="sensor_purpose">센서용도</label>
+            </th>
+            <td>
+              <select name="purpose" id="sensor_purpose">
+                <option value="">자유장</option>
+              </select>
+            </td>
+            <th>
+              <label for="sensor_sort">센서구분</label>
+            </th>
+            <td>
+              <select name="sort" id="sensor_sort">
+                <option value="">속도</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="sensor_start">시작일</label>
+            </th>
+            <td>
+              <input type="text" id="sensor_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required>
+            </td>
+            <th>
+              <label for="sensor_end">종료일</label>
+            </th>
+            <td>
+              <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="to" required>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="sensor_remarks">비고</label></th>
+            <td colspan="3">
+              <textarea name="remarks" id="sensor_remarks" cols="70" rows="1"></textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+          <button type="button" class="btn_pop btn_blue btn_delete">삭제</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

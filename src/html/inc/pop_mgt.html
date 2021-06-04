@@ -1,0 +1,122 @@
+<div class="pop_overlay">
+  <div class="pop_wrap pop_mgt">
+    <div class="pop_tit">
+      <h1>관측소 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_pop bl_addobservatory">
+          <caption>관측소 추가</caption>
+          <tr>
+            <th scope="row"><label for="mgt_code">기관코드</label></th>
+            <td>
+              <select name="code" id="mgt_code">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="mgt_state">운영상태</label>
+            </th>
+            <td>
+              <select name="state" id="mgt_state">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_name">관측소명</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_name">
+            </td>
+            <th>
+              <label for="mgt_code_2">관측소코드</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_code_2">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_type">관측소종류</label>
+            </th>
+            <td>
+              <select name="type" id="mgt_type">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th></th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_longitude">경도</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_longitude">
+            </td>
+            <th>
+              <label for="mgt_latitude">위도</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_latitude">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_start">시작일</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required>
+            </td>
+            <th>
+              <label for="mgt_end">종료일</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="to" required>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_floor">건물 층 수</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_floor">
+            </td>
+            <th>
+              <label for="mgt_m">표고(M)</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_m">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_lacation">관측소위치</label>
+            </th>
+            <td colspan="3">
+              <select id="mgt_lacation" class="input_20">
+                <option value="">경상남도</option>
+              </select>
+              <select class="input_20" title="mgt_lacation">
+                <option value="">상주시</option>
+              </select>
+              <input type="text" class="input_60" title="mgt_lacation">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="mgt_remarks">비고</label></th>
+            <td colspan="3">
+              <textarea name="remarks" id="mgt_remarks" cols="70" rows="3"></textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

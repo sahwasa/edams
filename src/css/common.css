@@ -16,8 +16,8 @@ em,address,i{font-style:normal;}
 table{border:0;border-spacing:0;width:100%;text-align:center;border-collapse:collapse;}
 button{display:inline-block;border:none;cursor:pointer;box-sizing:border-box;background:transparent;}
 .block,.block div{display:block;}
-input[type="text"],input[type="password"],textarea,select{height:25px;border:1px solid #9cabb6;color:#333;background-color:rgba(255,255,255,.9);vertical-align:middle;padding:0 5px;box-sizing:border-box;}
-select{min-width:50px;padding-right:20px;background:url(/images/btn_select.png) right 5px center no-repeat, rgba(255,255,255,.9);;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+input[type="text"],input[type="password"],input[type="date"],textarea,select{height:25px;border:1px solid #9cabb6;color:#333;background-color:rgba(255,255,255,.9);vertical-align:middle;padding:0 5px;box-sizing:border-box;}
+select{min-width:50px;padding-right:20px;background:url(/images/btn_select.png) right 5px center no-repeat, rgba(255,255,255,.9);/*;-webkit-appearance:none;-moz-appearance:none;appearance:none;*/}
 select::-ms-expand {display: none;}
 
 .blind{position:absolute;left:-9999px;top:-9999px;width:0;height:0;font-size:0;overflow:hidden;line-height:0;text-indent:-9999px;}
@@ -433,6 +433,7 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-datepicker-trigger,
 .ui-monthpicker-trigger{cursor:pointer;}
 .ui-monthpicker select.ui-datepicker-year{width:75px;}
+.ui-datepicker-trigger{position:relative;right:23px;margin-right:-15px;}
 
 /* accordion */
 .ui-accordion .ui-accordion-header{line-height:19px;background-color:#f0f6fe;color:#333;border-color:#094fa3;border-left-width:6px;color:#094fa3;margin-top:1px;padding-left:10px;font-weight:bold;border-radius:0;}
@@ -445,22 +446,3 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-timepicker-oneLine select{min-width:auto;padding:0 5px;}
 .ui-timepicker-oneLine .ui_tpicker_hour{margin-left:auto!important;}
 .ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_minute:before, .ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_second:before{margin:0 3px;}
-/* jqgrid_custom */
-.ui-jqgrid .jqgrid-multibox .ui-th-div{margin-top:0;}
-.s-ico{display:inline;}
-.ui-jqgrid.ui-corner-all{border-radius:0;border-color:#e8e8e8;border-top:2px solid #333;}
-.ui-jqgrid .ui-jqgrid-hdiv{border-bottom-color:#333;border-radius:0;background:transparent;}
-.ui-jqgrid .jqgrid-rownum,
-.ui-jqgrid .ui-jqgrid-hbox th{background:#fff;color:#333;font-weight: 600;border-color:#c4cdd3;vertical-align:middle;height:30px;}
-.ui-jqgrid .ui-jqgrid-hbox th[colspan]{background:#e0e6ec;}
-.ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
-.ui-jqgrid tr{border-color:#e8e8e8;}
-.ui-jqgrid tr.ui-row-ltr td{text-align:center;border-top:1px solid transparent;}
-.ui-jqgrid tr.jqgrow td, .ui-jqgrid tr.jqgroup td{height:26px;}
-.ui-jqgrid tr.ui-state-hover{background-color:#f5f6f7;}
-.ui-jqgrid tr.ui-state-hover td{border-top-color:#ccc;}
-.ui-jqgrid tr.ui-state-highlight,
-.ui-jqgrid tr.ui-state-highlight td{border-color:#fad42e;}
-.ui-jqgrid .ui-jqgrid-pager{background:#eff2f5;border-radius:0;}
-.ui-jqgrid .ui-jqgrid-pager td{padding:0;border:none;background:transparent;}
-.ui-jqgrid .ui-jqgrid-pager input{height:16px;border-radius:0;vertical-align:baseline;padding:3px 8px;}
