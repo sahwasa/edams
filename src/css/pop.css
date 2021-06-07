@@ -12,7 +12,8 @@
 .btn_pop{padding:4px 16px 5px;border-radius:3px;vertical-align:middle;font-size:13px;color:#fff;}
 .pop_userinfo_pw .pop_body,
 .pop_mgt .pop_body,
-.pop_register_fac .pop_body{margin:1px;}
+.pop_register_fac .pop_body,
+.pop_register_user .pop_body{margin:1px;}
 .pop_body{margin:0.5px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
@@ -86,4 +87,4 @@
 .pop_userinfo_edit .tbl_pop th{width:25%;text-align:left;padding-left:8px;}
 .pop_register_user .tbl_pop th{width:29%;text-align:left;}
 .pop_userinfo_pw .tbl_pop th,
-.pop_register_user .tbl_pop th{width:28%;}
+.pop_register_user .tbl_pop th{width:27%;}
