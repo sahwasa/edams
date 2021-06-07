@@ -1,4 +1,5 @@
 $(function(){
+
   // slectlist evt
   var selList = $('[role="checklist"]'),
       selBtn = selList.find('input'),

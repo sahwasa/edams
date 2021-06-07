@@ -125,25 +125,19 @@ td .axi{margin-right:0;}
 .to,
 .from,
 .datepic,
-.date{width:95px;}
-.timeform{width:165px;min-width:auto!important;}
+.date{width:105px;}
 .period{display:inline-flex;align-items:center;justify-content:space-between;line-height:22px;vertical-align:middle;}
 .period label,
 .period input{vertical-align:top;}
-.period_multi{position:relative;width:216px;}
+.period_multi{position:relative;width:229px;}
 .period_multi::after{content:"~";position:absolute;left:50%;top:0;transform:translateX(-50%);}
-.period_multi input{width:44%;}
-.period_multi.times input{width:47%;}
-.period.times input{width:100%;}
-.times,
+.period_multi input{width:45.8%;}
 .date_wrap{position:relative;}
-.times images,
-.date_wrap images{position:absolute;top:50%;right:5px;margin-top:-9px;}
-.period_multi images{position:absolute;right:4px;right:6px\0;top:50%;margin-top:-9px;vertical-align:top;}
-.period_multi images:first-of-type{left:calc(44% - 20px);left:calc(44% - 21px)\0;}
-.period_multi.times images:first-of-type{left:calc(47% - 20px);left:calc(47% - 21px)\0;}
+.times img,
+.date_wrap img{position:absolute;top:50%;right:5px;margin-top:-9px;}
+.period_multi img{position:absolute;right:5px;top:50%;margin-top:-9px;vertical-align:top;}
+.period_multi img:first-of-type{left:calc(45.8% - 22px);left:calc(45.8% - 23px)\0;}
 .divideL.period_multi::after{margin-left:0;}
-.period_multi .to{margin-left:20px;}
 [required]::after,
 .required::after{position:relative;content:"\e705";color:#f35857;margin-left:2px;font-family:"axicon";font-size:10px;}
 
@@ -235,7 +229,7 @@ td .in_label{margin-left:-10px;}
 
 /* table */
 .tbl_top{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;}
-.tbl_top .btn_wrap{margin-left: auto;}
+.tbl_top .btn_wrap{margin:0 0 0 auto;}
 .btn_wrap_s .btn_axi{padding:2px 9px;font-size:12px;}
 .btn_wrap_s .btn_ico,
 .tbl_top .btn_ico{padding:2px 6px;font-size:12px;}
@@ -409,7 +403,6 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-datepicker-trigger,
 .ui-monthpicker-trigger{cursor:pointer;}
 .ui-monthpicker select.ui-datepicker-year{width:75px;}
-.ui-datepicker-trigger{position:relative;right:23px;margin-right:-15px;}
 
 /* accordion */
 .ui-accordion .ui-accordion-header{line-height:19px;background-color:#f0f6fe;color:#333;border-color:#094fa3;border-left-width:6px;color:#094fa3;margin-top:1px;padding-left:10px;font-weight:bold;border-radius:0;}

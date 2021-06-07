@@ -31,18 +31,20 @@
           <li>
             <select title="acc03_info">
               <option value="">상태정보</option>
+              <option value="">운영중</option>
+              <option value="">운영종료</option>
             </select>
           </li>
           <li>
             <select title="acc03_filter">
               <option value="">일자필터</option>
+              <option value="">관측시작일</option>
+              <option value="">관측종료일</option>
             </select>
-          </li>
-          <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required title="시작 날짜 선택">
-          </li>
-          <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required title="종료  날짜 선택">
+            <span class="period period_multi">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" required title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" required title="종료  날짜 선택">
+            </span>
           </li>
           <li>
             <button type="button" class=" btn_gray btn_search">검색</button>
@@ -50,9 +52,11 @@
         </ul>
         </div>
         <div class="article">
-          <div class="btn_wrap">
-            <button type="button" class="btn btn_blueline">관측소 추가</button>
-            <button type="button" class="btn btn_blueline">관측소 삭제</button>
+          <div class="tbl_top">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">관측소 추가</button>
+              <button type="button" class="btn btn_blueline">관측소 삭제</button>
+            </div>         
           </div>
           <div class="tbl_wrap">
               <table id="acc03" class="jq-grid"></table>
@@ -109,5 +113,6 @@ function btn_detail(cellValue, options, rowdata, action) {
 
 jqgridInit();
 </script>
+
 </body>
 </html>
