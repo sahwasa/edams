@@ -83,6 +83,9 @@ select::-ms-expand {display: none;}
 .btn_ico:hover{background-image:url(/images/btn_ico_on.png);}
 .btn_excel{background-position:5px 4px;}
 .btn_txt{background-position:5px -164px;}
+.btn_none{display:none;}
+.btn_file{width:16px;height:16px;background-image:url(/images/btn_ico_file.png), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));background-repeat:no-repeat;text-indent:-9999px;}
+.btn_file:active, .btn_file:hover{background-image:url(/images/btn_ico_file.png), linear-gradient(rgba(220, 220, 220, 1), rgba(220, 220, 220, 1))}
 
 .btn_ico_only{font-size:0!important;width:16px;height:19px;background:url(/images/btn_ico.png) 0 0 no-repeat;vertical-align:middle;}
 .btn_down{background-position:0 -31px;}
