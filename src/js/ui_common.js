@@ -216,3 +216,17 @@ function jqgridInit(){
 $(window).on('resize', function() {
   jqgridInit();
 });
+
+
+function btn_detail(cellValue, options, rowdata, action) {
+  var html, txt = "";
+  switch (cellValue) {
+    case "detail":
+      txt = "detail";
+      break;
+    default:
+      txt = "none";
+  }
+  html = '<button type="button" class="btn btn_blue">' + txt + '</button>';
+  return html;
+}

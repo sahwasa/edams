@@ -42,13 +42,9 @@
               <option value="">관측종료일</option>
             </select>
             <span class="period period_multi">
-              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" required title="시작 날짜 선택">
-              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" required title="종료  날짜 선택">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
             </span>
-<!-- =======
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required title="시작 날짜 선택"> ~
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required title="종료  날짜 선택">
->>>>>>> 7505488cd01847d9100ff853abbe23f07e531eb7 -->
           </li>
           <li>
             <button type="button" class=" btn_gray btn_search">검색</button>
@@ -101,18 +97,7 @@ $("#acc03").jqGrid({
   height: 458,
   rowTotal: -1
 });
-function btn_detail(cellValue, options, rowdata, action) {
-  var html, txt = "";
-  switch (cellValue) {
-    case "detail":
-      txt = "detail";
-      break;
-    default:
-      txt = "none";
-  }
-  html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
-  return html;
-}
+
 
 
 jqgridInit();

@@ -19,17 +19,17 @@
         <div class="article">
           <ul class="search flex_wrap f_sb">
           <li>
-            <select title="fac01_kind">
+            <select title="시설물 종류">
               <option value="">시설물종류</option>
             </select>
           </li>
           <li>
-          <select title="fac01_sort">
+          <select title="시설물 구분">
               <option value="">시설물구분</option>
             </select>
           </li>
           <li>
-            <select title="fac01_division">
+            <select title="시설물 종">
               <option value="">시설물종</option>
             </select>
           </li>
@@ -39,9 +39,11 @@
         </ul>
         </div>
         <div class="article">
-          <div class="btn_wrap">
-            <button type="button" class="btn btn_blueline">시설물 추가</button>
-            <button type="button" class="btn btn_blueline">시설물 삭제</button>
+          <div class="tbl_top">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">시설물 추가</button>
+              <button type="button" class="btn btn_blueline">시설물 삭제</button>
+            </div>
           </div>
           <div class="tbl_wrap">
               <table id="fac01" class="jq-grid"></table>
@@ -80,18 +82,6 @@ $("#fac01").jqGrid({
   height: 459,
   rowTotal: -1
 });
-function btn_detail(cellValue, options, rowdata, action) {
-  var html, txt = "";
-  switch (cellValue) {
-    case "detail":
-      txt = "detail";
-      break;
-    default:
-      txt = "none";
-  }
-  html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
-  return html;
-}
 
 jqgridInit();
 </script>
