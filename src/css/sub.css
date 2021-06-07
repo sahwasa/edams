@@ -17,3 +17,7 @@
 
 /* acc */
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
+
+/*  */
+.acc03 .btn_wrap,
+.fac01 .btn_wrap{margin-bottom:10px;text-align:right;}

@@ -65,59 +65,48 @@
   </ul>
 </div>
   </div>
-  <div class="cont acc03">
+  <div class="cont fac01">
   <div class="breadcrumb">
     <ul>
       <li><a href="">HOME</a></li>
-      <li><a href="">가속도 계측자료관리</a></li>
-      <li>관측소 관리</li>
+      <li><a href="">시설물 관리</a></li>
+      <li>시설물정보 관리</li>
     </ul>
   </div>
   <div class="tit">
-    <h2>관측소 관리</h2>
+    <h2>시설물정보 관리</h2>
   </div>
     <div>
       <div class="section">
         <div class="article">
-          <ul class="search f_sb">
+          <ul class="search flex_wrap f_sb">
           <li>
-            <select title="acc03_code">
-              <option value="">기관코드</option>
+            <select title="fac01_kind">
+              <option value="">시설물종류</option>
             </select>
           </li>
           <li>
-            <select title="acc03_kind">
-              <option value="">관측소종류</option>
+          <select title="fac01_sort">
+              <option value="">시설물구분</option>
             </select>
           </li>
           <li>
-            <select title="acc03_info">
-              <option value="">상태정보</option>
+            <select title="fac01_division">
+              <option value="">시설물종</option>
             </select>
           </li>
           <li>
-            <select title="acc03_filter">
-              <option value="">일자필터</option>
-            </select>
-          </li>
-          <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required title="시작 날짜 선택">
-          </li>
-          <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required title="종료  날짜 선택">
-          </li>
-          <li>
-            <button type="button" class=" btn_gray btn_search">검색</button>
+            <button type="button" class="btn_gray btn_search">검색</button>
           </li>
         </ul>
         </div>
         <div class="article">
           <div class="btn_wrap">
-            <button type="button" class="btn btn_blueline">관측소 추가</button>
-            <button type="button" class="btn btn_blueline">관측소 삭제</button>
+            <button type="button" class="btn btn_blueline">시설물 추가</button>
+            <button type="button" class="btn btn_blueline">시설물 삭제</button>
           </div>
           <div class="tbl_wrap">
-              <table id="acc03" class="jq-grid"></table>
+              <table id="fac01" class="jq-grid"></table>
           </div>
         </div>
       </div>
@@ -129,30 +118,28 @@
 
 </div>
 <script>
-
-var acc03 = [
-  {'t1':'기상청(KS)', 't2':'ADG', 't3':'서안동관리소', 't4':'-', 't5':'', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'detail'},
-  {'t1':'경남(GN)', 't2':'ADG', 't3':'안동복합스위치야드', 't4':'건축물', 't5':'2', 't6':'2014-08-09', 't7':'2014-08-09', 't8':'운영종료', 't9':'detail'},
-  {'t1':'기상청(KS)', 't2':'ADG', 't3':'안동점', 't4':'-', 't5':'1', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'detail'},
-  {'t1':'경남(GN)', 't2':'ADD', 't3':'안동', 't4':'교량', 't5':'1', 't6':'', 't7':'', 't8':'', 't9':'detail'},
-  {'t1':'기상청(KS)', 't2':'ADO2', 't3':'안동', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'},
-  {'t1':'경남(GN)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'},
-  {'t1':'기상청(KS)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'}
+var fac01 = [
+  {'t1':'BR2018_0000089', 't2':'명곡교', 't3':'경상남도 양산시 명곡로 306-14', 't4':'양산시', 't5':'양산시청 도로관리과', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'detail'},
+  {'t1':'', 't2':'개곡교', 't3':'', 't4':'-', 't5':'', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'detail'},
+  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''},
+  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''},
+  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''}
 ]
-$("#acc03").jqGrid({
-  data: acc03,
+$("#fac01").jqGrid({
+  data: fac01,
   datatype: "local",
   colModel: [
-    {label:'기관코드',name:'t1',width:120},
-    {label:'관측소코드',name:'t2',width:120},
-    {label:'관측소명',name:'t3',width:200},
-    {label:'관측소종류',name:'t4',width:200},
-    {label:'센서수량',name:'t5',width:120},
-    {label:'관측시작일',name:'t6',width:250},
-    {label:'관측종료일',name:'t7',width:250},
-    {label:'상태정보',name:'t8',width:100},
+    {label:'시설물번호',name:'t1',width:120},
+    {label:'시설물명',name:'t2',width:120},
+    {label:'위치',name:'t3',width:200},
+    {label:'행정구역',name:'t4',width:200},
+    {label:'관지주체',name:'t5',width:120},
+    {label:'시서물종류',name:'t6',width:250},
+    {label:'시설물종',name:'t7',width:250},
+    {label:'시설물구분',name:'t8',width:100},
     {label:'상세보기',name:'t9',width:100, formatter : btn_detail}
   ],
+  multiselect:true,
   loadonce : true,
   viewrecords: true,
   height: 459,
@@ -170,7 +157,6 @@ function btn_detail(cellValue, options, rowdata, action) {
   html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
   return html;
 }
-
 
 jqgridInit();
 </script>

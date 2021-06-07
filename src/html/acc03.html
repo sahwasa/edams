@@ -4,18 +4,68 @@
     @@include('inc/header.html')
   </div>
   <div class="cont acc03">
-   
-   <h2>10. 관측소 관리</h2>
-    <table id="03"></table>
-    
-
-
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li><a href="">가속도 계측자료관리</a></li>
+      <li>관측소 관리</li>
+    </ul>
+  </div>
+  <div class="tit">
+    <h2>관측소 관리</h2>
+  </div>
+    <div>
+      <div class="section">
+        <div class="article">
+          <ul class="search f_sb">
+          <li>
+            <select title="acc03_code">
+              <option value="">기관코드</option>
+            </select>
+          </li>
+          <li>
+            <select title="acc03_kind">
+              <option value="">관측소종류</option>
+            </select>
+          </li>
+          <li>
+            <select title="acc03_info">
+              <option value="">상태정보</option>
+            </select>
+          </li>
+          <li>
+            <select title="acc03_filter">
+              <option value="">일자필터</option>
+            </select>
+          </li>
+          <li>
+            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required title="시작 날짜 선택">
+          </li>
+          <li>
+            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required title="종료  날짜 선택">
+          </li>
+          <li>
+            <button type="button" class=" btn_gray btn_search">검색</button>
+          </li>
+        </ul>
+        </div>
+        <div class="article">
+          <div class="btn_wrap">
+            <button type="button" class="btn btn_blueline">관측소 추가</button>
+            <button type="button" class="btn btn_blueline">관측소 삭제</button>
+          </div>
+          <div class="tbl_wrap">
+              <table id="acc03" class="jq-grid"></table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   @@include('inc/footer.html')
 </div>
 <script>
 
-var mydata3 = [
+var acc03 = [
   {'t1':'기상청(KS)', 't2':'ADG', 't3':'서안동관리소', 't4':'-', 't5':'', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'detail'},
   {'t1':'경남(GN)', 't2':'ADG', 't3':'안동복합스위치야드', 't4':'건축물', 't5':'2', 't6':'2014-08-09', 't7':'2014-08-09', 't8':'운영종료', 't9':'detail'},
   {'t1':'기상청(KS)', 't2':'ADG', 't3':'안동점', 't4':'-', 't5':'1', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'detail'},
@@ -24,8 +74,8 @@ var mydata3 = [
   {'t1':'경남(GN)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'},
   {'t1':'기상청(KS)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'}
 ]
-$("#03").jqGrid({
-  data: mydata3,
+$("#acc03").jqGrid({
+  data: acc03,
   datatype: "local",
   colModel: [
     {label:'기관코드',name:'t1',width:120},
@@ -40,7 +90,7 @@ $("#03").jqGrid({
   ],
   loadonce : true,
   viewrecords: true,
-  height: 547,
+  height: 459,
   rowTotal: -1
 });
 function btn_detail(cellValue, options, rowdata, action) {
@@ -57,7 +107,7 @@ function btn_detail(cellValue, options, rowdata, action) {
 }
 
 
-jqgridInit();  
+jqgridInit();
 </script>
 </body>
 </html>
