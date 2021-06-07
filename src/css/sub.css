@@ -19,5 +19,10 @@
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
 
 /*  */
+<<<<<<< Updated upstream
 /* .acc03 .btn_wrap,
 .fac01 .btn_wrap{margin-bottom:10px;text-align:right;} */
+=======
+.acc03 .btn_wrap,
+.fac01 .btn_wrap{margin-bottom:5px;text-align:right;}
+>>>>>>> Stashed changes
