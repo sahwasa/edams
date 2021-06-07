@@ -22,7 +22,7 @@
 .pop_upload_fac{width:500px;}
 .pop_upload_acc_done,
 .pop_register_user,
-.pop_register_userinfo,
+.pop_userinfo,
 .pop_userinfo_edit,
 .pop_userinfo_pw{width:350px;}
 
@@ -42,9 +42,9 @@
 /* pop_upload_acc_done */
 .upload_done{padding:0 0 30px 50px;}
 .upload_done::before{position:relative;top:12px; content:'\e6c6';font-family:'axicon';font-size:40px;color:#555;padding-right:15px;}
-.pop_register_userinfo .tbl_pop input[type = text]{padding:0;border:1px solid transparent;}
+.pop_userinfo .tbl_pop input[type = text]{padding:0;border:1px solid transparent;}
 #info_pw{padding-left:5px;border:1px solid #bbb;color:#bbb;}
-.pop_register_userinfo .tbl_pop th{width:27%;text-align:left;padding-left:8px;}
+.pop_userinfo .tbl_pop th{width:27%;text-align:left;padding-left:8px;}
 #info_number,
 #info_phonenumber{padding-left:30px;}
 .info_number,
