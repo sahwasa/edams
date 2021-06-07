@@ -1,2 +1,19 @@
+/* login */
+.login_wrap{position:relative;width:100%;height:100%;background:linear-gradient(to bottom, #f4f4f4 19%,#b4d6ed 50%,#a2cde8 51%,#f7f7f7 88%);}
+.login_box{position:absolute;top:calc(50% - 200px);left:calc(50% - 275px);width:550px;height:400px;}
+.tit_login{margin-bottom:10px;font-size:24px;font-weight:600;}
+.tit_login img{width:113px;margin-right:10px;vertical-align:bottom;}
+.login{padding:35px;border:1px solid #aaa;border-top:3px solid #005aab;background-color:#fff; box-shadow:0 0 10px #dfdfdf;}
+.login h2{font-size: 40px;}
+.login .flex_wrap{padding:40px 0 20px; justify-content:space-between;}
+.login ul{flex: 0 1 77%;}
+.login li{margin-bottom:15px;}
+.login button{width:100%;height:85px;border-radius:5px;flex: 0 1 19%;}
+.login label{display:inline-block;width:20%;font-size:15px;}
+.login input[type = text]{display:inline-block;width:78%;height:35px;line-height:35px;padding-left:10px;}
+.login_check{margin-left:80px;}
+.login_check input[type = checkbox]{position:relative;top:-2px;margin-right:10px;}
+.login_check label{width:50%;}
+
 /* acc */
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
