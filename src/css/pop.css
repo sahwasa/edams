@@ -5,7 +5,7 @@
 .pop_tit{display:flex;justify-content:space-between;padding:10px 15px;background-color:#005aab;}
 .pop_tit h1{font-size:16px;font-weight:bold;color:#fff;}
 .btn_pop_close{position:relative;top:1px;width:17px;height:17px;}
-.btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../images/btn_pop_close.png);}
+.btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(/images/btn_pop_close.png);}
 
 /* pop_common */
 .pop_wrap .btn_wrap{padding-top:16px;}
@@ -35,7 +35,7 @@
 
 /* pop_register_sensor */
 .email_file #upFile{display:none;}
-.email_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png)no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.email_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(/images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
 .email_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
 .email_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
 
