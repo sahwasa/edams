@@ -74,6 +74,7 @@
 .tbl_pop td{padding:3px;}
 .tbl_pop input[type = text],
 .tbl_pop input[type = date],
+.tbl_pop input[type = password],
 .tbl_pop select,
 .tbl_pop textarea{width:100%;}
 .tbl_pop textarea{line-height:22px;}
