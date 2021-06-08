@@ -76,63 +76,6 @@ $(function(){
       $("input[name='"+ getName +"'].from").datepicker( "option", "maxDate", selectedDate );
     }
   });
-  function date_to_str(format){
-    var year = format.getFullYear(),
-        month = format.getMonth() + 1,
-        date = format.getDate(),
-        hour = format.getHours(),
-        min = format.getMinutes(),
-        sec = format.getSeconds(),
-        ampm = (hour >= 12) ? '오후' : '오전';
-    if(month<10) month = '0' + month;
-    if(date<10) date = '0' + date;
-    hour = hour % 12;
-    hour = hour ? hour : 12;
-    if(hour<10) hour = '0' + hour;
-    min = min < 10 ? '0'+min : min;
-    sec = sec < 10 ? '0'+sec : sec;
-
-    return year + "-" + month + "-" + date + " " + ampm + " " + hour + ":" + min + ":" + sec;
-  }
-
-  // use jqueryui-timepicker-addon
-  // https://trentrichardson.com/examples/timepicker/
-  var timepicker = $('[dataformat="timepic"]'),
-      timefrom = $('[dataformat="timefrom"]'),
-      timeto = $('[dataformat="timeto"]');
-
-  timepicker.val( date_to_str(new Date()));
-  if(timepicker.length){
-    timepicker.datetimepicker({
-      timeFormat: 'tt hh:mm:ss',
-      controlType: 'select',
-      oneLine: true
-    });
-  }
-  timefrom.val( date_to_str(new Date()));
-  if(timefrom.length){
-    timefrom.datetimepicker({
-      timeFormat: 'tt hh:mm:ss',
-      controlType: 'select',
-      oneLine: true,
-      onClose: function( selectedDate ) {
-        var getName=$(this).attr('name');
-        $("input[name='"+ getName +"'].to").datepicker( "option", "minDate", selectedDate );
-      }  
-    });
-  }
-  timeto.val( date_to_str(new Date()));
-  if(timeto.length){
-    timeto.datetimepicker({
-      timeFormat: 'tt hh:mm:ss',
-      controlType: 'select',
-      oneLine: true,
-      onClose: function( selectedDate ) {
-        var getName=$(this).attr('name');
-        $("input[name='"+ getName +"'].from").datepicker( "option", "maxDate", selectedDate );
-      }
-    });
-  }
 
   // tab
   var tabBtn = $('[tabBtn] li'),
@@ -195,10 +138,10 @@ $(function(){
     collapsible: true,
     heightStyle: "content",
     icons: {
-      "header": "ui-icon-plus",
-      "activeHeader": "ui-icon-minus"
+      "header": "ui-icon-caret-1-e",
+      "activeHeader": "ui-icon-caret-1-s"
     },
-    active: true
+    // active: true
   });
 
     /* fileDeco */
@@ -211,7 +154,7 @@ $(function(){
 function jqgridInit(){
   $('.jq-grid').each(function(){
     $(this).setGridWidth($(this).parents('.tbl_wrap').width() - 2);
-  });  
+  });
 }
 $(window).on('resize', function() {
   jqgridInit();
