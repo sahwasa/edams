@@ -218,15 +218,52 @@ $(window).on('resize', function() {
 });
 
 
-function btn_detail(cellValue, options, rowdata, action) {
+function tblBtn(cellValue, options, rowdata, action) {
   var html, txt = "";
   switch (cellValue) {
-    case "detail":
-      txt = "detail";
+    case "edit":
+      txt = "edit";
+      break;
+    case "del":
+      txt = "del";
+      break;
+    case "dtl":
+      txt = "dtl";
+      break;
+    case "down":
+      txt = "down";
       break;
     default:
       txt = "none";
   }
-  html = '<button type="button" class="btn btn_blue">' + txt + '</button>';
+  html = '<button type="button" class="axi btn_' + txt + '"></button>';
+  return html;
+}
+
+function tagAxi(cellValue, options, rowdata, action) {
+  var html, txt = "";
+  switch (cellValue) {
+    case "ok":
+      txt = "ok";
+      break;
+    case "add":
+      txt = "add";
+      break;
+    case "del":
+      txt = "del";
+      break;
+    case "reject":
+      txt = "reject";
+      break;
+    case "help":
+      txt = "help";
+      break;
+    case "cancel":
+      txt = "cancel";
+      break;
+    default:
+      txt = "none";
+  }
+  html = '<button type="button" class="axi btn_' + txt + '"></button>';
   return html;
 }
