@@ -207,10 +207,6 @@ function tagAxi(cellValue, options, rowdata, action) {
     default:
       txt = "none";
   }
-<<<<<<< HEAD
-  html = '<button type="button" class="axi btn_dtl">' + txt + '</button>';
-=======
-  html = '<button type="button" class="axi btn_' + txt + '"></button>';
->>>>>>> 55a091026146a59645f9964d4e076b8260938f31
+  html = '<button type="button" class="axi btn_' + txt + '"></button>'; 
   return html;
 }
