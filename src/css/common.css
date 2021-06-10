@@ -267,10 +267,11 @@ h5{font-size:14px;line-height:28px;}
 .tbl_ipt th,
 .tbl_ipt td{padding:1px 20px 2px;line-height:25px;}
 .tbl_ipt input,
-.tbl_ipt textarea{width:100%;}
+.tbl_ipt textarea,
+.tbl_ipt select{width:100%;vertical-align:top;}
 .tbl_s{border:1px solid #ccc;}
 .tbl_s th,
-.tbl_s td{border:1px solid #e8e8e8;border-width:1px 0 0 1px;padding:3px 5px;line-height:26px;}
+.tbl_s td{border:1px solid #e8e8e8;border-width:1px 0 0 1px;padding:3px 5px;line-height:25px;}
 .tbl_s th{color:#000;font-weight:600;}
 .tbl_s td{color:#777;}
 .tbl_s tr:first-child th{border-top-color:#ccc;}
