@@ -121,7 +121,7 @@
             </div>         
           </div>
           <div class="tbl_wrap">
-              <table id="acc03" class="jq-grid"></table>
+              <table id="jqGrid4" class="jq-grid"></table>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@
 </div>
 <script>
 
-var acc03 = [
+var mydata4 = [
   {'t1':'기상청(KS)', 't2':'ADG', 't3':'서안동관리소', 't4':'-', 't5':'', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'detail'},
   {'t1':'경남(GN)', 't2':'ADG', 't3':'안동복합스위치야드', 't4':'건축물', 't5':'2', 't6':'2014-08-09', 't7':'2014-08-09', 't8':'운영종료', 't9':'detail'},
   {'t1':'기상청(KS)', 't2':'ADG', 't3':'안동점', 't4':'-', 't5':'1', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'detail'},
@@ -143,8 +143,8 @@ var acc03 = [
   {'t1':'경남(GN)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'},
   {'t1':'기상청(KS)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'detail'}
 ]
-$("#acc03").jqGrid({
-  data: acc03,
+$("#jqGrid4").jqGrid({
+  data: mydata4,
   datatype: "local",
   colModel: [
     {label:'기관코드',name:'t1',width:120},
@@ -162,8 +162,6 @@ $("#acc03").jqGrid({
   height: 458,
   rowTotal: -1
 });
-
-
 
 jqgridInit();
 </script>

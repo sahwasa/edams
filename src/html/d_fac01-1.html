@@ -1,0 +1,138 @@
+@@include('inc/top.html')
+<div class="wrap">
+  <div class="header">
+    @@include('inc/header.html')
+  </div>
+  <div class="cont fac01">
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">시설물 관리</a></li>
+      <li><a href="#">시설물정보 관리</a></li>
+      <li>시설물 정보 관리 상세</li>
+    </ul>
+  </div>
+  <div class="tit">
+    <h2>시설물 정보 관리 상세</h2>
+  </div>
+    <div class="flex_wrap f_sb">
+      <div class="section section_l">
+         <div class="tit_h3">
+            <h3>기본정보</h3>
+            <div class="btn_wrap">
+               <button type="button" class="btn btn_blueline">목록</button>
+            </div>
+         </div>
+         <table class="tbl_row tbl_facc">
+            <caption>기본정보</caption>
+            <tr>
+               <th scope="row">지진번호</th>
+               <td>BR2018_0000089</td>
+            </tr>
+            <tr>
+               <th scope="row">시설물명</th>
+               <td>명곡교</td>
+            </tr>
+            <tr>
+               <th scope="row">준공일자</th>
+               <td>2021-05-25</td>
+            </tr>
+            <tr>
+               <th scope="row">위치</th>
+               <td>경상남도 양산시 명곡로 306-14</td>
+            </tr>
+            <tr>
+               <th scope="row">위도</th>
+               <td>35.34</td>
+            </tr>
+            <tr>
+               <th scope="row">경도</th>
+               <td>129.06</td>
+            </tr>
+            <tr>
+               <th scope="row">행정구역</th>
+               <td>양산시</td>
+            </tr>
+            <tr>
+               <th scope="row">관리주체</th>
+               <td>양산시청 도로관리과</td>
+            </tr>
+            <tr>
+               <th scope="row">연락처</th>
+               <td>055-392-2783</td>
+            </tr>
+            <tr>
+               <th scope="row">시설물종류</th>
+               <td>도로교량</td>
+            </tr>
+            <tr>
+               <th scope="row">시설물종</th>
+               <td>1종</td>
+            </tr>
+            <tr>
+               <th scope="row">시설물 구분</th>
+               <td>교량</td>
+            </tr>
+         </table>
+      </div>
+      <div class="section section_r">
+        <div class="article">
+          <div class="tit_h3">
+            <h3>구조물 상세자료</h3>
+            <div class="btn_wrap">
+               <button type="button" class="btn btn_blueline">파일 업로드</button>
+            </div>
+         </div>
+          <div class="tbl_wrap">
+              <table id="fac01" class="jq-grid"></table>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tit_h3">
+            <h3>구조물 상세자료</h3>
+            <div class="btn_wrap">
+               <button type="button" class="btn btn_blueline">파일 업로드</button>
+            </div>
+         </div>
+          <div class="tbl_wrap">
+              <table id="fac01" class="jq-grid"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('inc/footer.html')
+</div>
+<script>
+var fac01 = [
+  {'t1':'BR2018_0000089', 't2':'명곡교', 't3':'경상남도 양산시 명곡로 306-14', 't4':'양산시', 't5':'양산시청 도로관리과', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'detail'},
+  {'t1':'', 't2':'개곡교', 't3':'', 't4':'-', 't5':'', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'detail'},
+  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''},
+  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''},
+  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''}
+]
+$("#fac01").jqGrid({
+  data: fac01,
+  datatype: "local",
+  colModel: [
+    {label:'시설물번호',name:'t1',width:120},
+    {label:'시설물명',name:'t2',width:120},
+    {label:'위치',name:'t3',width:200},
+    {label:'행정구역',name:'t4',width:200},
+    {label:'관지주체',name:'t5',width:120},
+    {label:'시서물종류',name:'t6',width:250},
+    {label:'시설물종',name:'t7',width:250},
+    {label:'시설물구분',name:'t8',width:100},
+    {label:'상세보기',name:'t9',width:100, formatter : btn_detail}
+  ],
+  multiselect:true,
+  loadonce : true,
+  viewrecords: true,
+  height: 459,
+  rowTotal: -1
+});
+
+jqgridInit();
+</script>
+</body>
+</html>

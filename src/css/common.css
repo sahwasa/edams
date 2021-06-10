@@ -68,6 +68,7 @@ select::-ms-expand {display: none;}
 .btn:disabled,
 .btn:disabled:hover{color:#ccd2de;border-color:#ccd2de;background-color:#fff;cursor:default;}
 
+
 .btn_axi,
 .tag_axi{padding-right:9px;}
 .btn_axi::before,
@@ -84,8 +85,8 @@ select::-ms-expand {display: none;}
 .btn_excel{background-position:5px 4px;}
 .btn_txt{background-position:5px -164px;}
 .btn_none{display:none;}
-.btn_file{width:16px;height:16px;background-image:url(../images/btn_ico_file.png), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));background-repeat:no-repeat;text-indent:-9999px;}
-.btn_file:active, .btn_file:hover{background-image:url(../images/btn_ico_file.png), linear-gradient(rgba(220, 220, 220, 1), rgba(220, 220, 220, 1))}
+.btn_file{width:16px;height:16px;background-image:url(../images/ico_file.png), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));background-repeat:no-repeat;text-indent:-9999px;}
+.btn_file:active, .btn_file:hover{background-image:url(../images/ico_file.png), linear-gradient(rgba(220, 220, 220, 1), rgba(220, 220, 220, 1))}
 
 .btn_ico_only{font-size:0!important;width:16px;height:19px;background:url(/images/btn_ico.png) 0 0 no-repeat;vertical-align:middle;}
 .btn_down{background-position:0 -31px;}
@@ -220,7 +221,7 @@ td .in_label{margin-left:-10px;}
 .cont > .tit .btn{position:relative;top:2px;margin-right:5px;}
 .section .tit_h3{height:30px; margin-bottom:5px;}
 .tit_h3 h3{font-size:16px;color:#000;}
-.tit_h3 h3::before{position:relative;top:2px;display:inline-block;content:"";width:15px;height:15px;border:5px solid #094fa3;border-radius:50%;margin-right:5px;background-color:#fff;box-sizing:border-box;}
+.tit_h3 h3::before{position:relative;top:2px;display:inline-block;content:"";width:15px;height:15px;border-radius:30%;margin-right:5px;background-color:#094fa3;box-sizing:border-box;}
 .tit h4{font-size:16px;font-weight:600;}
 
 /* footer */

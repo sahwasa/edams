@@ -227,6 +227,6 @@ function btn_detail(cellValue, options, rowdata, action) {
     default:
       txt = "none";
   }
-  html = '<button type="button" class="btn btn_blue">' + txt + '</button>';
+  html = '<button type="button" class="axi btn_dtl">' + txt + '</button>';
   return html;
 }
