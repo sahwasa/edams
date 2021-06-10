@@ -87,6 +87,7 @@ select::-ms-expand {display: none;}
 .btn_none{display:none;}
 .btn_file{width:16px;height:16px;background-image:url(../images/ico_file.png), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));background-repeat:no-repeat;text-indent:-9999px;}
 .btn_file:active, .btn_file:hover{background-image:url(../images/ico_file.png), linear-gradient(rgba(220, 220, 220, 1), rgba(220, 220, 220, 1))}
+.btn_delete{width:16px;height:16px;background-image:url(../images/ico_del.png);background-repeat:no-repeat;text-indent:-9999px;}
 
 .btn_ico_only{font-size:0!important;width:16px;height:19px;background:url(/images/btn_ico.png) 0 0 no-repeat;vertical-align:middle;}
 .btn_down{background-position:0 -31px;}
@@ -104,6 +105,7 @@ select::-ms-expand {display: none;}
 .btn_edit::before{content:"\f058";}
 .btn_help::before{content:"\f1ce";}
 .btn_all::before{content:"\f046";position:relative;top:1px;}
+
 
 .axi{margin:3px 10px 0 0;font-size:0!important;}
 .axi::before{font-size:14px;font-family:'axicon';}
@@ -147,6 +149,10 @@ td .axi{margin-right:0;}
 .file_text{width:380px;height:19px;}
 .file_wrap{display:inline-block;position:relative;width:75px;height:25px;margin-left:5px;cursor:pointer;}
 .file_add{filter:alpha(opacity:0);opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:24px;padding:0;border:0;cursor:pointer;}
+.tbl_wrap input[type=checkbox]{display:none}
+input[type=checkbox]+label{display:inline-block;width:15px;height:16px;border:1px solid #ababab;border-radius:2px;cursor:pointer}
+input[type=checkbox]:checked+label{background:url(../images/ico_check.png) no-repeat;background-size:cover;border:1px solid #005a9e}
+input[type=checkbox]{display:none}
 
 /* search */
 .search{display:flex;justify-content:end;align-items:center;padding:5px 6px 8px;margin:12px 0;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;
@@ -252,7 +258,7 @@ td .in_label{margin-left:-10px;}
 .tbl_row th{background-color:#f3f3f3;font-weight:600;}
 .tbl_col th,
 .tbl_col td{border:1px solid #f3f3f3;padding:8px 0;}
-.tbl_row td{text-align:left;padding:0 13px;color:#777;}
+.tbl_row td{text-align:left;padding-left:13px;padding-right:13px;color:#777;}
 .tbl_row th:first-child{border-left-width:0;}
 .tbl_row td:last-child{border-right-width:0;}
 .tbl_row tr:first-child th,
@@ -260,11 +266,12 @@ td .in_label{margin-left:-10px;}
 .tbl_row tr:last-child th,
 .tbl_row tr:last-child td{border-bottom-color:#ccc;}
 .tbl_row + .gis_wrap{margin-top:6px;}
-.tbl_blackTop{border-top:3px solid #333;text-align:left;}
+.tbl_blackTop{border-top:2px solid #333;/*text-align:left;*/}
+.tbl_blackTop thead{border-bottom:1.1px solid #333;}
 .tbl_blackTop th,
 .tbl_blackTop td{font-size:13px;border:1px solid #e8e8e8;padding:6px 20px;}
 .tbl_blackTop th{font-weight:bold;}
-.tbl_blackTop td{border-right-color:#7facce;color:#777;}
+.tbl_blackTop td{border-right-color:#e8e8e8;color:#777;}
 .tbl_blackTop td:last-child{border-right-color:#e8e8e8;}
 .tbl_ipt th,
 .tbl_ipt td{padding:1px 20px 2px;line-height:25px;}
@@ -278,6 +285,8 @@ td .in_label{margin-left:-10px;}
 .tbl_row .area select{margin-right:5px;min-width:auto;width:auto;}
 .tbl_quakeinfo th{width:99px;}
 .tbl_quakeinfo td{min-width:29px;}
+.tbl_basicinfo th{width:179px;}
+.tbl_basicinfo td{width:421px;}
 
 /* paginate */
 .paginate{margin-top:15px;padding:15px 0;text-align:center}
