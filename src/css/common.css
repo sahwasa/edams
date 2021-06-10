@@ -143,16 +143,15 @@ td .axi{margin-right:0;}
 .divideL.period_multi::after{margin-left:0;}
 [required]::after,
 .required::after{position:relative;content:"\e705";color:#f35857;margin-left:2px;font-family:"axicon";font-size:10px;}
-
 .file_down:hover{text-decoration:underline;color:#005a9e;}
 .file_down + .btn_del::before{border:none;}
 .file_text{width:380px;height:19px;}
 .file_wrap{display:inline-block;position:relative;width:75px;height:25px;margin-left:5px;cursor:pointer;}
 .file_add{filter:alpha(opacity:0);opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:24px;padding:0;border:0;cursor:pointer;}
-.tbl_wrap input[type=checkbox]{display:none}
-input[type=checkbox]+label{display:inline-block;width:15px;height:16px;border:1px solid #ababab;border-radius:2px;cursor:pointer}
-input[type=checkbox]:checked+label{background:url(../images/ico_check.png) no-repeat;background-size:cover;border:1px solid #005a9e}
-input[type=checkbox]{display:none}
+.tbl_blackTop input[type=checkbox]{display:none}
+.tbl_blackTop input[type=checkbox]+label{display:inline-block;width:15px;height:16px;border:1px solid #ababab;border-radius:2px;cursor:pointer}
+.tbl_blackTop input[type=checkbox]:checked+label{background:url(../images/ico_check.png) no-repeat;background-size:cover;border:1px solid #005a9e}
+.tbl_blackTop input[type=checkbox]{display:none}
 
 /* search */
 .search{display:flex;justify-content:end;align-items:center;padding:5px 6px 8px;margin:12px 0;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;
