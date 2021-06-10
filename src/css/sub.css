@@ -17,13 +17,26 @@
 
 /* acc */
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
+<<<<<<< Updated upstream
 
 /*  */
 .acc03 .btn_wrap,
 .fac01 .btn_wrap{margin-bottom:5px;text-align:right;}
+<<<<<<< HEAD
 
 /* fcc */
 .fac01-1 .f_sb .section_l{margin-top:27px;}
 .fac01-1 .f_sb .section_r{width:calc(100% - 600px);}
 .fac01-1 .section_r .article:last-child{margin-top:40px;}
 textarea[name ="MCT_preview"]{width:100%;height:165px;overflow-y:scroll;}
+=======
+>>>>>>> Stashed changes
+=======
+.tbl_sta th{width:150px;}
+.tbl_sta td{width:25%;}
+.recorder_sensor{counter-reset:recorder;}
+.recorder h4::after{counter-increment:recorder;content:"#"counter(recorder);margin-left:5px;}
+.recorder .sensor{margin:10px 0 15px;}
+.recorder:last-of-type .sensor{margin-bottom:0;}
+>>>>>>> Stashed changes
+>>>>>>> 55a091026146a59645f9964d4e076b8260938f31
