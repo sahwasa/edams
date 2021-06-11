@@ -86,7 +86,7 @@ select{min-width:50px;padding-right:20px;}
 .btn_none{display:none;}
 .btn_file{width:16px;height:16px;background-image:url(../images/ico_file.png), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));background-repeat:no-repeat;text-indent:-9999px;}
 .btn_file:active, .btn_file:hover{background-image:url(../images/ico_file.png), linear-gradient(rgba(220, 220, 220, 1), rgba(220, 220, 220, 1))}
-.btn_delete{width:16px;height:16px;background-image:url(../images/ico_del.png);background-repeat:no-repeat;text-indent:-9999px;}
+.btn_del{width:16px;height:16px;background-image:url(../images/ico_del.png);background-repeat:no-repeat;text-indent:-9999px;}
 
 .btn_ico_only{font-size:0!important;width:16px;height:19px;background:url(/images/btn_ico.png) 0 0 no-repeat;vertical-align:middle;}
 .btn_down{background-position:0 -31px;}
@@ -99,23 +99,19 @@ select{min-width:50px;padding-right:20px;}
 .btn_cancel::before{content:"\f057";}
 .btn_clear::before{content:"\e791";}
 .btn_add::before{content:"\f055";}
-.btn_del::before{content:"\f056";}
+/* .btn_del::before{content:"\f056";} */
 .btn_reject::before{content:"\f10f";}
 .btn_help::before{content:"\f059";}
 .btn_all::before{content:"\f046";position:relative;top:1px;}
 .btn_setting::before{content:"\f2ba";width:15px;height:15px;border:1px solid #000;border-radius:50%; color:#fff;}
 
-<<<<<<< HEAD
 
 .axi{margin:3px 10px 0 0;font-size:0!important;}
-=======
-.axi{padding:3px;font-size:0!important;color:#717e89;}
->>>>>>> 55a091026146a59645f9964d4e076b8260938f31
 .axi::before{font-size:14px;font-family:'axicon';}
 .axi.btn_dtl::before{content:"\f00e";}
 .axi.btn_paper::before{content:"\e125";}
 .axi.btn_test::before{content:"\e6a2";}
-.axi.btn_edit::before{content:"\e896";}
+.axi.btn_edit::before{content:"\e896";font-size:17px;}
 .axi.btn_down::before{content:"\e83e";font-size:16px;font-weight:bold;}
 .axi.btn_del::before{content:"\e117";font-size:15px;font-weight:bold;color:#df8282;}
 .axi.btn_close{margin-top:4px;}
@@ -140,6 +136,7 @@ td .axi{margin-right:0;}
 .period_multi::after{content:"~";position:absolute;left:50%;top:0;transform:translateX(-50%);}
 .period_multi input{width:45.8%;}
 .date_wrap{position:relative;}
+.pop_overlay .date_wrap{display:block;}
 .times img,
 .date_wrap img{position:absolute;top:50%;right:5px;margin-top:-9px;}
 .period_multi img{position:absolute;right:5px;top:50%;margin-top:-9px;vertical-align:top;}

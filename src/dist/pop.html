@@ -76,8 +76,10 @@
       <div class="pop_cont">
         <ul class="pop_ul flex_wrap f_sb">
           <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required>~
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required>
+            <span class="period period_multi">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+            </span>
           </li>
           <li>
             <label for="select_db_scale">규모</label>
@@ -199,16 +201,20 @@
               <label for="mgt_start">시작일</label>
             </th>
             <td>
-              <input type="text" id="mgt_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required>
+              <span class="date_wrap">
+                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="to" required></span>
             </td>
             <th>
               <label for="mgt_end">종료일</label>
             </th>
             <td>
-              <input type="text" id="mgt_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="to" required>
+              <span class="date_wrap">
+                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="to" required></span>
             </td>
-          </tr>
-          <tr>
+            </tr>
+            <tr>
             <th>
               <label for="mgt_floor">건물 층 수</label>
             </th>
@@ -334,15 +340,18 @@
                   <label for="equip_start">시작일</label>
                 </th>
                 <td>
-                  <input type="text" id="equip_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required>
+                  <span class="date_wrap">
+                    <input type="text" id="sensor_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="from date" dataformat="from" required></span>
                 </td>
-                <th>
-                  <label for="equip_end">종료일</label>
+                <th><label for="equip_end">종료일</label>
                 </th>
                 <td>
-                  <input type="text" id="equip_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="to" required>
+                  <span class="date_wrap">
+                    <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="from date" dataformat="to" required></span>
                 </td>
-              </tr>
+                </tr>
               <tr>
                 <th><label for="equip_remarks">비고</label></th>
                 <td colspan="3">
@@ -455,15 +464,19 @@
               <label for="sensor_start">시작일</label>
             </th>
             <td>
-              <input type="text" id="sensor_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required>
+            <span class="date_wrap">
+              <input type="text" id="sensor_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                class="from date" dataformat="from" required></span>
             </td>
             <th>
               <label for="sensor_end">종료일</label>
             </th>
             <td>
-              <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="to" required>
+              <span class="date_wrap">
+                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="to" required></span>
             </td>
-          </tr>
+            </tr>
           <tr>
             <th><label for="sensor_remarks">비고</label></th>
             <td colspan="3">
@@ -575,7 +588,9 @@
           </tr>
           <tr>
             <th><label for="fac_done">준공일자</label></th>
-            <td><input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="datepic" required>
+            <td>
+            <span class="date_wrap">
+            <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="datepic" required title="준공일자 선택"></span>
             </td>
           </tr>
           <tr>
@@ -683,8 +698,10 @@
       <div class="pop_cont">
         <ul class="pop_ul flex_wrap f_sb">
           <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required title="시작 날짜 선택">~
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required title="종료  날짜 선택">
+            <span class="period period_multi">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+            </span>
           </li>
           <li>
             <label for="select_eq_scale">규모</label>
