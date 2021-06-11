@@ -16,7 +16,7 @@ em,address,i{font-style:normal;}
 table{border:0;border-spacing:0;width:100%;text-align:center;border-collapse:collapse;}
 button{display:inline-block;border:none;cursor:pointer;box-sizing:border-box;background:transparent;}
 .block,.block div{display:block;}
-input[type="text"],input[type="password"],input[type="date"],textarea,select{height:25px;border:1px solid #ccc;color:#333;background-color:rgba(255,255,255,.9);vertical-align:middle;padding:0 5px;box-sizing:border-box;}
+input[type="text"],input[type="password"],input[type="date"],input[type="number"],textarea,select{height:25px;border:1px solid #ccc;color:#333;background-color:rgba(255,255,255,.9);vertical-align:middle;padding:0 5px;box-sizing:border-box;}
 select{min-width:50px;padding-right:20px;}
 
 .blind{position:absolute;left:-9999px;top:-9999px;width:0;height:0;font-size:0;overflow:hidden;line-height:0;text-indent:-9999px;}
@@ -103,9 +103,8 @@ select{min-width:50px;padding-right:20px;}
 .btn_reject::before{content:"\f10f";}
 .btn_help::before{content:"\f059";}
 .btn_all::before{content:"\f046";position:relative;top:1px;}
+
 .btn_setting::before{content:"\f2ba";width:15px;height:15px;border:1px solid #000;border-radius:50%; color:#fff;}
-
-
 .axi{margin:3px 10px 0 0;font-size:0!important;}
 .axi::before{font-size:14px;font-family:'axicon';}
 .axi.btn_dtl::before{content:"\f00e";}
@@ -147,8 +146,7 @@ td .axi{margin-right:0;}
 
 
 /* search */
-.search{display:flex;justify-content:end;align-items:center;padding:5px 6px 8px;margin:12px 0;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;
-}
+.search{display:flex;justify-content:end;align-items:center;padding:10px;margin-bottom:12px;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:25px;}
 .search ul{display:flex;align-items:center;}
 .search li{margin-left:10px;}
 .search li:first-child{margin-left:0;}
@@ -426,7 +424,7 @@ dd.btn_wrap{display:flex;align-items:center;}
 
 /* jqgrid custom */
 .ui-jqgrid.ui-corner-all{border-radius:0;border-color:#e8e8e8;border-top:2px solid #333;}
-.ui-jqgrid .ui-jqgrid-hdiv{border-radius:0;background:transparent;border-bottom-color:#333;}
+.ui-jqgrid .ui-jqgrid-hdiv{border-radius:0;margin-top:0;background:transparent;border-bottom-color:#333;}
 .ui-jqgrid .jqgrid-rownum,
 .ui-jqgrid .ui-jqgrid-hbox th{background:#fff;color:#333;font-weight:600;border-color:#e8e8e8;vertical-align:middle;height:30px;}
 .ui-jqgrid .ui-jqgrid-hbox th[colspan]{background:#e0e6ec;}
