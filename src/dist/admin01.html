@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상남도:지진피해평가관리시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="util">
+  <b>관리자님 반갑습니다.</b>
+  <ul class="util_list">
+    <li><button type="button">내정보</button></li>
+    <li><button type="button">로그아웃</button></li>
+  </ul>
+</div>
+<div class="nav">
+  <h1><a href="">지진피해평가 · 관리시스템</a></h1>
+  <ul class="gnb" role="navigation">
+    <li><a href="../dist/acc01.html">가속도 계측자료 관리</a>
+      <ul class="sub">
+        <li><a href="../dist/acc01.html">계측 가속도 DB</a></li>
+        <li><a href="../dist/acc02.html">지진 통보문 관리</a></li>
+        <li><a href="../dist/acc03.html">관측소 관리</a></li>
+        <li><a href="../dist/acc04.html">관측자료 업로드</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="../dist/fac01.html">시설물 관리</a>
+      <ul class="sub">
+        <li class="on"><a href="../dist/fac01.html">시설물정보 관리</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/dam01.html">지진피해평가</a>
+      <ul class="sub">
+        <li><a href="../dist/dam01.html">안전성 평가 모니터링</a></li>
+        <li><a href="../dist/dam02.html">지진피해평가 실행</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/admin01.html">관리자 지원</a>
+      <ul class="sub">
+        <li><a href="../dist/admin01.html">사용자관리</a></li>
+        <li><a href="../dist/admin02.html">매뉴얼(자료실)</a></li>
+      </ul>
+    </li>
+    <li><a href="">안전성평가 훈련</a>
+      <ul class="sub">
+        <li><a href="">지진피해평가 시뮬레이션</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="cont admin01">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">관리자지원</a></li>
+        <li>사용자관리</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>사용자 관리</h2>
+    </div>
+    <div>
+      <div class="section">
+        <div class="article">
+          <div class="search flex_wrap f_sb">
+            <ul class="flex_wrap f_sb">
+              <li>
+                <select title="부서선택">
+                  <option value="">부서선택</option>
+                </select>
+              </li>
+              <li>
+                <select title="검색조건">
+                  <option value="">검색조건</option>
+                </select>
+              </li>
+              <li>
+                <input type="text" title="사용자 관리 검색">
+              </li>
+              <li>
+                <button type="button" class="btn_gray btn_search">검색</button>
+              </li>
+            </ul>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">사용자 추가</button>
+              <button type="button" class="btn btn_blueline">사용자 삭제</button>
+            </div>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <table id="jqgrid2" class="jq-grid"></table>
+            <div id="jqgrid2Pager"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <p>Copyright(c) Gyeongsangnamdo All Rights Reserved.</p>
+</div>
+
+</div>
+<div class="pop_overlay">
+  <div class="pop_wrap pop_register_user">
+    <div class="pop_tit">
+      <h1>사용자 추가 / 수정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_pop table_border">
+          <caption>사용자 추가 / 수정</caption>
+          <tr>
+            <th scope="row"><label for="user_id" class="required">ID</label></th>
+            <td><input type="text" id="user_id"></td>
+            <td><button type="button" class="btn_pop btn_gray">중복</button></td>
+          </tr>
+          <tr>
+            <th><label for="user_name" class="required">이름</label></th>
+            <td colspan="2"><input type="text" id="user_name"></td>
+          </tr>
+          <tr>
+            <th><label for="user_pw" class="required">비밀번호</label></th>
+            <td colspan="2"><input type="password" id="user_pw"></td>
+          </tr>
+          <tr>
+            <th><label for="user_pwcheck" class="required">비밀번호 확인</label></th>
+            <td colspan="2"><input type="password" id="user_pwcheck"></td>
+          </tr>
+          <tr>
+            <th><label for="user_division" class="required">소속기관</label></th>
+            <td colspan="2"><input type="text" id="user_division"></td>
+          </tr>
+          <tr>
+            <th><label for="user_team" class="required">부서</label></th>
+            <td colspan="2"><input type="text" id="user_team"></td>
+          </tr>
+          <tr>
+            <th><label for="user_position">직급</label></th>
+            <td colspan="2"><input type="text" id="user_position"></td>
+          </tr>
+          <tr>
+            <th><label for="user_number">연락처</label></th>
+            <td colspan="2"><input type="text" id="user_number"></td>
+          </tr>
+          <tr>
+            <th><label for="user_phonenumber" class="required">핸드폰</label></th>
+            <td colspan="2"><input type="text" id="user_phonenumber"></td>
+          </tr>
+          <tr>
+            <th><label for="user_email">이메일</label></th>
+            <td colspan="2"><input type="text" id="user_email"></td>
+          </tr>
+          <tr>
+            <th><label for="user_authority" class="required">권한</label></th>
+            <td colspan="2">
+              <select name="authority" title="user_authority">
+                <option value="권한선택">권한선택</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var mydata2 = [
+    { 't1': '관리자', 't2': 'sysadmin', 't3': '홍길동', 't4': '경북도청', 't5': '', 't6': '', 't7': '2019-12-13', 't8': 'edit' },
+    { 't1': '사용자', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': 'edit' },
+    { 't1': '사용자', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': 'edit' },
+    { 't1': '', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': 'edit' },
+    { 't1': '', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': '' }
+  ]
+  $("#jqgrid2").jqGrid({
+    data: mydata2,
+    datatype: "local",
+    colModel: [
+      { label: '권한', name: 't1', width: 120 },
+      { label: '사용자ID', name: 't2', width: 120 },
+      { label: '사용자명', name: 't3', width: 200 },
+      { label: '소속기관', name: 't4', width: 200 },
+      { label: '부서', name: 't5', width: 120 },
+      { label: '직급', name: 't6', width: 250 },
+      { label: '등록일', name: 't7', width: 250 },
+      { label: '수정', name: 't8', width: 100, formatter: tblBtn }
+    ],
+    multiselect: true,
+    loadonce: true,
+    viewrecords: true,
+    height: 455,
+    rowTotal: -1,
+    pager: '#jqgrid2Pager'
+  });
+
+  jqgridInit();
+</script>
+</body>
+
+</html>

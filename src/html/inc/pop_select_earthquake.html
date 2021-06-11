@@ -8,8 +8,10 @@
       <div class="pop_cont">
         <ul class="pop_ul flex_wrap f_sb">
           <li>
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="from" required title="시작 날짜 선택">~
-            <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="to date" dataformat="to" required title="종료  날짜 선택">
+            <span class="period period_multi">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+            </span>
           </li>
           <li>
             <label for="select_eq_scale">규모</label>

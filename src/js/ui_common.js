@@ -176,6 +176,9 @@ function tblBtn(cellValue, options, rowdata, action) {
     case "down":
       txt = "down";
       break;
+    case "file":
+      txt = "file";
+      break;
     default:
       txt = "none";
   }
