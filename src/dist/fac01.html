@@ -119,6 +119,91 @@
 </div>
 
 </div>
+<div class="pop_overlay">
+  <div class="pop_wrap pop_register_fac">
+    <div class="pop_tit">
+      <h1>시설물 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_pop">
+          <caption>시설물등록</caption>
+          <tr>
+            <th scope="row"><label for="fac_number">시설물번호</label></th>
+            <td><input type="text" id="fac_number"></td>
+          </tr>
+          <tr>
+            <th><label for="fac_name">시설물명</label></th>
+            <td><input type="text" id="fac_name"></td>
+          </tr>
+          <tr>
+            <th><label for="fac_done">준공일자</label></th>
+            <td>
+            <span class="date_wrap">
+            <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="datepic" required title="준공일자 선택"></span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="fac_location">위치</label></th>
+            <td>
+              <select name="location" id="fac_location" class="input_33">
+                <option value="">시도</option>
+              </select>
+              <select name="fac_location" class="input_33">
+                <option value="">시군구</option>
+              </select>
+            <input type="text" class="input_33" title="fac_location">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="fac_latitude">위도</label></th>
+            <td><input type="text" id="fac_latitude"></td>
+          </tr>
+          <tr>
+            <th><label for="fac_longitude">경도</label></th>
+            <td><input type="text" id="fac_longitude"></td>
+          </tr>
+          <tr>
+            <th><label for="fac_Management">관리주체</label></th>
+            <td><input type="text" id="fac_Management"></td>
+          </tr>
+          <tr>
+            <th><label for="fac_contactnumber">연락처</label></th>
+            <td><input type="text" id="fac_contactnumber"></td>
+          </tr>
+          <tr>
+            <th><label for="fac_type">시설물종류</label></th>
+            <td>
+              <select name="type" id="fac_type">
+                <option value="">도로/교량</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="fac_kind">시설물종</label></th>
+            <td>
+              <select name="kind" id="fac_kind">
+                <option value="">1종</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="fac_sort">시설물구분</label></th>
+            <td>
+              <select name="sort" id="fac_sort">
+                <option value="">도로/교량</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
 var fac01 = [
   {'t1':'BR2018_0000089', 't2':'명곡교', 't3':'경상남도 양산시 명곡로 306-14', 't4':'양산시', 't5':'양산시청 도로관리과', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'dtl'},

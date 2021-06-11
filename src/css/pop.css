@@ -24,7 +24,7 @@
 .pop_register_user,
 .pop_userinfo,
 .pop_userinfo_edit,
-.pop_userinfo_pw{width:350px;}
+.pop_userinfo_pw{width:380px;}
 
 /* pop_dbSelect */
 .pop_body{padding:22px 20px;}
@@ -34,10 +34,10 @@
 .btn_search{position:relative;top:1px;background-color:#727272;padding:4px 14px 5px;border-radius:3px;color:#fff;}
 
 /* pop_register_sensor */
-.email_file #upFile{display:none;}
-.email_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
-.email_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
-.email_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
+.fac_file #upFile{display:none;}
+.fac_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.fac_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
+.fac_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
 
 /* pop_upload_acc_done */
 .upload_done{padding:0 0 30px 50px;}

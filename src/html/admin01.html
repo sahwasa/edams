@@ -53,8 +53,10 @@
   </div>
   @@include('inc/footer.html')
 </div>
+  @@include('inc/pop_register_user.html')
+
 <script>
-var fac01 = [
+var mydata2 = [
   {'t1':'관리자', 't2':'sysadmin', 't3':'홍길동', 't4':'경북도청', 't5':'', 't6':'', 't7':'2019-12-13', 't8':'edit'},
   {'t1':'사용자', 't2':'', 't3':'', 't4':'', 't5':'', 't6':'', 't7':'', 't8':'edit'},
   {'t1':'사용자', 't2':'', 't3':'', 't4':'', 't5':'', 't6':'', 't7':'', 't8':'edit'},
@@ -62,7 +64,7 @@ var fac01 = [
   {'t1':'', 't2':'', 't3':'', 't4':'', 't5':'', 't6':'', 't7':'', 't8':''}
 ]
 $("#jqgrid2").jqGrid({
-  data: fac01,
+  data: mydata2,
   datatype: "local",
   colModel: [
     {label:'권한',name:'t1',width:120},
