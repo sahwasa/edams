@@ -145,6 +145,7 @@ td .axi{margin-right:0;}
 [required]::after,
 .required::after{position:relative;content:"\e705";color:#f35857;margin-left:2px;font-family:"axicon";font-size:10px;}
 
+
 /* search */
 .search{display:flex;justify-content:end;align-items:center;padding:5px 6px 8px;margin:12px 0;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;
 }
@@ -442,3 +443,4 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-hdiv{border-bottom:1px solid #000;}
 .ui-jqgrid .ui-icon-asc{margin-top:-17px;}
 .ui-jqgrid .ui-icon-desc{margin-top:-10px;margin-left:0;}
+.ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:0;}
