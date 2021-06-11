@@ -17,7 +17,24 @@
 
 /* acc */
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
-
+.acc02 .f_sb .section_l{width:calc(100% - 520px);}
+.notice_wrap{border:1px solid #000;}
+.notice_tit{border-bottom:1px solid #000;text-align:center;padding:13px 20px 10px 50px;background:url(../images/logo_kma.png) 15px 0 no-repeat;background-size:contain;}
+.notice_tit h1{font-size:20px;word-spacing:1.5em;font-weight:bold;margin-bottom:6px;}
+.notice_tit .notice_date{text-align:right;}
+.notice_body{padding:15px 20px;}
+.notice_body dl{display:flex;flex-wrap:wrap;}
+.notice_body dt,
+.notice_body dd{margin:5px 0;line-height:17px;}
+.notice_body dt{width:80px; font-weight:bold;}
+.notice_body dt:nth-of-type(2){word-spacing:1.6em;}
+.notice_body dd{width:calc(100% - 80px);}
+.notice_foot{padding:10px 15px;}
+.notice_foot h2{margin-bottom:5px;}
+.tbl_refer th,
+.tbl_refer td{border:1px solid #000;padding:3px 5px;text-align:left;word-break:keep-all;}
+.tbl_refer th{width:30px;text-align:center;}
+.notice_foot p{margin-top:4px;}
 
 /*  */
 .acc03 .btn_wrap,

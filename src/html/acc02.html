@@ -1,0 +1,135 @@
+@@include('inc/top.html')
+<div class="wrap">
+   <div class="header">
+      @@include('inc/header.html')
+   </div>
+   <div class="cont acc02">
+      <div class="breadcrumb">
+         <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">가속도 계측자료 관리</a></li>
+            <li>지진 통보문 관리</li>
+         </ul>
+      </div>
+      <div class="tit">
+         <h2>지진 통보문 관리</h2>
+      </div>
+      <div class="flex_wrap f_sb">
+         <div class="section section_l">
+            <div class="tit_h3">
+               <h3>지진 수신 목록</h3>
+            </div>
+            <div class="article">
+              <ul class="search f_sb">
+                <li>
+                  <span class="period period_multi">
+                    <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+                    <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+                  </span>
+                </li>
+                <li>
+                  <label for="">규모</label>
+                  <input type="number" name="" id="" min="1" max="9" value="1" title="규모 범위 최소값" />이상 ~
+                  <input type="number" name="" id="" min="1" max="9" title="규모 범위 최대값" />이하
+                </li>
+                <li>
+                  <input type="text" placeholder="발생지역" title="발생지역" />
+                </li>
+                <li>
+                  <button type="button" class="btn_gray btn_search">검색</button>
+                </li>
+            </ul>
+            </div>
+            <div class="tbl_wrap">
+              <table id="jqGrid1" class="jq-grid"></table>
+            </div>
+         </div>
+         <div class="section section_r">
+            <div class="article">
+              <div class="tit_h3">
+                <h3>지진 통보문</h3>
+              </div>
+              <!-- 이미지인지, 데이터를 불러오는지 모르겠네 -_-; 이미지면 notice_wrap 아래 노드 지우고 이미지로 치환하면될듯! -->
+              <div class="notice_wrap">
+                <div class="notice_tit">
+                  <h1>지 진 정 보</h1>
+                  <p class="notice_date">2020년 07월 07일 14시 11분 발표</p>
+                </div>
+                <div class="notice_body">
+                  <dl>
+                    <dt>발생시각</dt>
+                    <dd>2020sus 07월 07일 14시 08분 23초</dd>
+                    <dt>규 모</dt>
+                    <dd>3.3 M<sub>L</sub></dd>
+                    <dt>발생위치</dt>
+                    <dd>인천 옹진군 연평도 남남서쪽 54㎞ 해역 
+                      <p>(북위 37.19°, 동경 125.55°)</p>
+                    </dd>
+                    <dt>발생깊이</dt>
+                    <dd>12㎞
+                      <div class="figure">
+                        <img src="http://placehold.it/286x190" alt="">
+                      </div>
+                    </dd>
+                    <dt>계기진도</dt>
+                    <dd>최대진도 Ⅲ(인천), Ⅱ(충남)
+                      <p>상세정보 : http://www.wather.go.kr/KML...</p>
+                    </dd>
+                    <dt>참고사항</dt>
+                    <dd>지진 발생 인근 지역은 지진동을 느낄 수 있음. 안전에 유의하기 바람</dd>
+                  </dl>
+                </div>
+                <div class="notice_foot">
+                  <div class="refer">
+                    <h2>[참고] 진도 등급별 현상 요약</h2>
+                    <table class="tbl_refer">
+                      <caption>진도 등급별 현상</caption>
+                      <tr>
+                        <th scope="row">Ⅲ</th>
+                        <td>실내, 특히 건물 위층에 있는 사람이 현저하게 느끼며, 정지하고 있는 차가 약간 흔들린다.</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ⅱ</th>
+                        <td>조용한 상태나 건물 위층에 있느 소수의 사람만 느낀다.</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ⅰ</th>
+                        <td>대부분 사람들은 느낄 수 없으나, 지진계에는 기록된다.</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <p>※ 진도정보는 해당 지역의 최대 계기 진도를 나타냅니다.</p>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   @@include('inc/footer.html')
+</div>
+<script>
+var mydata1 = [
+  {"t1": "지자체", "t2": "경상남도", "t3": "경상남도", "t4": "2.5", "t5": "2021-03-16 02:51:42", "t6": "0.1252", "t7": "정상", "t8": "2021-03-16 02:51:42" , "t9": "zip"  },
+  {"t1": "지자체", "t2": "창원시", "t3": "창원시청", "t4": "3.2", "t5": "2021-03-16 02:51:42", "t6": "0.1252", "t7": "미수신" , "t8": "-" , "t9": "" },
+  {"t1": "기상청", "t2": "대구기상청", "t3": "안동댐", "t4": "5.0", "t5": "2021-03-16 02:51:42", "t6": "0.1252", "t7": "정상", "t8": "2021-03-16 02:51:42" , "t9": "zip" }
+];
+$("#jqGrid1").jqGrid({
+  data: mydata1,
+  datatype: "local",
+  colModel: [
+    {label:'지진번호',name:'t1',width:100},
+    {label:'발생시각',name:'t2',width:120},
+    {label:'위도',name:'t3',width:150},
+    {label:'경도',name:'t4',width:150},
+    {label:'규모',name:'t5',width:230},
+    {label:'발생위치',name:'t6',width:180},
+  ],
+  loadonce : true,
+  viewrecords: true,
+  height: 547,
+  rowTotal: -1
+});
+</script>
+</body>
+
+</html>
