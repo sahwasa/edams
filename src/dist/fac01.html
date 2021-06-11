@@ -66,39 +66,39 @@
 </div>
   </div>
   <div class="cont fac01">
-  <div class="breadcrumb">
-    <ul>
-      <li><a href="">HOME</a></li>
-      <li><a href="">시설물 관리</a></li>
-      <li>시설물정보 관리</li>
-    </ul>
-  </div>
-  <div class="tit">
-    <h2>시설물정보 관리</h2>
-  </div>
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">시설물 관리</a></li>
+        <li>시설물정보 관리</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>시설물정보 관리</h2>
+    </div>
     <div>
       <div class="section">
         <div class="article">
           <ul class="search flex_wrap f_sb">
-          <li>
-            <select title="시설물 종류">
-              <option value="">시설물종류</option>
-            </select>
-          </li>
-          <li>
-          <select title="시설물 구분">
-              <option value="">시설물구분</option>
-            </select>
-          </li>
-          <li>
-            <select title="시설물 종">
-              <option value="">시설물종</option>
-            </select>
-          </li>
-          <li>
-            <button type="button" class="btn_gray btn_search">검색</button>
-          </li>
-        </ul>
+            <li>
+              <select title="시설물 종류">
+                <option value="">시설물종류</option>
+              </select>
+            </li>
+            <li>
+              <select title="시설물 구분">
+                <option value="">시설물구분</option>
+              </select>
+            </li>
+            <li>
+              <select title="시설물 종">
+                <option value="">시설물종</option>
+              </select>
+            </li>
+            <li>
+              <button type="button" class="btn_gray btn_search">검색</button>
+            </li>
+          </ul>
         </div>
         <div class="article">
           <div class="tbl_top">
@@ -108,7 +108,7 @@
             </div>
           </div>
           <div class="tbl_wrap">
-              <table id="fac01" class="jq-grid"></table>
+            <table id="fac01" class="jq-grid"></table>
           </div>
         </div>
       </div>
@@ -205,35 +205,36 @@
   </div>
 </div>
 <script>
-var fac01 = [
-  {'t1':'BR2018_0000089', 't2':'명곡교', 't3':'경상남도 양산시 명곡로 306-14', 't4':'양산시', 't5':'양산시청 도로관리과', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'dtl'},
-  {'t1':'', 't2':'개곡교', 't3':'', 't4':'-', 't5':'', 't6':'도로교량', 't7':'1종', 't8':'교량', 't9':'dtl'},
-  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''},
-  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''},
-  {'t1':'', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':''}
-]
-$("#fac01").jqGrid({
-  data: fac01,
-  datatype: "local",
-  colModel: [
-    {label:'시설물번호',name:'t1',width:120},
-    {label:'시설물명',name:'t2',width:120},
-    {label:'위치',name:'t3',width:200},
-    {label:'행정구역',name:'t4',width:200},
-    {label:'관지주체',name:'t5',width:120},
-    {label:'시서물종류',name:'t6',width:250},
-    {label:'시설물종',name:'t7',width:250},
-    {label:'시설물구분',name:'t8',width:100},
-    {label:'상세보기',name:'t9',width:100, formatter : tblBtn}
-  ],
-  multiselect:true,
-  loadonce : true,
-  viewrecords: true,
-  height: 455,
-  rowTotal: -1
-});
+  var fac01 = [
+    { 't1': 'BR2018_0000089', 't2': '명곡교', 't3': '경상남도 양산시 명곡로 306-14', 't4': '양산시', 't5': '양산시청 도로관리과', 't6': '도로교량', 't7': '1종', 't8': '교량', 't9': 'dtl' },
+    { 't1': '', 't2': '개곡교', 't3': '', 't4': '-', 't5': '', 't6': '도로교량', 't7': '1종', 't8': '교량', 't9': 'dtl' },
+    { 't1': '', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': '' },
+    { 't1': '', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': '' },
+    { 't1': '', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': '' }
+  ]
+  $("#fac01").jqGrid({
+    data: fac01,
+    datatype: "local",
+    colModel: [
+      { label: '시설물번호', name: 't1', width: 120 },
+      { label: '시설물명', name: 't2', width: 120 },
+      { label: '위치', name: 't3', width: 200 },
+      { label: '행정구역', name: 't4', width: 200 },
+      { label: '관지주체', name: 't5', width: 120 },
+      { label: '시서물종류', name: 't6', width: 250 },
+      { label: '시설물종', name: 't7', width: 250 },
+      { label: '시설물구분', name: 't8', width: 100 },
+      { label: '상세보기', name: 't9', width: 100, formatter: tblBtn }
+    ],
+    multiselect: true,
+    loadonce: true,
+    viewrecords: true,
+    height: 455,
+    rowTotal: -1
+  });
 
-jqgridInit();
+  jqgridInit();
 </script>
 </body>
+
 </html>
