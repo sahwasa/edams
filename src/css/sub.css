@@ -18,7 +18,6 @@
 /* acc */
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
 
-
 /*  */
 .acc03 .btn_wrap,
 .fac01 .btn_wrap{margin-bottom:5px;text-align:right;}
@@ -28,6 +27,10 @@
 .fac01-1 .f_sb .section_r{width:calc(100% - 600px);}
 .fac01-1 .section_r .article:last-child{margin-top:40px;}
 textarea[name ="MCT_preview"]{width:100%;height:165px;overflow-y:scroll;}
+
+
+/* dam02 */
+.dam02_tab1 .f_sb .section_r{width:calc(100% - 681px);}
 
 .tbl_sta th{width:150px;}
 .tbl_sta td{width:25%;}
