@@ -1,0 +1,130 @@
+@@include('inc/top.html')
+<div class="wrap">
+  <div class="header">
+    @@include('inc/header.html')
+  </div>
+  <div class="cont dam01">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">지진피해평가</a></li>
+        <li>안전성평가 모니터링</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>안전성평가 모니터링</h2>
+    </div>
+    <div class="flex_wrap f_sb">
+      <div class="section section_l">
+        <div class="article">
+          <div class="tit_h3">
+              <h3 class="blind">진도분포도</h3>
+              <div class="btn_wrap">
+                <button type="button" class="btn btn_blueline">다른 지진 선택</button>
+              </div>
+          </div>
+          <table class="tbl_row tbl_quakeinfo">
+              <caption>지진정보</caption>
+              <tr>
+                <th scope="row">지진번호</th>
+                <td>20210602001</td>
+                <th scope="row">규모</th>
+                <td>2.6</td>
+                <th scope="row">발생시각</th>
+                <td>2021-06-02 12:34:56</td>
+              </tr>
+              <tr>
+                <th scope="row">발생위치</th>
+                <td colspan="6">경북 포항시 북구 북쪽 9km지역</td>
+              </tr>
+          </table>
+        </div>
+        <div class="article">
+          <div class="tab">
+            <ul class="tab_list">
+              <li class="on"><a href="">안전성평가 분포</a></li>
+              <li><a href="">피해예측결과</a></li>
+            </ul>
+          </div>
+          <ul class="search flex_wrap f_sb">
+            <li>
+              <select title="시설물 종류">
+                <option value="">시설물종류</option>
+              </select>
+            </li>
+            <li>
+              <select title="평가결과">
+                <option value="">평가결과</option>
+              </select>
+            </li>
+            <li>
+              <input type="text" name="" id="" title="시설물명" class="ipt_facname" placeholder="시설물명" />
+            </li>
+            <li>
+              <button type="button" class="btn_gray btn_search">검색</button>
+            </li>
+          </ul>
+          <div class="tbl_wrap">
+            <table id="fac01" class="jq-grid"></table>
+          </div>
+        </div>
+      </div>
+      <div class="section section_r">
+        <div class="dam_count">
+          <ul class="dam_list">
+            <li>총건수<span>150건</span></li>
+            <li>안전<span>150건</span></li>
+            <li>점검필요<span>150건</span></li>
+            <li>수행중<span>150건</span></li>
+            <li>미수행<span>150건</span></li>
+          </ul>
+        </div>
+        <div class="gis_wrap">
+            <div class="gis_area">
+              <img src="http://placehold.it/719x637" width="100%" height="100%" alt="지도 영역" />
+              <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
+              <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
+              <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
+              <i class="i_status i_unperformed" style="left:200px;top:350px;">미수행</i> 
+            </div>
+            <div class="legend">
+              <h3>범례</h3>
+              <ul>
+               <li class="i_status i_safe">안전</li>
+               <li class="i_status i_needcheck">점검필요</li>
+               <li class="i_status i_ing">수행중</li>
+                <li class="i_status i_unperformed">미수행</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  @@include('inc/footer.html')
+</div>
+<script>
+  var fac01 = [
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'reject'}
+  ]
+  $("#fac01").jqGrid({
+    data: fac01,
+    datatype: "local",
+    colModel: [
+      { label: '시설물번호', name: 't1', width: 120 },
+      { label: '시서물종류', name: 't2', width: 120 },
+      { label: '시설물명', name: 't3', width: 150 },
+      { label: '위치', name: 't4', width: 300 },
+      { label: '평가결과', name: 't5', width: 100, formatter: tagAxi }
+    ],
+    multiselect: true,
+    loadonce: true,
+    viewrecords: true,
+    height: 339,
+    rowTotal: -1
+  });
+
+  jqgridInit();
+</script>
+</body>
+
+</html>

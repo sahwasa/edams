@@ -144,7 +144,6 @@ td .axi{margin-right:0;}
 [required]::after,
 .required::after{position:relative;content:"\e705";color:#f35857;margin-left:2px;font-family:"axicon";font-size:10px;}
 
-
 /* search */
 .search{display:flex;justify-content:end;align-items:center;padding:5px 6px 8px;margin:11px 0;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:30px;}
 .search ul{display:flex;align-items:center;}
@@ -312,7 +311,6 @@ td, th{font-size:13px;}
 .tbl_evt.evt4{background-color:#fa6e1a;}
 .tbl_evt.evt5{background-color:#ff0000;}
 
-
 /* paginate */
 .paginate{margin-top:15px;padding:15px 0;text-align:center}
 .paginate a,.paginate strong{display:inline-block;position:relative;_width /**/:14px;min-width:22px;padding:1px 5px 2px 4px;color:#333;font-size:15px;line-height:normal;box-sizing:border-box;font-weight:normal;margin:0 3px;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
@@ -351,9 +349,10 @@ color:#ccc;transform:translate(-50%, -50%);}
 .gis_area .i_status{position:absolute;font-size:0;}
 .gis_area .i_mag::before{left:0;top:0;}
 .gis_wrap .legend{position:absolute;right:10px;bottom:10px;background-color:rgba(255,255,255,.5);padding:8px;box-shadow:1px 2px 1px rgba(0,0,0,.14);border:1px solid #ababab;}
-.legend h3{display:block;margin-bottom:10px;font-weight:bold;text-align:center;font-size:12px;}
-.legend li{font-size:11px;text-align:left;line-height:18px;}
 
+.legend h3{display:block;font-weight:bold;text-align:center;font-size:12px;color:#000;margin-bottom:5px;}
+.legend li{font-size:11px;text-align:left;line-height:14px;margin-top:4px;vertical-align:top;}
+.legend li:first-child{margin-top:0;}
 .i_noreceive::before,
 .i_mag::before{display:inline-block;position:relative;left:1px;top:2px;width:11px;height:11px;border:1px solid #000;margin-right:5px;box-sizing:border-box;content:"";border-radius:50%;}
 .mag1::before{background:#fff;}
@@ -367,8 +366,12 @@ color:#ccc;transform:translate(-50%, -50%);}
 .mag9::before{background:#4a2602;}
 .mag10::before{background:#000;}
 
-.i_status::before{display:inline-block;content:"";width:14px;height:14px;background:url(../images/ico_legend.png) 0 0 no-repeat;margin-right:3px;vertical-align:middle;border-radius:50%;border:none;}
+.i_status::before{display:inline-block;content:"";width:14px;height:14px;background:url(../images/ico_legend.png) 0 0 no-repeat;margin-right:3px;vertical-align:top;border-radius:50%;border:none;}
 .i_noreceive::before{background-position-y:1px;top:0;}
+.i_safe::before{background-position-y:-22px;}
+.i_needcheck::before{background-position-y:-45px;}
+.i_ing::before{background-position-y:-68px;}
+.i_unperformed::before{background-position-y:-91px;}
 
 .gis_area .i_status{position:absolute;width:15px;height:15px;font-size:0;overflow:hidden;text-indent:-9999px;}
 .gis_area .i_status::before{position:absolute;left:1px;top:1px;}
@@ -418,12 +421,13 @@ dd.btn_wrap{display:flex;align-items:center;}
 .dash_dl_list dt::before{content:"-";}
 
 /* tab */
-.tab_list{display:flex;border-bottom:1px solid #ccd2d7;margin-bottom:10px;}
+.tab_list{display:flex;border-bottom:1px solid #ccc;margin-bottom:7px;}
+.tab_list li{position:relative;top:1px;border:1px solid #ccc;margin-left:-1px;}
 .tab_list li:first-child{margin-left:0;}
-.tab_list a{width:128px;border:1px solid #cccccc;border-bottom:none;color:#999999;line-height:30px;padding:0 15px;font-size:14px;letter-spacing:-.05em;text-align:center;font-weight:bold;}
-.tab_list .on{background-color:#333333;}
-.tab_list .on a{color:#fff!important;font-weight:normal;}
-.tab_list :hover a{color:#999999;}
+.tab_list a{min-width:130px;color:#999;line-height:30px;padding:0 15px;font-size:14px;letter-spacing:-.05em;text-align:center;}
+.tab_list .on{background-color:#333;border-color:transparent;}
+.tab_list .on a{color:#fff!important;font-weight:bold;}
+.tab_list :hover a{color:#333;}
 
 /* jquery-ui custom */
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
