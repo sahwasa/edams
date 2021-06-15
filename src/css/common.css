@@ -46,8 +46,7 @@ select{min-width:50px;padding-right:20px;}
 .btn_ico,
 .btn{border:1px solid transparent;background-color:#fff;color:#fff;text-align:center;text-indent:0;padding:0 16px;vertical-align:middle;border-radius:3px;font-size:14px;letter-spacing:-.1em;white-space:nowrap;line-height:26px;}
 .btn:hover{color:#fff;}
-.btn_s{padding:0 15px 1px;border-radius:2px;font-size:13px;border-width:1px;line-height:18px;}
-.jq-grid .btn_s{min-width:61px;}
+.btn_s{padding:0 15px 1px;border-radius:2px;font-size:13px;border-width:1px;line-height:17px;}
 .btn_line{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.5);}
 .btn_white{color:#666;border-color:#d7d7d7;background-color:#fff;}
 .btn_red{background-color:#f14a4a;}
@@ -57,8 +56,8 @@ select{min-width:50px;padding-right:20px;}
 .btn_blueline:hover{color:#fff;background-color:#0747a6;}
 .btn_grayline{color:#333;border-color:#333;}
 .btn_grayline:hover{color:#fff;background-color:#333;}
-.btn_redline{color:#f14a4a;border-color:#f14a4a;}
-.btn_redline:hover{color:#fff;background-color:#f14a4a;}
+.btn_redline{color:#f00;border-color:#f00;}
+.btn_redline:hover{color:#fff;background-color:#f00;}
 .btn_greenline{color:#399502;border-color:#399502;}
 .btn_greenline:hover{color:#fff;background-color:#399502;}
 .btn_gray{background-color:#333;border-color:transparent;}
@@ -66,7 +65,6 @@ select{min-width:50px;padding-right:20px;}
 .btn_lightgray{background-color:#c2c2c2;}
 .btn:disabled,
 .btn:disabled:hover{color:#ccd2de;border-color:#ccd2de;background-color:#fff;cursor:default;}
-
 
 .btn_axi,
 .tag_axi{padding-right:9px;}
@@ -294,23 +292,6 @@ td, th{font-size:13px;}
 .tbl_basicinfo th{width:179px;}
 .tbl_basicinfo td{width:421px;}
 
-.tbl_tag_evt::before{position: relative;top:2px;display:inline-block;content:'';width:14px;height:14px;background:url(../images/ico_legend.png);position:relative;top:1px;margin-right:4px;}
-.tbl_tag_evt.evt1::before{background-position:0 106px;}
-.tbl_tag_evt.evt2::before{background-position:0 83px;}
-.tbl_tag_evt.evt3::before{background-position:0 60px;}
-.tbl_tag_evt.evt4::before{background-position:0 37px;}
-.tbl_tag_evt.evt5{border:1px solid #f00;padding:0px 14px 1px;border-radius:3px;color:#f00;background-color:#fff;}
-.tbl_tag_evt.evt5:hover,.tbl_tag_evt.evt5:active{background-color:#ffe6e6;}
-.tbl_tag_evt.evt5::before{display:none;}
-
-.tbl_evt{position:relative;width:118px;margin-right:10px;padding:12px 60px 12px 5px;border-radius:3px;font-size:13px;color:#fff;text-align:center}
-.tbl_evt b{position:absolute;top:calc(50% - 12.5px);right:5px;width:55px;line-height:25px;margin-left:3px;border-radius:12.5px;background-color:#fff;color:#777}
-.tbl_evt.evt1{background-color:#024684;}
-.tbl_evt.evt2{background-color:#58a505;}
-.tbl_evt.evt3{background-color:#facd1a;}
-.tbl_evt.evt4{background-color:#fa6e1a;}
-.tbl_evt.evt5{background-color:#ff0000;}
-
 /* paginate */
 .paginate{margin-top:15px;padding:15px 0;text-align:center}
 .paginate a,.paginate strong{display:inline-block;position:relative;_width /**/:14px;min-width:22px;padding:1px 5px 2px 4px;color:#333;font-size:15px;line-height:normal;box-sizing:border-box;font-weight:normal;margin:0 3px;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
@@ -350,7 +331,7 @@ color:#ccc;transform:translate(-50%, -50%);}
 .gis_area .i_mag::before{left:0;top:0;}
 .gis_wrap .legend{position:absolute;right:10px;bottom:10px;background-color:rgba(255,255,255,.5);padding:8px;box-shadow:1px 2px 1px rgba(0,0,0,.14);border:1px solid #ababab;}
 
-.legend h3{display:block;font-weight:bold;text-align:center;font-size:12px;color:#000;margin-bottom:5px;}
+.legend h3{display:block;font-weight:bold;text-align:center;font-size:12px;color:#000;margin-bottom:8px;}
 .legend li{font-size:11px;text-align:left;line-height:14px;margin-top:4px;vertical-align:top;}
 .legend li:first-child{margin-top:0;}
 .i_noreceive::before,
@@ -469,5 +450,3 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
 .ui-jqgrid-hdiv input[type = checkbox]{position:relative;top:-3px;}
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background-color:#f0f7ff;}
-
-.appro::after{position:relative;top:1px;left:3px;content:'~';display:inline-block;font-size:15px;}

@@ -58,19 +58,32 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;overflow-y:scroll;}
 .dam01 .section_l .tab{margin-top:26px;}
 .ipt_facname{width:320px;}
 .dam_count{margin-bottom:5px;}
-.dam_list{display:flex;}
 .dam_count li{position:relative;width:118px;height:38px;font-size:13px;color:#fff;font-weight:600;line-height:38px;border-radius:3px;margin-left:10px;text-align:center;padding-right:55px;letter-spacing:-.1em;}
 .dam_count li:nth-child(1){background-color:#024684;margin-left:0;}
 .dam_count li:nth-child(2){background-color:#58a505;}
 .dam_count li:nth-child(3){background-color:#facd1a;}
 .dam_count li:nth-child(4){background-color:#fa6e1a;}
 .dam_count li:nth-child(5){background-color:#f00}
-.dam_count li span{position:absolute;top:50%;right:6px;px;width:50px;line-height:24px;background-color:#fff;border-radius:12px;text-align:center;color:#777;transform: translateY(-50%);}
+.dam_count li span{position:absolute;top:50%;right:6px;width:50px;line-height:24px;background-color:#fff;border-radius:12px;text-align:center;color:#777;transform:translateY(-50%);}
 
-.dam02_tab1 .f_sb .section_r{width:calc(100% - 681px);}
+.dam02 .f_sb .section_r{width:calc(100% - 681px);}
 .tbl_sta th{width:150px;}
 .tbl_sta td{width:25%;}
 .recorder_sensor{counter-reset:recorder;}
 .recorder h4::after{counter-increment:recorder;content:"#"counter(recorder);margin-left:5px;}
 .recorder .sensor{margin:10px 0 15px;}
 .recorder:last-of-type .sensor{margin-bottom:0;}
+
+.tbl_tag_evt::before{position: relative;top:2px;display:inline-block;content:'';width:14px;height:14px;background:url(../images/ico_legend.png);position:relative;top:1px;margin-right:4px;}
+.tbl_tag_evt.evt1::before{background-position:0 106px;}
+.tbl_tag_evt.evt2::before{background-position:0 83px;}
+.tbl_tag_evt.evt3::before{background-position:0 60px;}
+.tbl_tag_evt.evt4::before{background-position:0 37px;}
+
+.tbl_evt{position:relative;width:118px;margin-right:10px;padding:12px 60px 12px 5px;border-radius:3px;font-size:13px;color:#fff;text-align:center}
+.tbl_evt b{position:absolute;top:calc(50% - 12.5px);right:5px;width:55px;line-height:25px;margin-left:3px;border-radius:12.5px;background-color:#fff;color:#777}
+.tbl_evt.evt1{background-color:#024684;}
+.tbl_evt.evt2{background-color:#58a505;}
+.tbl_evt.evt3{background-color:#facd1a;}
+.tbl_evt.evt4{background-color:#fa6e1a;}
+.tbl_evt.evt5{background-color:#ff0000;}

@@ -70,7 +70,6 @@
       <ul>
         <li><a href="">HOME</a></li>
         <li><a href="">지진피해평가</a></li>
-        <li><a href="">지진피해평가</a></li>
         <li>지진피해평가 실행</li>
       </ul>
     </div>
@@ -102,15 +101,19 @@
         </table>
         <div class="gis_wrap">
           <div class="gis_area">
-            <img src="http://placehold.it/649x505" width="100%" height="100%" alt="지도 영역" />
+            <img src="http://placehold.it/651x505" width="100%" height="100%" alt="지도 영역" />
+            <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
+            <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
+            <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
+            <i class="i_status i_unperformed" style="left:200px;top:350px;">미수행</i> 
           </div>
           <div class="legend">
             <h3>범례</h3>
             <ul>
-              <li class="tbl_tag_evt evt1">안전</li>
-              <li class="tbl_tag_evt evt2">점검필요</li>
-              <li class="tbl_tag_evt evt3">수행중</li>
-              <li class="tbl_tag_evt evt4">미수행</li>
+              <li class="i_status i_safe">안전</li>
+              <li class="i_status i_needcheck">점검필요</li>
+              <li class="i_status i_ing">수행중</li>
+              <li class="i_status i_unperformed">미수행</li>
             </ul>
           </div>
         </div>
@@ -120,11 +123,6 @@
           <div class="tit_h3">
             <h3 class="blind">이벤트 발생정보</h3>
           </div>
-
-
-
-
-
           <div class="tab" tabBtn>
             <ul class="tab_list">
               <li class="on"><a href="">추정가속도생성</a></li>
@@ -134,7 +132,7 @@
           <div class="tab_conts" tabConts>
             <div class="tab_cont" tabCont>
               <ul class="search flex_wrap f_sb">
-                <li class="appro">
+                <li>
                   <select title="시설물 종류">
                     <option value="">시설물 종류</option>
                   </select>
@@ -145,7 +143,7 @@
                   </select>
                 </li>
                 <li class="search_li">
-                  <input type="text" placeholder="시설물명">
+                  <input type="text" title="시설물명" placeholder="시설물명">
                 </li>
                 <li>
                   <button type="button" class="btn_gray btn_search">검색</button>
@@ -160,18 +158,18 @@
                 <table id="jqGrid2" class="jq-grid"></table>
               </div>
             </div>
-
-
             <div class="tab_cont" tabCont>
-              <ul class="flex_wrap">
-                <li class="tbl_evt evt1">총건수<b>150건</b></li>
-                <li class="tbl_evt evt2">안전 <b>150건</b></li>
-                <li class="tbl_evt evt3">점검필요<b>102건</b></li>
-                <li class="tbl_evt evt4">수행중<b>150건</b></li>
-                <li class="tbl_evt evt5">미수행<b>102건</b></li>
-              </ul>
+              <div class="dam_count">
+                <ul class="flex_wrap">
+                  <li>총건수<span>150건</span></li>
+                  <li>안전<span>150건</span></li>
+                  <li>점검필요<span>150건</span></li>
+                  <li>수행중<span>150건</span></li>
+                  <li>미수행<span>150건</span></li>
+                </ul>
+              </div>
               <ul class="search flex_wrap f_sb">
-                <li class="appro">
+                <li>
                   <select title="시설물 종류">
                     <option value="">시설물 종류</option>
                   </select>
@@ -182,7 +180,7 @@
                   </select>
                 </li>
                 <li class="search_li">
-                  <input type="text" placeholder="시설물명">
+                  <input type="text" title="시설물명" placeholder="시설물명">
                 </li>
                 <li>
                   <button type="button" class="btn_gray btn_search">검색</button>
@@ -217,15 +215,15 @@
     data: mydata2,
     datatype: "local",
     colModel: [
-      { label: '시설물 번호', name: 't1', width: 100 },
-      { label: '시설물 종류', name: 't2', width: 120 },
-      { label: '시설물명', name: 't3', width: 150 },
+      { label: '시설물 번호', name: 't1', width: 163 },
+      { label: '시설물 종류', name: 't2', width: 109 },
+      { label: '시설물명', name: 't3', width: 105 },
       { label: '파일명', name: 't4', width: 150 },
-      { label: '생성일자', name: 't5', width: 230 }
+      { label: '생성일자', name: 't5', width: 156 }
     ],
     loadonce: true,
     viewrecords: true,
-    height: 397,
+    height: 415,
     rowTotal: -1,
     multiselect: true
   });
@@ -240,15 +238,15 @@
     data: mydata3,
     datatype: "local",
     colModel: [
-      { label: '시설물 번호', name: 't1', width: 100 },
-      { label: '시설물 종류', name: 't2', width: 120 },
-      { label: '시설물명', name: 't3', width: 150 },
-      { label: '평가결과', name: 't4', width: 150, formatter: evtDivision },
+      { label: '시설물 번호', name: 't1', width: 163 },
+      { label: '시설물 종류', name: 't2', width: 109 },
+      { label: '시설물명', name: 't3', width: 105 },
+      { label: '평가결과', name: 't4', width: 100, formatter: evtDivision },
       { label: '평가시간', name: 't5', width: 230 }
     ],
     loadonce: true,
     viewrecords: true,
-    height: 346,
+    height: 372,
     rowTotal: -1,
     multiselect: true
   });
@@ -256,7 +254,7 @@
   function evtDivision(cellValue, options, rowdata, action) {
     var html, txt = "";
     switch (cellValue) {
-      case "evt1":
+      case "i_safe":
         txt = "안전";
         break;
       case "evt2":
@@ -269,12 +267,13 @@
         txt = "미수행";
         break;
       case "evt5":
-        txt = "실행";
+        html = '<button type="button" class="btn btn_s btn_redline">실행</button';
         break;
       default:
-        txt = "none";
+        txt = cellValue;
     }
-    html = '<span class="tbl_tag_evt ' + cellValue + '">' + txt + '</span>';
+    if(cellValue != "evt5") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
+    
     return html;
   }
 
