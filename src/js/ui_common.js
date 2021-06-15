@@ -213,3 +213,29 @@ function tagAxi(cellValue, options, rowdata, action) {
   html = '<button type="button" class="axi btn_' + txt + '"></button>'; 
   return html;
 }
+
+function evtDivision(cellValue, options, rowdata, action) {
+  var html, txt = "";
+  switch (cellValue) {
+    case "i_safe":
+      txt = "안전";
+      break;
+    case "i_needcheck":
+      txt = "점검필요";
+      break;
+    case "i_ing":
+      txt = "수행중";
+      break;
+    case "i_unperformed":
+      txt = "미수행";
+      break;
+    case "evt5":
+      html = '<button type="button" class="btn btn_s btn_redline">실행</button';
+      break;
+    default:
+      txt = cellValue;
+  }
+  if(cellValue != "evt5") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
+  
+  return html;
+}

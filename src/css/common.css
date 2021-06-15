@@ -316,7 +316,6 @@ color:#fff;border-radius:8px;padding:4px 15px;}
 .link_h::after{position:absolute;top:50%;left:50%;content:"\f1b1";font-family:'axicon';font-size:22px;
 color:#ccc;transform:translate(-50%, -50%);}
 .link_h .section:last-of-type{margin-left:auto;}
-
 .box_grayline{border:1px solid #e8e8e8;}
 
 /* gis */
@@ -447,3 +446,4 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
 .ui-jqgrid-hdiv input[type = checkbox]{position:relative;top:-3px;}
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background-color:#f0f7ff;}
+.td_padding{padding-left:13px !important;}

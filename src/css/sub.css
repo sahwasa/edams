@@ -47,11 +47,15 @@
 .acc03 .btn_wrap,
 .fac01 .btn_wrap{margin-bottom:5px;text-align:right;}
 
+.tbl_event_dtl{position:relative;margin-top:58px;}
+.tbl_event_dtl::after{position:absolute;top:-30px;left:50%;content:'\f107';display:block;font-family:'axicon';font-size:35px;color:#ccc;transform:translateX(-50%);}
+[aria-describedby="jqGrid2_t5"]{padding-left:20px;}
+
 /* fac */
 .fac01-1 .f_sb .section_l{margin-top:27px;}
 .fac01-1 .f_sb .section_r{width:calc(100% - 600px);}
 .fac01-1 .section_r .article:last-child{margin-top:40px;}
-textarea[name ="MCT_preview"]{width:100%;height:165px;overflow-y:scroll;}
+textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 
 /* dam */
 .dam01 .f_sb .section_l{width:calc(100% - 749px);}
@@ -66,6 +70,8 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;overflow-y:scroll;}
 .dam_count li:nth-child(5){background-color:#f00}
 .dam_count li span{position:absolute;top:50%;right:6px;width:50px;line-height:24px;background-color:#fff;border-radius:12px;text-align:center;color:#777;transform:translateY(-50%);}
 
+.dam01 .tbl_wrap .i_status,
+.dam02 .tbl_wrap .i_status{display:inline-block;width:70px;text-align:left;}
 .dam02 .f_sb .section_r{width:calc(100% - 681px);}
 .tbl_sta th{width:150px;}
 .tbl_sta td{width:25%;}
@@ -83,3 +89,4 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;overflow-y:scroll;}
 .tbl_evt.evt3{background-color:#facd1a;}
 .tbl_evt.evt4{background-color:#fa6e1a;}
 .tbl_evt.evt5{background-color:#ff0000;}
+
