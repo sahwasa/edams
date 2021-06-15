@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상남도:지진피해평가관리시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="util">
+  <b>관리자님 반갑습니다.</b>
+  <ul class="util_list">
+    <li><button type="button">내정보</button></li>
+    <li><button type="button">로그아웃</button></li>
+  </ul>
+</div>
+<div class="nav">
+  <h1><a href="">지진피해평가 · 관리시스템</a></h1>
+  <ul class="gnb" role="navigation">
+    <li><a href="../dist/acc01.html">가속도 계측자료 관리</a>
+      <ul class="sub">
+        <li><a href="../dist/acc01.html">계측 가속도 DB</a></li>
+        <li><a href="../dist/acc02.html">지진 통보문 관리</a></li>
+        <li><a href="../dist/acc03.html">관측소 관리</a></li>
+        <li><a href="../dist/acc04.html">관측자료 업로드</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="../dist/fac01.html">시설물 관리</a>
+      <ul class="sub">
+        <li class="on"><a href="../dist/fac01.html">시설물정보 관리</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/dam01.html">지진피해평가</a>
+      <ul class="sub">
+        <li><a href="../dist/dam01.html">안전성 평가 모니터링</a></li>
+        <li><a href="../dist/dam02.html">지진피해평가 실행</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/admin01.html">관리자 지원</a>
+      <ul class="sub">
+        <li><a href="../dist/admin01.html">사용자관리</a></li>
+        <li><a href="../dist/admin02.html">매뉴얼(자료실)</a></li>
+      </ul>
+    </li>
+    <li><a href="">안전성평가 훈련</a>
+      <ul class="sub">
+        <li><a href="">지진피해평가 시뮬레이션</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="cont acc04">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">가속도 계측자료관리</a></li>
+        <li>관측자료 업로드</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>관측자료 업로드</h2>
+    </div>
+    <div>
+      <div class="section">
+        <div class="article">
+          <div class="tit_h3">
+            <h3>지진이벤트 선택</h3>
+          </div>
+          <ul class="search f_sb">
+            <li>
+              <span class="period period_multi">
+                <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly
+                  dataformat="from" title="시작 날짜 선택">
+                <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to"
+                  title="종료  날짜 선택">
+              </span>
+            </li>
+            <li>
+              <label for="acc04_scale">규모</label>
+              <select id="acc04_scale" title="전체">
+                <option value="">전체</option>
+              </select> ~
+              <select title="전체">
+                <option value="">전체</option>
+              </select>
+            </li>
+            <li>
+              <label for="acc04_location">발생지역</label>
+              <input type="text" id="acc04_location" placeholder="검색어">
+            </li>
+            <li>
+              <button type="button" class=" btn_gray btn_search">검색</button>
+            </li>
+          </ul>
+        </div>
+        <div class="article">
+          <div>
+            <div class="tbl_wrap">
+              <table id="jqGrid1" class="jq-grid"></table>
+            </div>
+          </div>
+          <div class="tbl_event_dtl">
+            <div class="tbl_top">
+              <div class="btn_wrap">
+                <button type="button" class="btn btn_blueline">파일 불러오기</button>
+                <button type="button" class="btn btn_blueline">새로고침</button>
+              </div>
+            </div>
+            <div class="tbl_wrap">
+              <table id="jqGrid2" class="jq-grid"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <p>Copyright(c) Gyeongsangnamdo All Rights Reserved.</p>
+</div>
+
+</div>
+  <div class="pop_overlay">
+    <div class="pop_wrap pop_upload_acc">
+      <div class="pop_tit">
+        <h1>관측자료 업로드</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <table id="tbl_upload_acc"></table>
+          <script>          
+            var tbl_upload_acc = [
+              {'t1':'abcd.zip', 't2':'done'},
+              {'t1':'abcd.zip', 't2':'done'},
+              {'t1':'abcd.zip', 't2':'fail'},
+              {'t1':'abcd.zip', 't2':'done'},
+              {'t1':'abcd.zip', 't2':'uploading'},
+              {'t1':'abcd.zip', 't2':'uploading'}
+            ]
+            $("#tbl_upload_acc").jqGrid({
+              data: tbl_upload_acc,
+              datatype: "local",
+              colModel: [
+                {label:'파일명',name:'t1',width:200},
+                {label:'업로드 상태',name:'t2',width:200, formatter:btn_delete}
+              ],
+              viewrecords: true,
+              width: 460,
+              height: 250,
+              rowNum: 20,
+              gridview: true,
+              multiselect:true
+            });
+            function btn_delete(cellValue, options, rowdata, action){
+              var html, txt = "";
+              switch (cellValue) {
+                  case 'done':
+                  txt = "완료";
+                  break;
+                  case 'fail':
+                  txt = "실패";
+                  break;
+                  case 'uploading':
+                  txt = "업로딩";
+                  break;
+                  default:
+                  txt = "";
+              }
+              html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
+              return html;
+            }
+          </script>
+          <div class="btn_wrap alignR">
+            <button type="button" class="btn_pop btn_blue btn_save btn_all_upload">전체 업로드</button>
+            <button type="button" class="btn_pop btn_blue btn_save btn_select_upload">선택 업로드</button>
+            <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="pop_overlay">
+  <div class="pop_wrap pop_upload_acc_done">
+    <div class="pop_tit">
+      <h1>관측자료 업로드</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <p class="upload_done">업로드가 완료되었습니다.</p>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_pop btn_blue btn_save">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var mydata1 = [
+  {"t1": "2019009233", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"}
+];
+$("#jqGrid1").jqGrid({
+  data: mydata1,
+  datatype: "local",
+  colModel: [
+    {label:'지진번호',name:'t1',width:100},
+    {label:'발생시각',name:'t2',width:200},
+    {label:'위도',name:'t3',width:100},
+    {label:'경도',name:'t4',width:100},
+    {label:'규모(ML)',name:'t5',width:100},
+    {label:'발생위치',name:'t6',width:200, align:"left", classes:"td_padding"},
+  ],
+  loadonce : true,
+  viewrecords: true,
+  height: 150,
+  rowTotal: -1,
+  rownumbers:true
+});
+$("#jqGrid1").jqGrid('setLabel',0,'번호', 'labelstyle')
+
+var mydata2 = [
+  {"t1": "경상남도(GN)", "t2": "경상남도", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "기상청(KS)", "t2": "안동댐", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "기상청", "t2": "", "t3": "", "t4": "미수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "-"},
+  {"t1": "경상남도", "t2": "안동댐", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "경상남도", "t2": "경상남도", "t3": "", "t4": "포맷오류", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "", "t2": "", "t3": "", "t4": "", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"}
+];
+$("#jqGrid2").jqGrid({
+  data: mydata2,
+  datatype: "local",
+  colModel: [
+    {label:'기관코드',name:'t1',width:150},
+    {label:'관측소명',name:'t2',width:150},
+    {label:'관측소코드',name:'t3',width:100},
+    {label:'수신상태',name:'t4',width:130},
+    {label:'파일명',name:'t5',width:230, align:"left", classes:"td_padding"},
+    {label:'수신시각',name:'t6',width:180},
+  ],
+  loadonce : true,
+  viewrecords: true,
+  height: 150,
+  rowTotal: -1,
+});
+
+  jqgridInit();
+</script>
+</body>
+
+</html>

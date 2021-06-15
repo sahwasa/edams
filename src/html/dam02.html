@@ -140,6 +140,7 @@
   </div>
   @@include('inc/footer.html')
 </div>
+@@include('inc/pop_select_earthquake.html')
 <script>
   var mydata2 = [
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
@@ -164,9 +165,9 @@
   });
 
   var mydata3 = [
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt1", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt2", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt3", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_safe", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_needcheck", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_ing", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt5", "t5": "2021-05-27 12:34:56" }
   ];
   $("#jqGrid3").jqGrid({
@@ -186,31 +187,6 @@
     multiselect: true
   });
 
-  function evtDivision(cellValue, options, rowdata, action) {
-    var html, txt = "";
-    switch (cellValue) {
-      case "i_safe":
-        txt = "안전";
-        break;
-      case "evt2":
-        txt = "점검필요";
-        break;
-      case "evt3":
-        txt = "수행중";
-        break;
-      case "evt4":
-        txt = "미수행";
-        break;
-      case "evt5":
-        html = '<button type="button" class="btn btn_s btn_redline">실행</button';
-        break;
-      default:
-        txt = cellValue;
-    }
-    if(cellValue != "evt5") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
-    
-    return html;
-  }
 
   jqgridInit();
 </script>

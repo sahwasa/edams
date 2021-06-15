@@ -102,9 +102,17 @@
   </div>
   @@include('inc/footer.html')
 </div>
+@@include('inc/pop_select_earthquake.html')
 <script>
   var fac01 = [
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'reject'}
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_safe'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_needcheck'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_ing'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_unperformed'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''}
   ]
   $("#fac01").jqGrid({
     data: fac01,
@@ -113,8 +121,8 @@
       { label: '시설물번호', name: 't1', width: 120 },
       { label: '시서물종류', name: 't2', width: 120 },
       { label: '시설물명', name: 't3', width: 150 },
-      { label: '위치', name: 't4', width: 300 },
-      { label: '평가결과', name: 't5', width: 100, formatter: tagAxi }
+      { label: '위치', name: 't4', width: 300, align:"left", classes:"td_padding"},
+      { label: '평가결과', name: 't5', width: 100, formatter: evtDivision}
     ],
     multiselect: true,
     loadonce: true,

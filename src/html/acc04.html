@@ -1,0 +1,132 @@
+@@include('inc/top.html')
+<div class="wrap">
+  <div class="header">
+    @@include('inc/header.html')
+  </div>
+  <div class="cont acc04">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">가속도 계측자료관리</a></li>
+        <li>관측자료 업로드</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>관측자료 업로드</h2>
+    </div>
+    <div>
+      <div class="section">
+        <div class="article">
+          <div class="tit_h3">
+            <h3>지진이벤트 선택</h3>
+          </div>
+          <ul class="search f_sb">
+            <li>
+              <span class="period period_multi">
+                <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly
+                  dataformat="from" title="시작 날짜 선택">
+                <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to"
+                  title="종료  날짜 선택">
+              </span>
+            </li>
+            <li>
+              <label for="acc04_scale">규모</label>
+              <select id="acc04_scale" title="전체">
+                <option value="">전체</option>
+              </select> ~
+              <select title="전체">
+                <option value="">전체</option>
+              </select>
+            </li>
+            <li>
+              <label for="acc04_location">발생지역</label>
+              <input type="text" id="acc04_location" placeholder="검색어">
+            </li>
+            <li>
+              <button type="button" class=" btn_gray btn_search">검색</button>
+            </li>
+          </ul>
+        </div>
+        <div class="article">
+          <div>
+            <div class="tbl_wrap">
+              <table id="jqGrid1" class="jq-grid"></table>
+            </div>
+          </div>
+          <div class="tbl_event_dtl">
+            <div class="tbl_top">
+              <div class="btn_wrap">
+                <button type="button" class="btn btn_blueline">파일 불러오기</button>
+                <button type="button" class="btn btn_blueline">새로고침</button>
+              </div>
+            </div>
+            <div class="tbl_wrap">
+              <table id="jqGrid2" class="jq-grid"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('inc/footer.html')
+</div>
+@@include('inc/pop_upload_acc.html')
+@@include('inc/pop_upload_acc_done.html')
+<script>
+var mydata1 = [
+  {"t1": "2019009233", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
+  {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"}
+];
+$("#jqGrid1").jqGrid({
+  data: mydata1,
+  datatype: "local",
+  colModel: [
+    {label:'지진번호',name:'t1',width:100},
+    {label:'발생시각',name:'t2',width:200},
+    {label:'위도',name:'t3',width:100},
+    {label:'경도',name:'t4',width:100},
+    {label:'규모(ML)',name:'t5',width:100},
+    {label:'발생위치',name:'t6',width:200, align:"left", classes:"td_padding"},
+  ],
+  loadonce : true,
+  viewrecords: true,
+  height: 150,
+  rowTotal: -1,
+  rownumbers:true
+});
+$("#jqGrid1").jqGrid('setLabel',0,'번호', 'labelstyle')
+
+var mydata2 = [
+  {"t1": "경상남도(GN)", "t2": "경상남도", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "기상청(KS)", "t2": "안동댐", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "기상청", "t2": "", "t3": "", "t4": "미수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "-"},
+  {"t1": "경상남도", "t2": "안동댐", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "경상남도", "t2": "경상남도", "t3": "", "t4": "포맷오류", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},
+  {"t1": "", "t2": "", "t3": "", "t4": "", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"}
+];
+$("#jqGrid2").jqGrid({
+  data: mydata2,
+  datatype: "local",
+  colModel: [
+    {label:'기관코드',name:'t1',width:150},
+    {label:'관측소명',name:'t2',width:150},
+    {label:'관측소코드',name:'t3',width:100},
+    {label:'수신상태',name:'t4',width:130},
+    {label:'파일명',name:'t5',width:230, align:"left", classes:"td_padding"},
+    {label:'수신시각',name:'t6',width:180},
+  ],
+  loadonce : true,
+  viewrecords: true,
+  height: 150,
+  rowTotal: -1,
+});
+
+  jqgridInit();
+</script>
+</body>
+
+</html>

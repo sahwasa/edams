@@ -205,6 +205,70 @@
 </div>
 
 </div>
+<div class="pop_overlay">
+  <div class="pop_wrap pop_select_earthquake">
+    <div class="pop_tit">
+      <h1>지진선택</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <ul class="pop_ul flex_wrap f_sb">
+          <li>
+            <span class="period period_multi">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+            </span>
+          </li>
+          <li>
+            <label for="select_eq_scale">규모</label>
+            <select id="select_eq_scale">
+              <option value="">전체</option>
+            </select> ~ 
+            <select title="select_eq_scale">
+              <option value="">전체</option>
+            </select>
+          </li>
+          <li>
+            <label for="select_eq_occur">발생지역</label>
+            <input type="text" placeholder="검색어" id="select_eq_occur">
+            <button type="button" class="btn_search">검색</button>
+          </li>
+        </ul>
+        <table id="pop_select_earthquake"></table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_confirm">확인</button>
+          <button type="button" class="btn_pop btn_blue btn_pop_cancel">취소</button>
+        </div>
+        <script>          
+        var pop_select_earthquake = [
+          {'t1': '2019009233', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
+          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
+          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
+          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'}
+        ]
+        $("#pop_select_earthquake").jqGrid({
+          data: pop_select_earthquake,
+          datatype: "local",
+          colModel: [
+            {label:'지진번호',name:'t1',width:60},
+            {label:'발생시각',name:'t2',width:110},
+            {label:'위도',name:'t3',width:35},
+            {label:'경도',name:'t4',width:35},
+            {label:'규모',name:'t5',width:35},
+            {label:'발생위치',name:'t6'}
+          ],
+          viewrecords: true,
+          width: 685,
+          height: 311,
+          rowNum: 20,
+          gridview: true
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
   var mydata2 = [
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
@@ -229,9 +293,9 @@
   });
 
   var mydata3 = [
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt1", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt2", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt3", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_safe", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_needcheck", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_ing", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt5", "t5": "2021-05-27 12:34:56" }
   ];
   $("#jqGrid3").jqGrid({
@@ -251,31 +315,6 @@
     multiselect: true
   });
 
-  function evtDivision(cellValue, options, rowdata, action) {
-    var html, txt = "";
-    switch (cellValue) {
-      case "i_safe":
-        txt = "안전";
-        break;
-      case "evt2":
-        txt = "점검필요";
-        break;
-      case "evt3":
-        txt = "수행중";
-        break;
-      case "evt4":
-        txt = "미수행";
-        break;
-      case "evt5":
-        html = '<button type="button" class="btn btn_s btn_redline">실행</button';
-        break;
-      default:
-        txt = cellValue;
-    }
-    if(cellValue != "evt5") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
-    
-    return html;
-  }
 
   jqgridInit();
 </script>

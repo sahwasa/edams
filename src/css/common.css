@@ -162,7 +162,7 @@ td .in_label{margin-left:-10px;}
 .search.plural_form li{padding:2px 0;}
 .divide4 li{width:25%;margin-left:0;}
 .divide4 .w2{width:50%;}
-.search_li{width:calc(100% - 311px);}
+.search_li{width:calc(100% - 297px);}
 .search_li>input{width:100%;}
 
 .wrap{min-width:1500px;height:100%;text-align:left;}
@@ -347,6 +347,7 @@ color:#ccc;transform:translate(-50%, -50%);}
 .mag9::before{background:#4a2602;}
 .mag10::before{background:#000;}
 
+
 .i_status::before{display:inline-block;content:"";width:14px;height:14px;background:url(../images/ico_legend.png) 0 0 no-repeat;margin-right:3px;vertical-align:top;border-radius:50%;border:none;}
 .i_noreceive::before{background-position-y:1px;top:0;}
 .i_safe::before{background-position-y:-22px;}
@@ -450,3 +451,4 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
 .ui-jqgrid-hdiv input[type = checkbox]{position:relative;top:-3px;}
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background-color:#f0f7ff;}
+.td_padding{padding-left:13px !important;}
