@@ -66,62 +66,64 @@
 </div>
   </div>
   <div class="cont acc03">
-  <div class="breadcrumb">
-    <ul>
-      <li><a href="">HOME</a></li>
-      <li><a href="">가속도 계측자료관리</a></li>
-      <li>관측소 관리</li>
-    </ul>
-  </div>
-  <div class="tit">
-    <h2>관측소 관리</h2>
-  </div>
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">가속도 계측자료관리</a></li>
+        <li>관측소 관리</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>관측소 관리</h2>
+    </div>
     <div>
       <div class="section">
         <div class="article">
           <ul class="search f_sb">
-          <li>
-            <select title="기관코드">
-              <option value="">기관코드</option>
-            </select>
-          </li>
-          <li>
-            <select title="관측소종류">
-              <option value="">관측소종류</option>
-            </select>
-          </li>
-          <li>
-            <select title="상태정보">
-              <option value="">상태정보</option>
-              <option value="">운영중</option>
-              <option value="">운영종료</option>
-            </select>
-          </li>
-          <li>
-            <select title="일자필터">
-              <option value="">일자필터</option>
-              <option value="">관측시작일</option>
-              <option value="">관측종료일</option>
-            </select>
-            <span class="period period_multi">
-              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
-              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
-            </span>
-          </li>
-          <li>
-            <button type="button" class=" btn_gray btn_search">검색</button>
-          </li>
-        </ul>
+            <li>
+              <select title="기관코드">
+                <option value="">기관코드</option>
+              </select>
+            </li>
+            <li>
+              <select title="관측소종류">
+                <option value="">관측소종류</option>
+              </select>
+            </li>
+            <li>
+              <select title="상태정보">
+                <option value="">상태정보</option>
+                <option value="">운영중</option>
+                <option value="">운영종료</option>
+              </select>
+            </li>
+            <li>
+              <select title="일자필터">
+                <option value="">일자필터</option>
+                <option value="">관측시작일</option>
+                <option value="">관측종료일</option>
+              </select>
+              <span class="period period_multi">
+                <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly
+                  dataformat="from" title="시작 날짜 선택">
+                <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to"
+                  title="종료  날짜 선택">
+              </span>
+            </li>
+            <li>
+              <button type="button" class=" btn_gray btn_search">검색</button>
+            </li>
+          </ul>
         </div>
         <div class="article">
           <div class="tbl_top">
             <div class="btn_wrap">
               <button type="button" class="btn btn_blueline">관측소 추가</button>
               <button type="button" class="btn btn_blueline">관측소 삭제</button>
-            </div>         
+            </div>
           </div>
           <div class="tbl_wrap">
-              <table id="jqGrid4" class="jq-grid"></table>
+            <table id="jqGrid4" class="jq-grid"></table>
           </div>
         </div>
       </div>
@@ -132,38 +134,164 @@
 </div>
 
 </div>
+<div class="pop_overlay">
+  <div class="pop_wrap pop_mgt">
+    <div class="pop_tit">
+      <h1>관측소 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_pop bl_addobservatory">
+          <caption>관측소 추가</caption>
+          <tr>
+            <th scope="row"><label for="mgt_code">기관코드</label></th>
+            <td>
+              <select name="code" id="mgt_code">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="mgt_state">운영상태</label>
+            </th>
+            <td>
+              <select name="state" id="mgt_state">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_name">관측소명</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_name">
+            </td>
+            <th>
+              <label for="mgt_code_2">관측소코드</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_code_2">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_type">관측소종류</label>
+            </th>
+            <td>
+              <select name="type" id="mgt_type">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th></th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_longitude">경도</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_longitude">
+            </td>
+            <th>
+              <label for="mgt_latitude">위도</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_latitude">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_start">시작일</label>
+            </th>
+            <td>
+              <span class="date_wrap">
+                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="to" required></span>
+            </td>
+            <th>
+              <label for="mgt_end">종료일</label>
+            </th>
+            <td>
+              <span class="date_wrap">
+                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="to" required></span>
+            </td>
+            </tr>
+            <tr>
+            <th>
+              <label for="mgt_floor">건물 층 수</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_floor">
+            </td>
+            <th>
+              <label for="mgt_m">표고(M)</label>
+            </th>
+            <td>
+              <input type="text" id="mgt_m">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="mgt_lacation">관측소위치</label>
+            </th>
+            <td colspan="3">
+              <select id="mgt_lacation" class="input_20">
+                <option value="">경상남도</option>
+              </select>
+              <select class="input_20" title="mgt_lacation">
+                <option value="">상주시</option>
+              </select>
+              <input type="text" class="input_60" title="mgt_lacation">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="mgt_remarks">비고</label></th>
+            <td colspan="3">
+              <textarea name="remarks" id="mgt_remarks" cols="70" rows="3"></textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
+  var mydata4 = [
+    { 't1': '기상청(KS)', 't2': 'ADG', 't3': '서안동관리소', 't4': '-', 't5': '', 't6': '2014-08-09', 't7': '-', 't8': '운영중', 't9': 'dtl' },
+    { 't1': '경남(GN)', 't2': 'ADG', 't3': '안동복합스위치야드', 't4': '건축물', 't5': '2', 't6': '2014-08-09', 't7': '2014-08-09', 't8': '운영종료', 't9': 'dtl' },
+    { 't1': '기상청(KS)', 't2': 'ADG', 't3': '안동점', 't4': '-', 't5': '1', 't6': '2014-08-09', 't7': '-', 't8': '운영중', 't9': 'dtl' },
+    { 't1': '경남(GN)', 't2': 'ADD', 't3': '안동', 't4': '교량', 't5': '1', 't6': '', 't7': '', 't8': '', 't9': 'dtl' },
+    { 't1': '기상청(KS)', 't2': 'ADO2', 't3': '안동', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': 'dtl' },
+    { 't1': '경남(GN)', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': 'dtl' },
+    { 't1': '기상청(KS)', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': 'dtl' }
+  ]
+  $("#jqGrid4").jqGrid({
+    data: mydata4,
+    datatype: "local",
+    colModel: [
+      { label: '기관코드', name: 't1', width: 120 },
+      { label: '관측소코드', name: 't2', width: 120 },
+      { label: '관측소명', name: 't3', width: 200 },
+      { label: '관측소종류', name: 't4', width: 200 },
+      { label: '센서수량', name: 't5', width: 120 },
+      { label: '관측시작일', name: 't6', width: 250 },
+      { label: '관측종료일', name: 't7', width: 250 },
+      { label: '상태정보', name: 't8', width: 100 },
+      { label: '상세보기', name: 't9', width: 100, formatter: tblBtn }
+    ],
+    loadonce: true,
+    viewrecords: true,
+    height: 458,
+    rowTotal: -1
+  });
 
-var mydata4 = [
-  {'t1':'기상청(KS)', 't2':'ADG', 't3':'서안동관리소', 't4':'-', 't5':'', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'dtl'},
-  {'t1':'경남(GN)', 't2':'ADG', 't3':'안동복합스위치야드', 't4':'건축물', 't5':'2', 't6':'2014-08-09', 't7':'2014-08-09', 't8':'운영종료', 't9':'dtl'},
-  {'t1':'기상청(KS)', 't2':'ADG', 't3':'안동점', 't4':'-', 't5':'1', 't6':'2014-08-09', 't7':'-', 't8':'운영중', 't9':'dtl'},
-  {'t1':'경남(GN)', 't2':'ADD', 't3':'안동', 't4':'교량', 't5':'1', 't6':'', 't7':'', 't8':'', 't9':'dtl'},
-  {'t1':'기상청(KS)', 't2':'ADO2', 't3':'안동', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'dtl'},
-  {'t1':'경남(GN)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'dtl'},
-  {'t1':'기상청(KS)', 't2':'', 't3':'', 't4':'-', 't5':'', 't6':'', 't7':'', 't8':'', 't9':'dtl'}
-]
-$("#jqGrid4").jqGrid({
-  data: mydata4,
-  datatype: "local",
-  colModel: [
-    {label:'기관코드',name:'t1',width:120},
-    {label:'관측소코드',name:'t2',width:120},
-    {label:'관측소명',name:'t3',width:200},
-    {label:'관측소종류',name:'t4',width:200},
-    {label:'센서수량',name:'t5',width:120},
-    {label:'관측시작일',name:'t6',width:250},
-    {label:'관측종료일',name:'t7',width:250},
-    {label:'상태정보',name:'t8',width:100},
-    {label:'상세보기',name:'t9',width:100, formatter :tblBtn}
-  ],
-  loadonce : true,
-  viewrecords: true,
-  height: 458,
-  rowTotal: -1
-});
-
-jqgridInit();
+  jqgridInit();
 </script>
 </body>
+
 </html>
