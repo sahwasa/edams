@@ -149,8 +149,10 @@ td .axi{margin-right:0;}
 .search li:first-child{margin-left:0;}
 .search input,.search select,.search button{font-size:13px;vertical-align:middle;}
 .search li label,
-.search li .label{position:relative;top:-1px;display:inline-block;font-weight:600;vertical-align:middle;color:#094fa3;font-size:13px;letter-spacing:-.02em;}
+.search li .label{display:inline-block;font-weight:600;vertical-align:middle;font-size:13px;letter-spacing:-.02em;}
 .in_label{display:flex;align-items:center;}
+.search li label::before,
+.search li .label::before{content:"·";margin:0 3px;}
 td .in_label{margin-left:-10px;}
 .in_label .label{margin-left:10px;}
 .in_label label{color:#333;font-weight:normal;letter-spacing:-.05em;margin-left:10px;}
