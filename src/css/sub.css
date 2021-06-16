@@ -43,24 +43,22 @@
 .recorder .sensor{margin:10px 0 15px;}
 .recorder:last-of-type .sensor{margin-bottom:0;}
 
-/*  */
-.acc03 .btn_wrap,
-.fac01 .btn_wrap{margin-bottom:5px;text-align:right;}
-
 .tbl_event_dtl{position:relative;margin-top:58px;}
 .tbl_event_dtl::after{position:absolute;top:-30px;left:50%;content:'\f107';display:block;font-family:'axicon';font-size:35px;color:#ccc;transform:translateX(-50%);}
 [aria-describedby="jqGrid2_t5"]{padding-left:20px;}
 
 /* fac */
-.fac01-1 .f_sb .section_l{margin-top:27px;}
 .fac01-1 .f_sb .section_r{width:calc(100% - 600px);}
 .fac01-1 .section_r .article:last-child{margin-top:40px;}
 textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 
 /* dam */
-.dam01 .f_sb .section_l{width:calc(100% - 749px);}
-.dam01 .section_l .tab{margin-top:26px;}
-.ipt_facname{width:320px;}
+.dam01 .f_sb .section_l,
+.dam01 .quake_wrap,
+.dam01 .tab{width:calc(100% - 749px);}
+.dam01 .cont_wrap{position:relative;}
+.dam01 .tab_area{margin-top:26px;}
+.dam01 .tab_area .section_r{position:absolute;top:35px;right:0;width:719px;}
 .dam_count{margin-bottom:5px;}
 .dam_count li{position:relative;width:118px;height:38px;font-size:13px;color:#fff;font-weight:600;line-height:38px;border-radius:3px;margin-left:10px;text-align:center;padding-right:55px;letter-spacing:-.1em;}
 .dam_count li:nth-child(1){background-color:#024684;margin-left:0;}
@@ -69,24 +67,17 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .dam_count li:nth-child(4){background-color:#fa6e1a;}
 .dam_count li:nth-child(5){background-color:#f00}
 .dam_count li span{position:absolute;top:50%;right:6px;width:50px;line-height:24px;background-color:#fff;border-radius:12px;text-align:center;color:#777;transform:translateY(-50%);}
+.dam_dtl .tbl_row th{width:100px;}
+.file_viewer{margin-top:4px;}
+.file_viewer td{border-left-color:#ccc;}
+.file_viewer .file_list{padding:4px 8px;}
+.file_list button{border:1px solid #727272;color:#555;line-height:18px;padding:0 10px;border-radius:3px;margin:2px 4px;}
+.file_list button:hover{color:#000;box-shadow:0 1px 1px rgba(0,0,0,.2);}
+.file_list button.on{background-color:#727272;color:#fff;}
 
 .dam01 .tbl_wrap .i_status,
 .dam02 .tbl_wrap .i_status{display:inline-block;width:70px;text-align:left;}
 .dam02 .f_sb .section_r{width:calc(100% - 681px);}
-.tbl_sta th{width:150px;}
-.tbl_sta td{width:25%;}
-.recorder_sensor{counter-reset:recorder;}
-.recorder h4::after{counter-increment:recorder;content:"#"counter(recorder);margin-left:5px;}
-.recorder .sensor{margin:10px 0 15px;}
-.recorder:last-of-type .sensor{margin-bottom:0;}
+
 .tbl_wrap .i_status{width:67px;text-align:left;}
 .tbl_wrap .i_status::before{margin-top:2px;}
-
-.tbl_evt{position:relative;width:118px;margin-right:10px;padding:12px 60px 12px 5px;border-radius:3px;font-size:13px;color:#fff;text-align:center}
-.tbl_evt b{position:absolute;top:calc(50% - 12.5px);right:5px;width:55px;line-height:25px;margin-left:3px;border-radius:12.5px;background-color:#fff;color:#777}
-.tbl_evt.evt1{background-color:#024684;}
-.tbl_evt.evt2{background-color:#58a505;}
-.tbl_evt.evt3{background-color:#facd1a;}
-.tbl_evt.evt4{background-color:#fa6e1a;}
-.tbl_evt.evt5{background-color:#ff0000;}
-

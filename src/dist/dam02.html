@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상남도:지진피해평가관리시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="util">
+  <b>관리자님 반갑습니다.</b>
+  <ul class="util_list">
+    <li><button type="button">내정보</button></li>
+    <li><button type="button">로그아웃</button></li>
+  </ul>
+</div>
+<div class="nav">
+  <h1><a href="">지진피해평가 · 관리시스템</a></h1>
+  <ul class="gnb" role="navigation">
+    <li><a href="../dist/acc01.html">가속도 계측자료 관리</a>
+      <ul class="sub">
+        <li><a href="../dist/acc01.html">계측 가속도 DB</a></li>
+        <li><a href="../dist/acc02.html">지진 통보문 관리</a></li>
+        <li><a href="../dist/acc03.html">관측소 관리</a></li>
+        <li><a href="../dist/acc04.html">관측자료 업로드</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="../dist/fac01.html">시설물 관리</a>
+      <ul class="sub">
+        <li class="on"><a href="../dist/fac01.html">시설물정보 관리</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/dam01.html">지진피해평가</a>
+      <ul class="sub">
+        <li><a href="../dist/dam01.html">안전성 평가 모니터링</a></li>
+        <li><a href="../dist/dam02.html">지진피해평가 실행</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/admin01.html">관리자 지원</a>
+      <ul class="sub">
+        <li><a href="../dist/admin01.html">사용자관리</a></li>
+        <li><a href="../dist/admin02.html">매뉴얼(자료실)</a></li>
+      </ul>
+    </li>
+    <li><a href="">안전성평가 훈련</a>
+      <ul class="sub">
+        <li><a href="">지진피해평가 시뮬레이션</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="cont dam02">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">지진피해평가</a></li>
+        <li>지진피해평가 실행</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>지진 피해 평가 실행</h2>
+    </div>
+    <div class="flex_wrap f_sb">
+      <div class="section section_l">
+        <div class="tit_h3">
+          <h3 class="blind">진도분포도</h3>
+          <div class="btn_wrap">
+            <button type="button" class="btn btn_blueline">다른 지진 선택</button>
+          </div>
+        </div>
+        <table class="tbl_row tbl_quakeinfo">
+          <caption>지진정보</caption>
+          <tr>
+            <th scope="row">지진번호</th>
+            <td>20210</td>
+            <th scope="row">규모</th>
+            <td>2.6</td>
+            <th scope="row">발생시각</th>
+            <td>2021-06-02 12:34:56</td>
+          </tr>
+          <tr>
+            <th scope="row">발생위치</th>
+            <td colspan="6">경북 포항시 북구 북쪽 9km지역</td>
+          </tr>
+        </table>
+        <div class="gis_wrap">
+          <div class="gis_area">
+            <img src="http://placehold.it/649x503" width="100%" height="100%" alt="지도 영역" />
+            <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
+            <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
+            <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
+            <i class="i_status i_unperformed" style="left:200px;top:350px;">미수행</i> 
+          </div>
+          <div class="legend">
+            <h3>범례</h3>
+            <ul>
+              <li class="i_status i_safe">안전</li>
+              <li class="i_status i_needcheck">점검필요</li>
+              <li class="i_status i_ing">수행중</li>
+              <li class="i_status i_unperformed">미수행</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section section_r">
+        <div class="article">
+          <div class="tit_h3">
+            <h3 class="blind">이벤트 발생정보</h3>
+          </div>
+          <div class="tab" tabBtn>
+            <ul class="tab_list">
+              <li class="on"><a href="">추정가속도생성</a></li>
+              <li><a href="">안전성평가</a></li>
+            </ul>
+          </div>
+          <div class="tab_conts" tabConts>
+            <div class="tab_cont" tabCont>
+              <ul class="search flex_wrap f_sb">
+                <li>
+                  <select title="시설물 종류">
+                    <option value="">시설물 종류</option>
+                  </select>
+                </li>
+                <li>
+                  <select title="생성여부">
+                    <option value="">생성여부</option>
+                  </select>
+                </li>
+                <li class="search_li">
+                  <input type="text" title="시설물명" placeholder="시설물명">
+                </li>
+                <li>
+                  <button type="button" class="btn_gray btn_search">검색</button>
+                </li>
+              </ul>
+              <div class="tbl_top">
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blueline">추정가속도 생성</button>
+                </div>
+              </div>
+              <div class="tbl_wrap">
+                <table id="jqGrid2" class="jq-grid"></table>
+              </div>
+            </div>
+            <div class="tab_cont" tabCont>
+              <div class="dam_count">
+                <ul class="flex_wrap">
+                  <li>총건수<span>150건</span></li>
+                  <li>안전<span>150건</span></li>
+                  <li>점검필요<span>150건</span></li>
+                  <li>수행중<span>150건</span></li>
+                  <li>미수행<span>150건</span></li>
+                </ul>
+              </div>
+              <ul class="search flex_wrap f_sb">
+                <li>
+                  <select title="시설물 종류">
+                    <option value="">시설물 종류</option>
+                  </select>
+                </li>
+                <li>
+                  <select title="평가결과">
+                    <option value="">평가결과</option>
+                  </select>
+                </li>
+                <li class="search_li">
+                  <input type="text" title="시설물명" placeholder="시설물명">
+                </li>
+                <li>
+                  <button type="button" class="btn_gray btn_search">검색</button>
+                </li>
+              </ul>
+              <div class="tbl_top">
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blueline">안전성 평가</button>
+                </div>
+              </div>
+              <div class="tbl_wrap">
+                <table id="jqGrid3" class="jq-grid"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <p>Copyright(c) Gyeongsangnamdo All Rights Reserved.</p>
+</div>
+
+</div>
+<div class="pop_overlay">
+  <div class="pop_wrap pop_select_earthquake">
+    <div class="pop_tit">
+      <h1>지진선택</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <ul class="pop_ul flex_wrap f_sb">
+          <li>
+            <span class="period period_multi">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+            </span>
+          </li>
+          <li>
+            <label for="select_eq_scale">규모</label>
+            <select id="select_eq_scale">
+              <option value="">전체</option>
+            </select> ~ 
+            <select title="select_eq_scale">
+              <option value="">전체</option>
+            </select>
+          </li>
+          <li>
+            <label for="select_eq_occur">발생지역</label>
+            <input type="text" placeholder="검색어" id="select_eq_occur">
+          </li>
+          <li>
+            <button type="button" class="btn_search">검색</button>
+          </li>
+        </ul>
+        <table id="pop_select_earthquake"></table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn_pop btn_blue btn_confirm">확인</button>
+          <button type="button" class="btn_pop btn_blue btn_pop_cancel">취소</button>
+        </div>
+        <script>          
+        var pop_select_earthquake = [
+          {'t1': '2019009233', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
+          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
+          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
+          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'}
+        ]
+        $("#pop_select_earthquake").jqGrid({
+          data: pop_select_earthquake,
+          datatype: "local",
+          colModel: [
+            {label:'지진번호',name:'t1',width:60},
+            {label:'발생시각',name:'t2',width:110},
+            {label:'위도',name:'t3',width:35},
+            {label:'경도',name:'t4',width:35},
+            {label:'규모',name:'t5',width:35},
+            {label:'발생위치',name:'t6'}
+          ],
+          viewrecords: true,
+          width: 685,
+          height: 311,
+          rowNum: 20,
+          gridview: true
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var mydata2 = [
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" }
+  ];
+  $("#jqGrid2").jqGrid({
+    data: mydata2,
+    datatype: "local",
+    colModel: [
+      { label: '시설물 번호', name: 't1', width: 163 },
+      { label: '시설물 종류', name: 't2', width: 109 },
+      { label: '시설물명', name: 't3', width: 105 },
+      { label: '파일명', name: 't4', width: 150, align:'left'},
+      { label: '생성일자', name: 't5', width: 156 }
+    ],
+    loadonce: true,
+    viewrecords: true,
+    height: 414,
+    rowTotal: -1,
+    multiselect: true
+  });
+
+  var mydata3 = [
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_safe", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_needcheck", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_ing", "t5": "2021-05-27 12:34:56" },
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_unperformed", "t5": "2021-05-27 12:34:56" }
+  ];
+  $("#jqGrid3").jqGrid({
+    data: mydata3,
+    datatype: "local",
+    colModel: [
+      { label: '시설물 번호', name: 't1', width: 163 },
+      { label: '시설물 종류', name: 't2', width: 109 },
+      { label: '시설물명', name: 't3', width: 105 },
+      { label: '평가결과', name: 't4', width: 100, formatter: evtDivision },
+      { label: '평가시간', name: 't5', width: 230 }
+    ],
+    loadonce: true,
+    viewrecords: true,
+    height: 371,
+    rowTotal: -1,
+    multiselect: true
+  });
+
+  function evtDivision(cellValue, options, rowdata, action) {
+    var html, txt = "";
+    switch (cellValue) {
+      case "i_safe":
+        txt = "안전";
+        break;
+      case "i_needcheck":
+        txt = "점검필요";
+        break;
+      case "i_ing":
+        txt = "수행중";
+        break;
+      case "i_unperformed":
+        html = '<button type="button" class="btn btn_s btn_redline">실행</button';
+        break;
+      default:
+        txt = cellValue;
+    }
+    if(cellValue != "i_unperformed") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
+    
+    return html;
+  }
+  jqgridInit();
+</script>
+</body>
+
+</html>
