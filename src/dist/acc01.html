@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/pop.css">
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
@@ -132,7 +131,7 @@
                <h3 class="blind">이벤트 발생정보</h3>
             </div>
             <div class="tbl_wrap">
-               <table id="jqGrid1" class="jq-grid"></table>
+               <table id="jqGrid" class="jq-grid"></table>
             </div>
          </div>
       </div>
@@ -144,77 +143,81 @@
 
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap pop_select_db">
+  <div class="pop_wrap p_acc01-1">
     <div class="pop_tit">
       <h1>계측가속도 DB 지진선택</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <ul class="pop_ul flex_wrap f_sb">
+        <ul class="search f_sb">
           <li>
             <span class="period period_multi">
-              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from" title="시작 날짜 선택">
-              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to" title="종료  날짜 선택">
+              <input type="text" class="datepicker from" name="date" placeholder="YYYY-MM-DD" readonly dataformat="from"
+                title="시작 날짜 선택">
+              <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to"
+                title="종료  날짜 선택">
             </span>
           </li>
           <li>
-            <label for="select_db_scale">규모</label>
-            <select id="select_db_scale">
-              <option value="전체">전체</option>
-            </select> ~ 
-            <select title="select_db_scale">
-              <option value="전체">전체</option>
+            <label for="p.acc01_scale">규모</label>
+            <select id="p.acc01_scale" title="전체">
+              <option value="">전체</option>
+            </select> ~
+            <select title="전체">
+              <option value="">전체</option>
             </select>
           </li>
           <li>
-            <label for="select_db_occur">발생지역</label>
-            <input type="text" placeholder="검색어" id="select_db_occur">
-            <button type="button" class="btn_search">검색</button>
+            <label for="p.acc01_location">발생지역</label>
+            <input type="text" id="p.acc01_location" placeholder="검색어">
+          </li>
+          <li>
+            <button type="button" class="btn btn_gray">검색</button>
           </li>
         </ul>
-        <table id="pop_select_db"></table>
+        <table id="jqGrid11"></table>
         <div class="btn_wrap alignR">
-          <button type="button" class="btn_pop btn_blue btn_confirm">확인</button>
-          <button type="button" class="btn_pop btn_blue btn_pop_cancel">취소</button>
+          <button type="button" class="btn btn_blue">확인</button>
+          <button type="button" class="btn btn_gray">취소</button>
         </div>
-        <script>          
-        var pop_select_db = [
-          {'t1': '2019009233', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
-          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
-          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'},
-          {'t1': '', 't2':'2013-05-15 22:12:32', 't3':'38.82', 't4':'125.56','t5':'2.0', 't6':'인천 웅진군 연평도 남서쪽 50㎞ 해역'}
-        ]
-        $("#pop_select_db").jqGrid({
-          data: pop_select_db,
-          datatype: "local",
-          colModel: [
-            {label:'지진번호',name:'t1',width:60},
-            {label:'발생시각',name:'t2',width:110},
-            {label:'위도',name:'t3',width:35},
-            {label:'경도',name:'t4',width:35},
-            {label:'규모',name:'t5',width:35},
-            {label:'발생위치',name:'t6'}
-          ],
-          viewrecords: true,
-          width: 685,
-          height: 311,
-          rowNum: 20,
-          gridview: true
-        });
+        <script>
+          var mydata11 = [
+            { 't1': '2019009233', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' }
+          ]
+          $("#jqGrid11").jqGrid({
+            data: mydata11,
+            datatype: "local",
+            colModel: [
+              { label: '지진번호', name: 't1', width: 60 },
+              { label: '발생시각', name: 't2', width: 110 },
+              { label: '위도', name: 't3', width: 35 },
+              { label: '경도', name: 't4', width: 35 },
+              { label: '규모', name: 't5', width: 35 },
+              { label: '발생위치', name: 't6' }
+            ],
+            viewrecords: true,
+            width: 758,
+            height: 311,
+            rowNum: 20,
+            gridview: true
+          });
         </script>
       </div>
     </div>
   </div>
 </div>
 <script>
-var mydata1 = [
+var mydata = [
   {"t1": "지자체", "t2": "경상남도", "t3": "경상남도", "t4": "2.5", "t5": "2021-03-16 02:51:42", "t6": "0.1252", "t7": "정상", "t8": "2021-03-16 02:51:42" , "t9": "file"  },
   {"t1": "지자체", "t2": "창원시", "t3": "창원시청", "t4": "3.2", "t5": "2021-03-16 02:51:42", "t6": "0.1252", "t7": "미수신" , "t8": "-" , "t9": "" },
   {"t1": "기상청", "t2": "대구기상청", "t3": "안동댐", "t4": "5.0", "t5": "2021-03-16 02:51:42", "t6": "0.1252", "t7": "정상", "t8": "2021-03-16 02:51:42" , "t9": "file" }
 ];
-$("#jqGrid1").jqGrid({
-  data: mydata1,
+$("#jqGrid").jqGrid({
+  data: mydata,
   datatype: "local",
   colModel: [
     {label:'구분',name:'t1',width:100},

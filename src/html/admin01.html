@@ -33,7 +33,7 @@
                 <input type="text" title="사용자 관리 검색">
               </li>
               <li>
-                <button type="button" class="btn_gray btn_search">검색</button>
+                <button type="button" class="btn btn_gray">검색</button>
               </li>
             </ul>
             <div class="btn_wrap">
@@ -44,8 +44,8 @@
         </div>
         <div class="article">
           <div class="tbl_wrap">
-            <table id="jqgrid2" class="jq-grid"></table>
-            <div id="jqgrid2Pager"></div>
+            <table id="jqgrid" class="jq-grid"></table>
+            <div id="jqgridPager"></div>
           </div>
         </div>
       </div>
@@ -53,18 +53,18 @@
   </div>
   @@include('inc/footer.html')
 </div>
-@@include('inc/pop_register_user.html')
+@@include('inc/P.admin01-1.html')
 
 <script>
-  var mydata2 = [
+  var mydata = [
     { 't1': '관리자', 't2': 'sysadmin', 't3': '홍길동', 't4': '경북도청', 't5': '', 't6': '', 't7': '2019-12-13', 't8': 'edit' },
     { 't1': '사용자', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': 'edit' },
     { 't1': '사용자', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': 'edit' },
     { 't1': '', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': 'edit' },
     { 't1': '', 't2': '', 't3': '', 't4': '', 't5': '', 't6': '', 't7': '', 't8': '' }
   ]
-  $("#jqgrid2").jqGrid({
-    data: mydata2,
+  $("#jqgrid").jqGrid({
+    data: mydata,
     datatype: "local",
     colModel: [
       { label: '권한', name: 't1', width: 120 },
@@ -81,7 +81,7 @@
     viewrecords: true,
     height: 455,
     rowTotal: -1,
-    pager: '#jqgrid2Pager'
+    pager: '#jqgridPager'
   });
 
   jqgridInit();

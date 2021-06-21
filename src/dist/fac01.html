@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/pop.css">
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
@@ -96,7 +95,7 @@
               </select>
             </li>
             <li>
-              <button type="button" class="btn_gray btn_search">검색</button>
+              <button type="button" class="btn btn_gray">검색</button>
             </li>
           </ul>
         </div>
@@ -108,7 +107,7 @@
             </div>
           </div>
           <div class="tbl_wrap">
-            <table id="fac01" class="jq-grid"></table>
+            <table id="jqGrid" class="jq-grid"></table>
           </div>
         </div>
       </div>
@@ -120,14 +119,14 @@
 
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap pop_register_fac">
+  <div class="pop_wrap p_fac01-1-1">
     <div class="pop_tit">
       <h1>시설물 등록</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <table class="tbl_pop">
+        <table class="tbl_row">
           <caption>시설물등록</caption>
           <tr>
             <th scope="row"><label for="fac_number">시설물번호</label></th>
@@ -140,20 +139,23 @@
           <tr>
             <th><label for="fac_done">준공일자</label></th>
             <td>
-            <span class="date_wrap">
-            <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="datepic" required title="준공일자 선택"></span>
+              <span class="date_wrap">
+                <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="datepic" required title="준공일자 선택"></span>
             </td>
           </tr>
           <tr>
             <th><label for="fac_location">위치</label></th>
             <td>
-              <select name="location" id="fac_location" class="input_33">
-                <option value="">시도</option>
-              </select>
-              <select name="fac_location" class="input_33">
-                <option value="">시군구</option>
-              </select>
-            <input type="text" class="input_33" title="fac_location">
+              <span class="area">
+                <select name="location" id="fac_location">
+                  <option value="">시도</option>
+                </select>
+                <select name="fac_location">
+                  <option value="">시군구</option>
+                </select>
+                <input type="text" title="fac_location">
+              </span>
             </td>
           </tr>
           <tr>
@@ -198,27 +200,27 @@
           </tr>
         </table>
         <div class="btn_wrap alignR">
-          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+          <button type="button" class="btn btn_blue">저장</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-  var fac01 = [
+  var mydata = [
     { 't1': 'BR2018_0000089', 't2': '명곡교', 't3': '경상남도 양산시 명곡로 306-14', 't4': '양산시', 't5': '양산시청 도로관리과', 't6': '도로교량', 't7': '1종', 't8': '교량', 't9': 'dtl' },
     { 't1': '', 't2': '개곡교', 't3': '', 't4': '-', 't5': '', 't6': '도로교량', 't7': '1종', 't8': '교량', 't9': 'dtl' },
     { 't1': '', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': '' },
     { 't1': '', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': '' },
     { 't1': '', 't2': '', 't3': '', 't4': '-', 't5': '', 't6': '', 't7': '', 't8': '', 't9': '' }
   ]
-  $("#fac01").jqGrid({
-    data: fac01,
+  $("#jqGrid").jqGrid({
+    data: mydata,
     datatype: "local",
     colModel: [
       { label: '시설물번호', name: 't1', width: 150 },
       { label: '시설물명', name: 't2', width: 100 },
-      { label: '위치', name: 't3', width: 200, align:"left", classes:"td_padding"},
+      { label: '위치', name: 't3', width: 200 },
       { label: '행정구역', name: 't4', width: 100 },
       { label: '관지주체', name: 't5', width: 150 },
       { label: '시서물종류', name: 't6', width: 100 },

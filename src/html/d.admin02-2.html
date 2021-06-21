@@ -1,0 +1,62 @@
+@@include('inc/top.html')
+<div class="wrap">
+  <div class="header">
+    @@include('inc/header.html')
+  </div>
+  <div class="cont admin02_write">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">관리자지원</a></li>
+        <li>매뉴얼</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>매뉴얼</h2>
+    </div>
+    <div class="section">
+      <div class="alignR">
+        <button type="button" class="btn btn_blue">확인</button>
+        <button type="button" class="btn btn_gray">취소</button>
+      </div>
+      <div class="article">
+        <div class="manual_box">
+          <div class="tit_manual">
+            <span class="flex_wrap">
+              <select title="게시글 분류">
+                <option value="분류">분류</option>
+              </select>
+              <input type="text" placeholder="제목을 입력해주세요">
+            </span>
+          </div>
+          <div class="manual_body">
+            <textarea name="" id=""></textarea>
+          </div>
+          <div class="manual_attach">
+            <h3>첨부파일</h3>
+            <ul>
+              <li>
+                [공지사항] 재난유형 메뉴얼 공지사항.pdf
+                <span>111.81KB</span>
+                <button type="button" class="btn_file"></button>
+              </li>
+              <li>
+                [메뉴얼] 지진피해평가관리시스템 메뉴얼.pdf
+                <span>111.81KB</span>
+                <button type="button" class="btn_file"></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="alignR">
+          <button type="button" class="btn btn_blue">목록</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@@include('inc/footer.html')
+</div>
+</body>
+
+</html>

@@ -1,12 +1,12 @@
 <div class="pop_overlay">
-  <div class="pop_wrap pop_userinfo_edit">
+  <div class="pop_wrap p_cmmn02-1-2">
     <div class="pop_tit">
       <h1>내정보</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <table class="tbl_pop table_border">
+        <table class="tbl_info">
           <caption>내정보</caption>
           <tr>
             <th><label for="info_id">ID</label></th>
@@ -15,7 +15,7 @@
           <tr>
             <th scope="row"><label for="info_pw">비밀번호</label></th>
             <td><input type="password" id="info_pw" value="************" disabled></td>
-            <td><button type="button" class="btn_pop btn_gray btn_change">변경</button></td>
+            <td><button type="button" class="btn btn_gray">변경</button></td>
           </tr>
           <tr>
             <th><label for="info_name">이름</label></th>
@@ -27,8 +27,11 @@
           </tr>
           <tr>
             <th><label for="info_team">부서 / 직급</label></th>
-            <td colspan="2"><input type="text" id="info_team" class="input_50"> / 
-            <input type="text" id="info_position" class="input_50">
+            <td colspan="2">
+              <span class="flex_wrap f_sb input_50">
+                <input type="text" id="info_team" placeholder="부서"> /
+                <input type="text" id="info_position" placeholder="직급">
+              </span>
             </td>
           </tr>
           <tr>
@@ -54,7 +57,7 @@
           </tr>
         </table>
         <div class="btn_wrap alignR">
-          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+          <button type="button" class="btn btn_blue">저장</button>
         </div>
       </div>
     </div>

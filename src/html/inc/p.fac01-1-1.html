@@ -1,12 +1,12 @@
 <div class="pop_overlay">
-  <div class="pop_wrap pop_register_fac">
+  <div class="pop_wrap p_fac01-1-1">
     <div class="pop_tit">
       <h1>시설물 등록</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <table class="tbl_pop">
+        <table class="tbl_row">
           <caption>시설물등록</caption>
           <tr>
             <th scope="row"><label for="fac_number">시설물번호</label></th>
@@ -19,20 +19,23 @@
           <tr>
             <th><label for="fac_done">준공일자</label></th>
             <td>
-            <span class="date_wrap">
-            <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly class="from date" dataformat="datepic" required title="준공일자 선택"></span>
+              <span class="date_wrap">
+                <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                  class="from date" dataformat="datepic" required title="준공일자 선택"></span>
             </td>
           </tr>
           <tr>
             <th><label for="fac_location">위치</label></th>
             <td>
-              <select name="location" id="fac_location" class="input_33">
-                <option value="">시도</option>
-              </select>
-              <select name="fac_location" class="input_33">
-                <option value="">시군구</option>
-              </select>
-            <input type="text" class="input_33" title="fac_location">
+              <span class="area">
+                <select name="location" id="fac_location">
+                  <option value="">시도</option>
+                </select>
+                <select name="fac_location">
+                  <option value="">시군구</option>
+                </select>
+                <input type="text" title="fac_location">
+              </span>
             </td>
           </tr>
           <tr>
@@ -77,7 +80,7 @@
           </tr>
         </table>
         <div class="btn_wrap alignR">
-          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+          <button type="button" class="btn btn_blue">저장</button>
         </div>
       </div>
     </div>

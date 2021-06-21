@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/pop.css">
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
@@ -105,14 +104,14 @@
               <input type="text" id="acc04_location" placeholder="검색어">
             </li>
             <li>
-              <button type="button" class=" btn_gray btn_search">검색</button>
+              <button type="button" class=" btn btn_gray">검색</button>
             </li>
           </ul>
         </div>
         <div class="article">
           <div>
             <div class="tbl_wrap">
-              <table id="jqGrid1" class="jq-grid"></table>
+              <table id="jqGrid" class="jq-grid"></table>
             </div>
           </div>
           <div class="tbl_event_dtl">
@@ -135,68 +134,68 @@
 </div>
 
 </div>
-  <div class="pop_overlay">
-    <div class="pop_wrap pop_upload_acc">
-      <div class="pop_tit">
-        <h1>관측자료 업로드</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
-      </div>
-      <div class="pop_body">
-        <div class="pop_cont">
-          <table id="tbl_upload_acc"></table>
-          <script>          
-            var tbl_upload_acc = [
-              {'t1':'abcd.zip', 't2':'done'},
-              {'t1':'abcd.zip', 't2':'done'},
-              {'t1':'abcd.zip', 't2':'fail'},
-              {'t1':'abcd.zip', 't2':'done'},
-              {'t1':'abcd.zip', 't2':'uploading'},
-              {'t1':'abcd.zip', 't2':'uploading'}
-            ]
-            $("#tbl_upload_acc").jqGrid({
-              data: tbl_upload_acc,
-              datatype: "local",
-              colModel: [
-                {label:'파일명',name:'t1',width:200},
-                {label:'업로드 상태',name:'t2',width:200, formatter:btn_delete}
-              ],
-              viewrecords: true,
-              width: 460,
-              height: 250,
-              rowNum: 20,
-              gridview: true,
-              multiselect:true
-            });
-            function btn_delete(cellValue, options, rowdata, action){
-              var html, txt = "";
-              switch (cellValue) {
-                  case 'done':
-                  txt = "완료";
-                  break;
-                  case 'fail':
-                  txt = "실패";
-                  break;
-                  case 'uploading':
-                  txt = "업로딩";
-                  break;
-                  default:
-                  txt = "";
-              }
-              html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
-              return html;
+<div class="pop_overlay">
+  <div class="pop_wrap p_acc04-1-1">
+    <div class="pop_tit">
+      <h1>관측자료 업로드</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table id="jqGrid12"></table>
+        <script>
+          var mydata12 = [
+            { 't1': 'abcd.zip', 't2': 'done' },
+            { 't1': 'abcd.zip', 't2': 'done' },
+            { 't1': 'abcd.zip', 't2': 'fail' },
+            { 't1': 'abcd.zip', 't2': 'done' },
+            { 't1': 'abcd.zip', 't2': 'uploading' },
+            { 't1': 'abcd.zip', 't2': 'uploading' }
+          ]
+          $("#jqGrid12").jqGrid({
+            data: mydata12,
+            datatype: "local",
+            colModel: [
+              { label: '파일명', name: 't1', width: 200 },
+              { label: '업로드 상태', name: 't2', width: 200, formatter: btn_delete }
+            ],
+            viewrecords: true,
+            width: 460,
+            height: 250,
+            rowNum: 20,
+            gridview: true,
+            multiselect: true
+          });
+          function btn_delete(cellValue, options, rowdata, action) {
+            var html, txt = "";
+            switch (cellValue) {
+              case 'done':
+                txt = "완료";
+                break;
+              case 'fail':
+                txt = "실패";
+                break;
+              case 'uploading':
+                txt = "업로딩";
+                break;
+              default:
+                txt = "";
             }
-          </script>
-          <div class="btn_wrap alignR">
-            <button type="button" class="btn_pop btn_blue btn_save btn_all_upload">전체 업로드</button>
-            <button type="button" class="btn_pop btn_blue btn_save btn_select_upload">선택 업로드</button>
-            <button type="button" class="btn_pop btn_blue btn_save">저장</button>
-          </div>
+            html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
+            return html;
+          }
+        </script>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_blue">전체 업로드</button>
+          <button type="button" class="btn btn_blue">선택 업로드</button>
+          <button type="button" class="btn btn_blue">저장</button>
         </div>
       </div>
     </div>
   </div>
+</div>
 <div class="pop_overlay">
-  <div class="pop_wrap pop_upload_acc_done">
+  <div class="pop_wrap p_acc04-1-2">
     <div class="pop_tit">
       <h1>관측자료 업로드</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -205,14 +204,14 @@
       <div class="pop_cont">
         <p class="upload_done">업로드가 완료되었습니다.</p>
         <div class="btn_wrap alignC">
-          <button type="button" class="btn_pop btn_blue btn_save">확인</button>
+          <button type="button" class="btn btn_blue">확인</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-var mydata1 = [
+var mydata = [
   {"t1": "2019009233", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
@@ -220,8 +219,8 @@ var mydata1 = [
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"}
 ];
-$("#jqGrid1").jqGrid({
-  data: mydata1,
+$("#jqGrid").jqGrid({
+  data: mydata,
   datatype: "local",
   colModel: [
     {label:'지진번호',name:'t1',width:100},
@@ -237,7 +236,7 @@ $("#jqGrid1").jqGrid({
   rowTotal: -1,
   rownumbers:true
 });
-$("#jqGrid1").jqGrid('setLabel',0,'번호', 'labelstyle')
+$("#jqGrid").jqGrid('setLabel',0,'번호', 'labelstyle')
 
 var mydata2 = [
   {"t1": "경상남도(GN)", "t2": "경상남도", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},

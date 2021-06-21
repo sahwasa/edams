@@ -1,12 +1,12 @@
 <div class="pop_overlay">
-  <div class="pop_wrap pop_mgt">
+  <div class="pop_wrap p_acc03-1">
     <div class="pop_tit">
       <h1>관측소 추가</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <table class="tbl_pop bl_addobservatory">
+        <table class="tbl_row">
           <caption>관측소 추가</caption>
           <tr>
             <th scope="row"><label for="mgt_code">기관코드</label></th>
@@ -70,7 +70,7 @@
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="mgt_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
             <th>
@@ -78,11 +78,11 @@
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="mgt_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
-            </tr>
-            <tr>
+          </tr>
+          <tr>
             <th>
               <label for="mgt_floor">건물 층 수</label>
             </th>
@@ -101,13 +101,15 @@
               <label for="mgt_lacation">관측소위치</label>
             </th>
             <td colspan="3">
-              <select id="mgt_lacation" class="input_20">
-                <option value="">경상남도</option>
-              </select>
-              <select class="input_20" title="mgt_lacation">
-                <option value="">상주시</option>
-              </select>
-              <input type="text" class="input_60" title="mgt_lacation">
+              <span class="area">
+                <select id="mgt_lacation">
+                  <option value="">경상남도</option>
+                </select>
+                <select title="mgt_lacation">
+                  <option value="">상주시</option>
+                </select>
+                <input type="text" title="mgt_lacation">
+              </span>
             </td>
           </tr>
           <tr>
@@ -118,7 +120,7 @@
           </tr>
         </table>
         <div class="btn_wrap alignR">
-          <button type="button" class="btn_pop btn_blue btn_save">저장</button>
+          <button type="button" class="btn btn_blue">저장</button>
         </div>
       </div>
     </div>

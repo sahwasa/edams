@@ -230,7 +230,7 @@ function evtDivision(cellValue, options, rowdata, action) {
       txt = "미수행";
       break;
     case "evt5":
-      html = '<button type="button" class="btn btn_s btn_redline">실행</button';
+      html = '<button type="button" class="btn btn_s btn_redline">실행</button>';
       break;
     default:
       txt = cellValue;

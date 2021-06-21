@@ -61,11 +61,11 @@
               <input type="text" name="" id="" title="시설물명" class="ipt_facname" placeholder="시설물명" />
             </li>
             <li>
-              <button type="button" class="btn_gray btn_search">검색</button>
+              <button type="button" class="btn btn_gray">검색</button>
             </li>
           </ul>
           <div class="tbl_wrap">
-            <table id="fac01" class="jq-grid"></table>
+            <table id="jqGrid" class="jq-grid"></table>
           </div>
         </div>
       </div>
@@ -102,9 +102,9 @@
   </div>
   @@include('inc/footer.html')
 </div>
-@@include('inc/pop_select_earthquake.html')
+@@include('inc/P.dam01-1.html')
 <script>
-  var fac01 = [
+  var mydata = [
     { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_safe'},
     { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_needcheck'},
     { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_ing'},
@@ -114,8 +114,8 @@
     { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
     { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''}
   ]
-  $("#fac01").jqGrid({
-    data: fac01,
+  $("#jqGrid").jqGrid({
+    data: mydata,
     datatype: "local",
     colModel: [
       { label: '시설물번호', name: 't1', width: 120 },

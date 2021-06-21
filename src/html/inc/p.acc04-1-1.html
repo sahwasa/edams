@@ -1,0 +1,60 @@
+<div class="pop_overlay">
+  <div class="pop_wrap p_acc04-1-1">
+    <div class="pop_tit">
+      <h1>관측자료 업로드</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table id="jqGrid12"></table>
+        <script>
+          var mydata12 = [
+            { 't1': 'abcd.zip', 't2': 'done' },
+            { 't1': 'abcd.zip', 't2': 'done' },
+            { 't1': 'abcd.zip', 't2': 'fail' },
+            { 't1': 'abcd.zip', 't2': 'done' },
+            { 't1': 'abcd.zip', 't2': 'uploading' },
+            { 't1': 'abcd.zip', 't2': 'uploading' }
+          ]
+          $("#jqGrid12").jqGrid({
+            data: mydata12,
+            datatype: "local",
+            colModel: [
+              { label: '파일명', name: 't1', width: 200 },
+              { label: '업로드 상태', name: 't2', width: 200, formatter: btn_delete }
+            ],
+            viewrecords: true,
+            width: 460,
+            height: 250,
+            rowNum: 20,
+            gridview: true,
+            multiselect: true
+          });
+          function btn_delete(cellValue, options, rowdata, action) {
+            var html, txt = "";
+            switch (cellValue) {
+              case 'done':
+                txt = "완료";
+                break;
+              case 'fail':
+                txt = "실패";
+                break;
+              case 'uploading':
+                txt = "업로딩";
+                break;
+              default:
+                txt = "";
+            }
+            html = '<button type="button" class="tbl_' + txt + '">' + txt + '</button>';
+            return html;
+          }
+        </script>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_blue">전체 업로드</button>
+          <button type="button" class="btn btn_blue">선택 업로드</button>
+          <button type="button" class="btn btn_blue">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -43,14 +43,14 @@
               <input type="text" id="acc04_location" placeholder="검색어">
             </li>
             <li>
-              <button type="button" class=" btn_gray btn_search">검색</button>
+              <button type="button" class=" btn btn_gray">검색</button>
             </li>
           </ul>
         </div>
         <div class="article">
           <div>
             <div class="tbl_wrap">
-              <table id="jqGrid1" class="jq-grid"></table>
+              <table id="jqGrid" class="jq-grid"></table>
             </div>
           </div>
           <div class="tbl_event_dtl">
@@ -70,10 +70,10 @@
   </div>
   @@include('inc/footer.html')
 </div>
-@@include('inc/pop_upload_acc.html')
-@@include('inc/pop_upload_acc_done.html')
+@@include('inc/P.acc04-1-1.html')
+@@include('inc/P.acc04-1-2.html')
 <script>
-var mydata1 = [
+var mydata = [
   {"t1": "2019009233", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
@@ -81,8 +81,8 @@ var mydata1 = [
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "전북 군산시 어청도 남서쪽 50㎞ 해역"}
 ];
-$("#jqGrid1").jqGrid({
-  data: mydata1,
+$("#jqGrid").jqGrid({
+  data: mydata,
   datatype: "local",
   colModel: [
     {label:'지진번호',name:'t1',width:100},
@@ -98,7 +98,7 @@ $("#jqGrid1").jqGrid({
   rowTotal: -1,
   rownumbers:true
 });
-$("#jqGrid1").jqGrid('setLabel',0,'번호', 'labelstyle')
+$("#jqGrid").jqGrid('setLabel',0,'번호', 'labelstyle')
 
 var mydata2 = [
   {"t1": "경상남도(GN)", "t2": "경상남도", "t3": "", "t4": "정상수신", "t5": "GN_GN_KEVT_2019001.zip", "t6": "2021-03-16 02:51:42"},

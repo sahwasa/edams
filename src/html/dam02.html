@@ -84,7 +84,7 @@
                   <input type="text" title="시설물명" placeholder="시설물명">
                 </li>
                 <li>
-                  <button type="button" class="btn_gray btn_search">검색</button>
+                  <button type="button" class="btn btn_gray">검색</button>
                 </li>
               </ul>
               <div class="tbl_top">
@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div class="tbl_wrap">
-                <table id="jqGrid2" class="jq-grid"></table>
+                <table id="jqGrid" class="jq-grid"></table>
               </div>
             </div>
             <div class="tab_cont" tabCont>
@@ -121,7 +121,7 @@
                   <input type="text" title="시설물명" placeholder="시설물명">
                 </li>
                 <li>
-                  <button type="button" class="btn_gray btn_search">검색</button>
+                  <button type="button" class="btn btn_gray">검색</button>
                 </li>
               </ul>
               <div class="tbl_top">
@@ -130,7 +130,7 @@
                 </div>
               </div>
               <div class="tbl_wrap">
-                <table id="jqGrid3" class="jq-grid"></table>
+                <table id="jqGrid2" class="jq-grid"></table>
               </div>
             </div>
           </div>
@@ -140,15 +140,15 @@
   </div>
   @@include('inc/footer.html')
 </div>
-@@include('inc/pop_select_earthquake.html')
+@@include('inc/P.dam01-1.html')
 <script>
-  var mydata2 = [
+  var mydata = [
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" }
   ];
-  $("#jqGrid2").jqGrid({
-    data: mydata2,
+  $("#jqGrid").jqGrid({
+    data: mydata,
     datatype: "local",
     colModel: [
       { label: '시설물 번호', name: 't1', width: 163 },
@@ -164,14 +164,14 @@
     multiselect: true
   });
 
-  var mydata3 = [
+  var mydata2 = [
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_safe", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_needcheck", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_ing", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt5", "t5": "2021-05-27 12:34:56" }
   ];
-  $("#jqGrid3").jqGrid({
-    data: mydata3,
+  $("#jqGrid2").jqGrid({
+    data: mydata2,
     datatype: "local",
     colModel: [
       { label: '시설물 번호', name: 't1', width: 163 },

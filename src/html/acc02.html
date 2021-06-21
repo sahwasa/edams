@@ -36,12 +36,12 @@
                   <input type="text" placeholder="발생지역" title="발생지역" />
                 </li>
                 <li>
-                  <button type="button" class="btn_gray btn_search">검색</button>
+                  <button type="button" class="btn btn_gray">검색</button>
                 </li>
             </ul>
             </div>
             <div class="tbl_wrap">
-              <table id="jqGrid1" class="jq-grid"></table>
+              <table id="jqGrid" class="jq-grid"></table>
             </div>
          </div>
          <div class="section section_r">
@@ -108,7 +108,7 @@
    @@include('inc/footer.html')
 </div>
 <script>
-var mydata1 = [
+var mydata = [
   {"t1": "2019009233", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "인천 웅진군 연평도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "인천 웅진군 연평도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "인천 웅진군 연평도 남서쪽 50㎞ 해역"},
@@ -116,8 +116,8 @@ var mydata1 = [
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "인천 웅진군 연평도 남서쪽 50㎞ 해역"},
   {"t1": "", "t2": "2013-05-15 22:12:32", "t3": "38.82", "t4": "125.56", "t5": "2.0", "t6": "인천 웅진군 연평도 남서쪽 50㎞ 해역"}
 ];
-$("#jqGrid1").jqGrid({
-  data: mydata1,
+$("#jqGrid").jqGrid({
+  data: mydata,
   datatype: "local",
   colModel: [
     {label:'지진번호',name:'t1',width:100},
