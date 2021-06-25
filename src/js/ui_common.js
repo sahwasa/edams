@@ -1,4 +1,53 @@
 $(function(){
+
+  // slectlist evt
+  var selList = $('[role="checklist"]'),
+      selBtn = selList.find('input'),
+      allBtn = $('[role="all"]');    
+  selBtn.each(function(){
+    if($(this).prop('checked')) $(this).parent('label').addClass('on');
+  });
+  selBtn.on('change', function(){
+    var sel = $(this),
+        selP = sel.parents('ul');
+      addOn(sel);
+      allEvt(selP);
+  });
+  allBtn.on('change',function(){
+    var all = $(this);
+    addOn(all);
+  })
+  function addOn(sel){
+    if(sel[0].type === 'radio'){
+      sel.parents('ul').find('label').removeClass('on');
+    }
+    (sel.prop('checked')) ?
+      sel.parents('label').addClass('on') :
+      sel.parents('label').removeClass('on');
+  }
+  function allEvt(selP){
+    var checkLeng = selP.find(':checkbox:checked').length,
+        allLeng = selP.find(':checkbox').length,
+        thisAll = selP.prev('label').find('[role="all"]');       
+    (checkLeng === allLeng) ?
+    thisAll.prop('checked',true).parents('label').addClass('on') :
+    thisAll.prop('checked',false).parents('label').removeClass('on');
+  }
+  allBtn.on('change',function(){
+    var sel = $(this),
+        selUl = $(this).parent('label').next('ul'),
+        selTxt = $(this).next('.txt');
+    if(sel.prop('checked')){
+      selUl.find(':checkbox').prop('checked',true);
+      selUl.find('label').addClass('on');
+      selTxt.text('ON')
+    }else{
+      selUl.find(':checkbox').prop('checked',false);
+      selUl.find('label').removeClass('on');
+      selTxt.text('OFF')
+    }
+  });
+
   /*calendar*/
   $.datepicker.setDefaults({
     buttonImageOnly: true,
@@ -52,17 +101,37 @@ $(function(){
   });    
   tabInit();
 
-  // pop
+  // pop_open
   var popBtn = $('[openpop]');
   popBtn.on('click',function(){
     var target = $(this).attr('openpop');
     $('#'+target).show();
   })
+
   var closePop = $('[closePop]');
   closePop.on('click',function(){
     $(this).parents('.pop_overlay').hide();
   })
 
+  $('.btn_toggle').on('click',function(e){
+    e.preventDefault();
+    var cur = $(this).attr('datavalue');
+    if($(this).attr('disabled') == 'disabled') return false;
+    if(cur == 'on'){
+      $(this).attr('datavalue','off');
+    }else{
+        $(this).attr('datavalue','on');
+    }
+  })
+
+  // var modal= $(".pop_wrap");
+  // modal.draggable({
+  //   handle: ".pop_tit",
+  //   containment: "parent",
+  //   scroll:false,
+  //   cursor:'move'
+  //  });
+  
   // accordion
   $('[role="acc"] > div').accordion({
     header : "h4",
@@ -74,6 +143,12 @@ $(function(){
     },
     // active: true
   });
+
+    /* fileDeco */
+  $('[role="fileAdd"]').change(function(){
+    var fileAdd = $(this);
+    fileAdd.parent('span').prev('[role="filePath"]').val(fileAdd.val());
+  });
   
 });
 function jqgridInit(){
@@ -84,6 +159,7 @@ function jqgridInit(){
 $(window).on('resize', function() {
   jqgridInit();
 });
+
 
 function tblBtn(cellValue, options, rowdata, action) {
   var html, txt = "";
