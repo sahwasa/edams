@@ -101,7 +101,7 @@
         </table>
         <div class="gis_wrap">
           <div class="gis_area">
-            <img src="http://placehold.it/651x505" width="100%" height="100%" alt="지도 영역" />
+            <img src="http://placehold.it/649x503" width="100%" height="100%" alt="지도 영역" />
             <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
             <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
             <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
@@ -286,12 +286,12 @@
       { label: '시설물 번호', name: 't1', width: 163 },
       { label: '시설물 종류', name: 't2', width: 109 },
       { label: '시설물명', name: 't3', width: 105 },
-      { label: '파일명', name: 't4', width: 150 },
+      { label: '파일명', name: 't4', width: 150, align:'left'},
       { label: '생성일자', name: 't5', width: 156 }
     ],
     loadonce: true,
     viewrecords: true,
-    height: 415,
+    height: 414,
     rowTotal: -1,
     multiselect: true
   });
@@ -300,7 +300,7 @@
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_safe", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_needcheck", "t5": "2021-05-27 12:34:56" },
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_ing", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt5", "t5": "2021-05-27 12:34:56" }
+    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_unperformed", "t5": "2021-05-27 12:34:56" }
   ];
   $("#jqGrid2").jqGrid({
     data: mydata2,
@@ -314,12 +314,33 @@
     ],
     loadonce: true,
     viewrecords: true,
-    height: 372,
+    height: 371,
     rowTotal: -1,
     multiselect: true
   });
 
-
+  function evtDivision(cellValue, options, rowdata, action) {
+    var html, txt = "";
+    switch (cellValue) {
+      case "i_safe":
+        txt = "안전";
+        break;
+      case "i_needcheck":
+        txt = "점검필요";
+        break;
+      case "i_ing":
+        txt = "수행중";
+        break;
+      case "i_unperformed":
+        html = '<button type="button" class="btn btn_s btn_redline">실행</button';
+        break;
+      default:
+        txt = cellValue;
+    }
+    if(cellValue != "i_unperformed") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
+    
+    return html;
+  }
   jqgridInit();
 </script>
 </body>

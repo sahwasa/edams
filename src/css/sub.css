@@ -48,15 +48,17 @@
 [aria-describedby="jqGrid2_t5"]{padding-left:20px;}
 
 /* fac */
-.fac01-1 .f_sb .section_l{margin-top:27px;}
 .fac01-1 .f_sb .section_r{width:calc(100% - 600px);}
 .fac01-1 .section_r .article:last-child{margin-top:40px;}
 textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 
 /* dam */
-.dam01 .f_sb .section_l{width:calc(100% - 749px);}
-.dam01 .section_l .tab{margin-top:26px;}
-.ipt_facname{width:320px;}
+.dam01 .f_sb .section_l,
+.dam01 .quake_wrap,
+.dam01 .tab{width:calc(100% - 749px);}
+.dam01 .cont_wrap{position:relative;}
+.dam01 .tab_area{margin-top:26px;}
+.dam01 .tab_area .section_r{position:absolute;top:35px;right:0;width:719px;}
 .dam_count{margin-bottom:5px;}
 .dam_count li{position:relative;width:118px;height:38px;font-size:13px;color:#fff;font-weight:600;line-height:38px;border-radius:3px;margin-left:10px;text-align:center;padding-right:55px;letter-spacing:-.1em;}
 .dam_count li:nth-child(1){background-color:#024684;margin-left:0;}
