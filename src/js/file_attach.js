@@ -114,7 +114,6 @@ function selectFile(fileObject) {
         fileSizeStr = parseInt(fileSize) + " BYTE";
       }
 
-
       if ($.inArray(ext, ['exe', 'bat', 'sh', 'java', 'jsp', 'html', 'js', 'css', 'xml']) >= 0) {
         // 확장자 체크
         /* alert("등록이 불가능한 파일 입니다.");
