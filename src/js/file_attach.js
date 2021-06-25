@@ -118,22 +118,16 @@ function selectFile(fileObject) {
         // 확장자 체크
         /* alert("등록이 불가능한 파일 입니다.");
         break; */
+        var attachListWrap = document.getElementById('fileTableTbody');
+        var attachList = attachListWrap.querySelectorAll('tr');
+        var attachListLength = attachList.length;
 
-        // 20210624
-        // 리스트에 들어간 파일의 갯수를 나타내는 변수를 만들어서 if 조건식에 담기
-        var fileListTest = document.getElementById('fileTableTbody');
-        var fileListTest2 = fileListTest.querySelectorAll('tr');
-        var fileListTest3 = fileListTest2.length;
-
-        if (fileListTest3 == 0) {
+        if (attachListLength == 0) {
           $("#fileDragDesc").show();
           $("fileListTable").hide();
-          console.log('a');
         } else {
           $("#fileDragDesc").hide();
           $("fileListTable").show();
-          console.log('b');
-          console.log(fileListTest3);
         }
         alert(fileName + "은 등록이 불가능한 파일 형식입니다.");
 
