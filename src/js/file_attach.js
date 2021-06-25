@@ -107,11 +107,11 @@ function selectFile(fileObject) {
 
       var fileSizeStr = "";
       if ((1024 * 1024) <= fileSize) {    // 파일 용량이 1메가 이상인 경우 
-        fileSizeStr = fileSizeMb.toFixed(2) + " Mb";
+        fileSizeStr = fileSizeMb.toFixed(2) + " MB";
       } else if ((1024) <= fileSize) {
-        fileSizeStr = parseInt(fileSizeKb) + " kb";
+        fileSizeStr = parseInt(fileSizeKb) + " KB";
       } else {
-        fileSizeStr = parseInt(fileSize) + " byte";
+        fileSizeStr = parseInt(fileSize) + " BYTE";
       }
 
 
