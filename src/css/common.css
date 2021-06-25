@@ -47,6 +47,7 @@ select{min-width:50px;padding-right:20px;}
 .btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../images/btn_pop_close.png);}
 .pop_wrap .search.f_sb{justify-content:space-between;}
 .pop_wrap .btn_wrap{padding-top:16px;}
+.pop_wrap .search li{margin-left:0px;}
 .pop_wrap table{border:1px solid #d7d7d7;}
 .pop_wrap th{width:20%;}
 .pop_wrap .tbl_row th,
@@ -166,6 +167,7 @@ td .axi{margin-right:0;}
 /* search */
 .search{display:flex;justify-content:end;align-items:center;padding:10px;margin-bottom:12px;border-width:1px 0;border:1px solid #d7d7d7;background-color:#f3f3f3;line-height:25px;}
 .search ul{display:flex;align-items:center;}
+.search li{margin-left:10px;}
 .search li:first-child{margin-left:0;}
 .search input,.search select,.search button{font-size:13px;vertical-align:middle;}
 .search li label,
