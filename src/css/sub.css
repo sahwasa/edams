@@ -35,18 +35,14 @@
 .tbl_refer td{border:1px solid #000;padding:3px 5px;text-align:left;word-break:keep-all;}
 .tbl_refer th{width:30px;text-align:center;}
 .notice_foot p{margin-top:4px;}
-
 .tbl_sta th{width:150px;}
 .tbl_sta td{width:25%;}
 .recorder_sensor{counter-reset:recorder;}
 .recorder h4::after{counter-increment:recorder;content:"#"counter(recorder);margin-left:5px;}
 .recorder .sensor{margin:10px 0 15px;}
 .recorder:last-of-type .sensor{margin-bottom:0;}
-
-/*  */
 .acc03 .btn_wrap,
 .fac01 .btn_wrap{margin-bottom:5px;text-align:right;}
-
 .tbl_event_dtl{position:relative;margin-top:58px;}
 .tbl_event_dtl::after{position:absolute;top:-30px;left:50%;content:'\f107';display:block;font-family:'axicon';font-size:35px;color:#ccc;transform:translateX(-50%);}
 [aria-describedby="jqGrid2_t5"]{padding-left:20px;}
@@ -69,7 +65,6 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .dam_count li:nth-child(4){background-color:#fa6e1a;}
 .dam_count li:nth-child(5){background-color:#f00}
 .dam_count li span{position:absolute;top:50%;right:6px;width:50px;line-height:24px;background-color:#fff;border-radius:12px;text-align:center;color:#777;transform:translateY(-50%);}
-
 .dam01 .tbl_wrap .i_status,
 .dam02 .tbl_wrap .i_status{display:inline-block;width:70px;text-align:left;}
 .dam02 .f_sb .section_r{width:calc(100% - 681px);}
@@ -79,7 +74,6 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .recorder h4::after{counter-increment:recorder;content:"#"counter(recorder);margin-left:5px;}
 .recorder .sensor{margin:10px 0 15px;}
 .recorder:last-of-type .sensor{margin-bottom:0;}
-
 .tbl_tag_evt::before{position: relative;top:2px;display:inline-block;content:'';width:14px;height:14px;background:url(../images/ico_legend.png);position:relative;top:1px;margin-right:4px;}
 .tbl_tag_evt.evt1::before{background-position:0 106px;}
 .tbl_tag_evt.evt2::before{background-position:0 83px;}
@@ -94,11 +88,10 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .tbl_evt.evt4{background-color:#fa6e1a;}
 .tbl_evt.evt5{background-color:#ff0000;}
 
-
 /* admin */
-.admin02_list .text_orange{color:#e0752e;}
-.admin02_list .search{justify-content:space-between;}
-.admin02_list .search ul{width:100%;}
+.admin02 .text_orange{color:#e0752e;}
+.admin02 .search{justify-content:space-between;}
+.admin02 .search ul{width:100%;}
 .tbl_manual{line-height:32px;table-layout:fixed;}
 .tbl_manual thead{border-top:2px solid #000;border-bottom:1px solid #000;}
 .tbl_manual tbody tr{border-bottom:1px solid #e8e8e8;}
@@ -125,14 +118,44 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .manual_body{padding:30px 0;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;}
 .manual_body p{padding-left:10px;font-size:13px;line-height:24px;}
 .manual_body textarea{width:100%;min-height:300px;}
-.manual_attach h3,.upload-btn{padding:10px 0;font-size:13px;}
+.manual_attach h3{padding:10px 0;font-size:13px;}
+.upload-btn{padding:1px 5px 3px 3px;border:1px solid #ccc;border-radius:3px;font-size:13px;cursor:pointer;}
 .manual_attach #dropZone{padding:10px 0 10px 10px;background-color:#e8e8e8;text-align:left;}
 .manual_attach li{line-height:35px;}
 .manual_attach h3::before,.upload-btn::before{position:relative;top:2px;content:'';display:inline-block;width:15px;height:16px;margin-right:5px;background:url(../images/ico_addfile.gif);background-size:cover;}
 .manual_attach span{margin:0 5px;color:#aaaaaa;}
 .manual_attach .btn_file{position:relative;top:3px;}
-.admin02_write .manual_body{padding:10px 0;}
-.admin02_write .tit_manual{padding:15px 0;}
+.admin02_write .manual_body,.admin02_write .tit_manual{padding:10px 0;}
 .btn_delfile{position:relative;top:3px;display:inline-block;width:14px;height:14px;background:url(../images/ico_pop_close_red.png)no-repeat center center;background-size:80%;}
-.upload-btn-wrapper{position:relative;}
-.upload-btn-wrapper input[type=file]{font-size:100px;position:absolute;left:0;top:0;opacity:0}#fileDragDesc{text-align:center}
+.upload-btn-wrapper{position:relative;padding:10px 0;}
+.upload-btn-wrapper input[type=file]{position:absolute;left:0;top:10px;opacity:0;width:80px;height:25px;cursor:pointer;}
+#fileDragDesc{text-align:center}
+.wrap .admin02_write{max-height:1000%;}
+
+/* pop_sub */
+/* 구조물상세자료 업로드(p_fac01-1-2) */
+.fac_file #upFile{display:none;}
+.fac_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.fac_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
+.fac_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
+
+/* 관측자료 업로드 완료(p_acc04-1-2) */
+.upload_done{font-size:14px;text-align:center;padding-bottom:20px;}
+.upload_done::before{display:block;content:'\e6c6';font-family:'axicon';font-size:45px;color:#555;padding-bottom:10px;}
+
+/* 내정보(p_cmmn02-1) */
+.p_cmmn02-1-1 input[type = text]{padding:0;border:1px solid transparent;}
+#info_pw{padding-left:5px;color:#bbb;}
+#info_number, #info_phonenumber{padding-left:25px;}
+.info_number, .info_phonenumber{position:relative;}
+.info_number::before, .info_phonenumber::before{position:absolute;top:45%;font-size:16px;font-family:'axicon';transform:translateY(-50%);color:#777;}
+.info_number::before{content:'\f095';left:10px;}
+.info_phonenumber::before{content:'\e865';left:7px;}
+.pop_wrap table input[type = text],
+.pop_wrap table input[type = date],
+.pop_wrap table input[type = password],
+.pop_wrap table select,
+.pop_wrap table textarea{width:100%;}
+.input_50 input{max-width:45%;}
+.p_admin01-1 table th, .p_cmmn02-1-1 table th, .p_cmmn02-1-2 table th{width:30%;text-align:left;}
+.p_cmmn02-1-3 table th{width:30%;}
