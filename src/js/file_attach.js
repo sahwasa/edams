@@ -111,7 +111,6 @@ function selectFile(fileObject) {
       if ($.inArray(ext, notExt ) >= 0) {
         // 확장자 체크
         alert(fileName + "은 등록이 불가능한 파일 형식입니다.");
-        break;
       } else if (fileSizeMb > uploadSize) {
         // 파일 사이즈 체크
         alert("용량 초과\n업로드 가능 용량 : " + uploadSize + " MB");
