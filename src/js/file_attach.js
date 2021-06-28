@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $("#input_file").bind('change', function () {
+$(function () {
+  $("#input_file").on('change', function () {
     selectFile(this.files);
     //this.files[0].size gets the size of your file.
     //alert(this.files[0].size);
@@ -82,14 +82,6 @@ function selectFile(fileObject) {
 
   // 다중파일 등록
   if (files != null) {
-    if (files != null && files.length > 0) {
-      $("#fileDragDesc").hide();
-      $("fileListTable").show();
-    } else {
-      $("#fileDragDesc").show();
-      $("fileListTable").hide();
-    }
-
     for (var i = 0; i < files.length; i++) {
       // 파일 이름
       var fileName = files[i].name;
@@ -114,23 +106,12 @@ function selectFile(fileObject) {
         fileSizeStr = parseInt(fileSize) + " BYTE";
       }
 
-      if ($.inArray(ext, ['exe', 'bat', 'sh', 'java', 'jsp', 'html', 'js', 'css', 'xml']) >= 0) {
+      var notExt = ['exe', 'bat', 'sh', 'java', 'jsp', 'html', 'js', 'css', 'xml'];
+
+      if ($.inArray(ext, notExt ) >= 0) {
         // 확장자 체크
-        /* alert("등록이 불가능한 파일 입니다.");
-        break; */
-        var attachListWrap = document.getElementById('fileTableTbody');
-        var attachList = attachListWrap.querySelectorAll('tr');
-        var attachListLength = attachList.length;
-
-        if (attachListLength == 0) {
-          $("#fileDragDesc").show();
-          $("fileListTable").hide();
-        } else {
-          $("#fileDragDesc").hide();
-          $("fileListTable").show();
-        }
         alert(fileName + "은 등록이 불가능한 파일 형식입니다.");
-
+        break;
       } else if (fileSizeMb > uploadSize) {
         // 파일 사이즈 체크
         alert("용량 초과\n업로드 가능 용량 : " + uploadSize + " MB");
@@ -150,6 +131,13 @@ function selectFile(fileObject) {
 
         // 파일 번호 증가
         fileIndex++;
+      }
+      if (fileList != null && fileList.length > 0) {
+        $("#fileDragDesc").hide();
+        $("fileListTable").show();
+      } else {
+        $("#fileDragDesc").show();
+        $("fileListTable").hide();
       }
     }
   } else {
