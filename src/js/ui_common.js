@@ -163,8 +163,3 @@ function evtDivision(cellValue, options, rowdata, action) {
   
   return html;
 }
-
-
-$('.btn_write').on('click', function(){
-  $()
-})
