@@ -458,10 +458,10 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid tr{border-color:#e8e8e8;}
 .ui-jqgrid tr.ui-row-ltr td{text-align:center;border-top:1px solid transparent;}
 .ui-jqgrid tr.jqgrow td, .ui-jqgrid tr.jqgroup td{height:26px;}
-.ui-jqgrid tr.ui-state-hover{background-color:#f5f6f7;}
+.ui-jqgrid tr.ui-state-hover{background-color:#f0f7ff;}
 .ui-jqgrid tr.ui-state-hover td{border-top-color:#ccc;}
 .ui-jqgrid tr.ui-state-highlight,
-.ui-jqgrid tr.ui-state-highlight td{border-color:#e8e8e8;}
+.ui-jqgrid tr.ui-state-highlight td{border-color: #fad42e;background-color:#fffcc6;}
 .ui-jqgrid .ui-jqgrid-pager{background:#eff2f5;border-radius:0;}
 .ui-jqgrid .ui-jqgrid-pager td{padding:0;border:none;background:transparent;}
 .ui-jqgrid .ui-jqgrid-pager input{height:16px;border-radius:0;vertical-align:baseline;padding:3px 8px;}
@@ -470,5 +470,4 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-icon-desc{margin-top:-10px;margin-left:0;}
 .ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
 .ui-jqgrid-hdiv input[type = checkbox]{position:relative;top:-3px;}
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background-color:#f0f7ff;}
 .td_padding{padding-left:13px !important;}
