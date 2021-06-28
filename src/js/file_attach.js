@@ -111,7 +111,6 @@ function selectFile(fileObject) {
       if ($.inArray(ext, notExt ) >= 0) {
         // 확장자 체크
         alert(fileName + "은 등록이 불가능한 파일 형식입니다.");
-        break;
       } else if (fileSizeMb > uploadSize) {
         // 파일 사이즈 체크
         alert("용량 초과\n업로드 가능 용량 : " + uploadSize + " MB");
@@ -132,7 +131,7 @@ function selectFile(fileObject) {
         // 파일 번호 증가
         fileIndex++;
       }
-      if (fileList != null && fileList.length > 0) {
+      if (totalFileSize > 0) {
         $("#fileDragDesc").hide();
         $("fileListTable").show();
       } else {
@@ -175,6 +174,7 @@ function deleteFile(fIndex) {
   // 파일 사이즈 배열 삭제
   delete fileSizeList[fIndex];
 
+  console.log(totalFileSize)
   // 업로드 파일 테이블 목록에서 삭제
   $("#fileTr_" + fIndex).remove();
 
