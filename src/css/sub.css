@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* login */
 .login_wrap{position:relative;width:100%;height:100%;background:linear-gradient(to bottom, #f4f4f4 35%,#b4d6ed 50%,#a2cde8 51%,#f7f7f7 88%);}
 .login_box{position:absolute;top:calc(50% - 200px);left:calc(50% - 275px);width:550px;height:400px;}
@@ -130,31 +132,3 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .upload-btn-wrapper input[type=file]{position:absolute;left:0;top:10px;opacity:0;width:80px;height:25px;cursor:pointer;}
 #fileDragDesc{text-align:center}
 .wrap .admin02_write{max-height:1000%;}
-
-/* pop_sub */
-/* 구조물상세자료 업로드(p_fac01-1-2) */
-.fac_file #upFile{display:none;}
-.fac_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
-.fac_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
-.fac_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
-
-/* 관측자료 업로드 완료(p_acc04-1-2) */
-.upload_done{font-size:14px;text-align:center;padding-bottom:20px;}
-.upload_done::before{display:block;content:'\e6c6';font-family:'axicon';font-size:45px;color:#555;padding-bottom:10px;}
-
-/* 내정보(p_cmmn02-1) */
-.p_cmmn02-1-1 input[type = text]{padding:0;border:1px solid transparent;}
-#info_pw{padding-left:5px;color:#bbb;}
-#info_number, #info_phonenumber{padding-left:25px;}
-.info_number, .info_phonenumber{position:relative;}
-.info_number::before, .info_phonenumber::before{position:absolute;top:45%;font-size:16px;font-family:'axicon';transform:translateY(-50%);color:#777;}
-.info_number::before{content:'\f095';left:10px;}
-.info_phonenumber::before{content:'\e865';left:7px;}
-.pop_wrap table input[type = text],
-.pop_wrap table input[type = date],
-.pop_wrap table input[type = password],
-.pop_wrap table select,
-.pop_wrap table textarea{width:100%;}
-.input_50 input{max-width:45%;}
-.p_admin01-1 table th, .p_cmmn02-1-1 table th, .p_cmmn02-1-2 table th{width:30%;text-align:left;}
-.p_cmmn02-1-3 table th{width:30%;}

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
@@ -66,7 +67,7 @@
 </div>
   </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_dam01-1">
+  <div class="pop_wrap p_dam01_1">
     <div class="pop_tit">
       <h1>지진선택</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -83,8 +84,8 @@
             </span>
           </li>
           <li>
-            <label for="p.acc01_scale">규모</label>
-            <select id="p.acc01_scale" title="전체">
+            <label for="scale">규모</label>
+            <select id="scale" title="전체">
               <option value="">전체</option>
             </select> ~
             <select title="전체">
@@ -92,8 +93,8 @@
             </select>
           </li>
           <li>
-            <label for="p.acc01_location">발생지역</label>
-            <input type="text" id="p.acc01_location" placeholder="검색어">
+            <label for="location">발생지역</label>
+            <input type="text" id="location" placeholder="검색어">
           </li>
           <li>
             <button type="button" class="btn btn_gray">검색</button>
@@ -134,7 +135,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc03-1">
+  <div class="pop_wrap p_acc03_1">
     <div class="pop_tit">
       <h1>관측소 추가</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -144,41 +145,41 @@
         <table class="tbl_row">
           <caption>관측소 추가</caption>
           <tr>
-            <th scope="row"><label for="mgt_code">기관코드</label></th>
+            <th scope="row"><label for="code">기관코드</label></th>
             <td>
-              <select name="code" id="mgt_code">
+              <select name="code" id="code">
                 <option value="">선택</option>
               </select>
             </td>
             <th>
-              <label for="mgt_state">운영상태</label>
+              <label for="state">운영상태</label>
             </th>
             <td>
-              <select name="state" id="mgt_state">
+              <select name="state" id="state">
                 <option value="">선택</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_name">관측소명</label>
+              <label for="name">관측소명</label>
             </th>
             <td>
-              <input type="text" id="mgt_name">
+              <input type="text" id="name">
             </td>
             <th>
-              <label for="mgt_code_2">관측소코드</label>
+              <label for="code_2">관측소코드</label>
             </th>
             <td>
-              <input type="text" id="mgt_code_2">
+              <input type="text" id="code_2">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_type">관측소종류</label>
+              <label for="type">관측소종류</label>
             </th>
             <td>
-              <select name="type" id="mgt_type">
+              <select name="type" id="type">
                 <option value="">선택</option>
               </select>
             </td>
@@ -187,70 +188,70 @@
           </tr>
           <tr>
             <th>
-              <label for="mgt_longitude">경도</label>
+              <label for="longitude">경도</label>
             </th>
             <td>
-              <input type="text" id="mgt_longitude">
+              <input type="text" id="longitude">
             </td>
             <th>
-              <label for="mgt_latitude">위도</label>
+              <label for="latitude">위도</label>
             </th>
             <td>
-              <input type="text" id="mgt_latitude">
+              <input type="text" id="latitude">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_start">시작일</label>
+              <label for="start">시작일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="mgt_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
             <th>
-              <label for="mgt_end">종료일</label>
+              <label for="end">종료일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="mgt_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_floor">건물 층 수</label>
+              <label for="floor">건물 층 수</label>
             </th>
             <td>
-              <input type="text" id="mgt_floor">
+              <input type="text" id="floor">
             </td>
             <th>
-              <label for="mgt_m">표고(M)</label>
+              <label for="m">표고(M)</label>
             </th>
             <td>
-              <input type="text" id="mgt_m">
+              <input type="text" id="m">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_lacation">관측소위치</label>
+              <label for="location">관측소위치</label>
             </th>
             <td colspan="3">
               <span class="area">
-                <select id="mgt_lacation">
+                <select id="location">
                   <option value="">경상남도</option>
                 </select>
-                <select title="mgt_lacation">
+                <select title="location">
                   <option value="">상주시</option>
                 </select>
-                <input type="text" title="mgt_lacation">
+                <input type="text" title="location">
               </span>
             </td>
           </tr>
           <tr>
-            <th><label for="mgt_remarks">비고</label></th>
+            <th><label for="remarks">비고</label></th>
             <td colspan="3">
-              <textarea name="remarks" id="mgt_remarks" cols="70" rows="3"></textarea>
+              <textarea name="remarks" id="remarks" cols="70" rows="3"></textarea>
             </td>
           </tr>
         </table>
@@ -262,7 +263,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc03-2-1">
+  <div class="pop_wrap p_acc03_2_1">
     <div class="pop_tit">
       <h1>기록계 등록/수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -276,91 +277,91 @@
           <caption>기록계 등록/수정</caption>
           <tr>
             <th scope="row">
-              <label for="equip_number">기록계고유번호</label>
+              <label for="number">기록계고유번호</label>
             </th>
             <td>
-              <input type="text" id="equip_number">
+              <input type="text" id="number">
             </td>
             <th>
-              <label for="equip_state">운영상태</label>
+              <label for="state">운영상태</label>
             </th>
             <td>
-              <select name="state" id="equip_state">
+              <select name="state" id="state">
                 <option value="">운영중</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="equip_make">제작사</label>
+              <label for="make">제작사</label>
             </th>
             <td>
-              <select name="make" id="equip_make">
+              <select name="make" id="make">
                 <option value="">제조사</option>
               </select>
             </td>
             <th>
-              <label for="equip_model">모델</label>
+              <label for="model">모델</label>
             </th>
             <td>
-              <select name="model" id="equip_model">
+              <select name="model" id="model">
                 <option value="">모델명</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="equip_serial">Serial</label>
+              <label for="serial">Serial</label>
             </th>
             <td>
-              <input type="text" id="equip_serial">
+              <input type="text" id="serial">
             </td>
             <th>
-              <label for="equip_channel">채널 수</label>
+              <label for="channel">채널 수</label>
             </th>
             <td>
-              <input type="text" id="equip_channel">
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label for="equip_format">Save format</label>
-            </th>
-            <td>
-              <select name="format" id="equip_format">
-                <option value="">선택</option>
-              </select>
-            </td>
-            <th>
-              <label for="equip_protocol">protocol</label>
-            </th>
-            <td>
-              <select name="protocol" id="equip_protocol">
-                <option value="">선택</option>
-              </select>
+              <input type="text" id="channel">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="equip_start">시작일</label>
+              <label for="format">Save format</label>
+            </th>
+            <td>
+              <select name="format" id="format">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="protocol">protocol</label>
+            </th>
+            <td>
+              <select name="protocol" id="protocol">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="start">시작일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="equip_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="from" required></span>
             </td>
-            <th><label for="equip_end">종료일</label>
+            <th><label for="end">종료일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="equip_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
           </tr>
           <tr>
-            <th><label for="equip_remarks">비고</label></th>
+            <th><label for="remarks">비고</label></th>
             <td colspan="3">
-              <textarea name="remarks" id="equip_remarks" cols="70" rows="1"></textarea>
+              <textarea name="remarks" id="remarks" cols="70" rows="1"></textarea>
             </td>
           </tr>
         </table>
@@ -373,7 +374,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc03-2-2">
+  <div class="pop_wrap p_acc03_2_2">
     <div class="pop_tit">
       <h1>센서 등록/수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -386,106 +387,106 @@
         <table class="tbl_row">
           <caption>센서 등록/수정</caption>
           <tr>
-            <th scope="row"><label for="sensor_number">기록계 고유번호</label></th>
-            <td title="sensor_number">GS_IC_R01</td>
+            <th scope="row"><label for="number">기록계 고유번호</label></th>
+            <td title="number">GS_IC_R01</td>
             <th>
-              <label for="sensor_number_2" required>센서 고유번호</label>
+              <label for="number_2" required>센서 고유번호</label>
             </th>
             <td>
-              <select name="number" id="sensor_number_2">
+              <select name="number" id="number_2">
                 <option value="">선택</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="sensor_latitude" required>위도</label>
+              <label for="latitude" required>위도</label>
             </th>
             <td>
-              <input type="text" id="sensor_latitude">
+              <input type="text" id="latitude">
             </td>
             <th>
-              <label for="sensor_longitude" required>경도</label>
+              <label for="longitude" required>경도</label>
             </th>
             <td>
-              <input type="text" id="sensor_longitude">
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label for="sensor_make" required>제작사</label>
-            </th>
-            <td>
-              <select name="make" id="sensor_make">
-                <option value="">선택</option>
-              </select>
-            </td>
-            <th>
-              <label for="sensor_model" required>모델</label>
-            </th>
-            <td>
-              <select name="model" id="sensor_model">
-                <option value="">선택</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-          <tr>
-            <th>
-              <label for="sensor_state">운영상태</label>
-            </th>
-            <td>
-              <select name="state" id="sensor_state">
-                <option value="">선택</option>
-              </select>
-            </td>
-            <th>
-              <label for="sensor_serial">serial</label>
-            </th>
-            <td>
-              <input type="text" id="sensor_serial">
+              <input type="text" id="longitude">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="sensor_purpose">센서용도</label>
+              <label for="make" required>제작사</label>
             </th>
             <td>
-              <select name="purpose" id="sensor_purpose">
+              <select name="make" id="make">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="model" required>모델</label>
+            </th>
+            <td>
+              <select name="model" id="model">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <th>
+              <label for="state">운영상태</label>
+            </th>
+            <td>
+              <select name="state" id="state">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="serial">serial</label>
+            </th>
+            <td>
+              <input type="text" id="serial">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="purpose">센서용도</label>
+            </th>
+            <td>
+              <select name="purpose" id="purpose">
                 <option value="">자유장</option>
               </select>
             </td>
             <th>
-              <label for="sensor_sort">센서구분</label>
+              <label for="sort">센서구분</label>
             </th>
             <td>
-              <select name="sort" id="sensor_sort">
+              <select name="sort" id="sort">
                 <option value="">속도</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="sensor_start">시작일</label>
+              <label for="start">시작일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="sensor_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="from" required></span>
             </td>
             <th>
-              <label for="sensor_end">종료일</label>
+              <label for="end">종료일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
           </tr>
           <tr>
-            <th><label for="sensor_remarks">비고</label></th>
+            <th><label for="remarks">비고</label></th>
             <td colspan="3">
-              <textarea name="remarks" id="sensor_remarks" cols="70" rows="1"></textarea>
+              <textarea name="remarks" id="remarks" cols="70" rows="1"></textarea>
             </td>
           </tr>
         </table>
@@ -498,7 +499,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc04-1-1">
+  <div class="pop_wrap p_acc04_1_1">
     <div class="pop_tit">
       <h1>관측자료 업로드</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -558,7 +559,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc04-1-2">
+  <div class="pop_wrap p_acc04_1_2">
     <div class="pop_tit">
       <h1>관측자료 업로드</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -574,7 +575,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_fac01-1-1">
+  <div class="pop_wrap p_fac01_1_1">
     <div class="pop_tit">
       <h1>시설물 등록</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -584,71 +585,71 @@
         <table class="tbl_row">
           <caption>시설물등록</caption>
           <tr>
-            <th scope="row"><label for="fac_number">시설물번호</label></th>
-            <td><input type="text" id="fac_number"></td>
+            <th scope="row"><label for="number">시설물번호</label></th>
+            <td><input type="text" id="number"></td>
           </tr>
           <tr>
-            <th><label for="fac_name">시설물명</label></th>
-            <td><input type="text" id="fac_name"></td>
+            <th><label for="name">시설물명</label></th>
+            <td><input type="text" id="name"></td>
           </tr>
           <tr>
-            <th><label for="fac_done">준공일자</label></th>
+            <th><label for="done">준공일자</label></th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="fac_done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="done" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="datepic" required title="준공일자 선택"></span>
             </td>
           </tr>
           <tr>
-            <th><label for="fac_location">위치</label></th>
+            <th><label for="location">위치</label></th>
             <td>
               <span class="area">
-                <select name="location" id="fac_location">
+                <select name="location" id="location">
                   <option value="">시도</option>
                 </select>
-                <select name="fac_location">
+                <select name="location">
                   <option value="">시군구</option>
                 </select>
-                <input type="text" title="fac_location">
+                <input type="text" title="location">
               </span>
             </td>
           </tr>
           <tr>
-            <th><label for="fac_latitude">위도</label></th>
-            <td><input type="text" id="fac_latitude"></td>
+            <th><label for="latitude">위도</label></th>
+            <td><input type="text" id="latitude"></td>
           </tr>
           <tr>
-            <th><label for="fac_longitude">경도</label></th>
-            <td><input type="text" id="fac_longitude"></td>
+            <th><label for="longitude">경도</label></th>
+            <td><input type="text" id="longitude"></td>
           </tr>
           <tr>
-            <th><label for="fac_Management">관리주체</label></th>
-            <td><input type="text" id="fac_Management"></td>
+            <th><label for="Management">관리주체</label></th>
+            <td><input type="text" id="Management"></td>
           </tr>
           <tr>
-            <th><label for="fac_contactnumber">연락처</label></th>
-            <td><input type="text" id="fac_contactnumber"></td>
+            <th><label for="contactnumber">연락처</label></th>
+            <td><input type="text" id="contactnumber"></td>
           </tr>
           <tr>
-            <th><label for="fac_type">시설물종류</label></th>
+            <th><label for="type">시설물종류</label></th>
             <td>
-              <select name="type" id="fac_type">
+              <select name="type" id="type">
                 <option value="">도로/교량</option>
               </select>
             </td>
           </tr>
           <tr>
-            <th><label for="fac_kind">시설물종</label></th>
+            <th><label for="kind">시설물종</label></th>
             <td>
-              <select name="kind" id="fac_kind">
+              <select name="kind" id="kind">
                 <option value="">1종</option>
               </select>
             </td>
           </tr>
           <tr>
-            <th><label for="fac_sort">시설물구분</label></th>
+            <th><label for="sort">시설물구분</label></th>
             <td>
-              <select name="sort" id="fac_sort">
+              <select name="sort" id="sort">
                 <option value="">도로/교량</option>
               </select>
             </td>
@@ -662,7 +663,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_fac01-1-2">
+  <div class="pop_wrap p_fac01_1_2">
     <div class="pop_tit">
       <h1>구조물상세자료 업로드</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -672,8 +673,8 @@
         <table class="tbl_row">
           <caption>구조물상세자료 업로드</caption>
           <tr>
-            <th scope="row"><label for="upload_fac_name">제목</label></th>
-            <td><input type="text" id="upload_fac_name" placeholder="구조계산서"></td>
+            <th scope="row"><label for="name">제목</label></th>
+            <td><input type="text" id="name" placeholder="구조계산서"></td>
           </tr>
           <tr>
             <td colspan="3">
@@ -698,7 +699,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc01-1">
+  <div class="pop_wrap p_acc01_1">
     <div class="pop_tit">
       <h1>계측가속도 DB 지진선택</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -715,8 +716,8 @@
             </span>
           </li>
           <li>
-            <label for="p.acc01_scale">규모</label>
-            <select id="p.acc01_scale" title="전체">
+            <label for="scale">규모</label>
+            <select id="scale" title="전체">
               <option value="">전체</option>
             </select> ~
             <select title="전체">
@@ -724,8 +725,8 @@
             </select>
           </li>
           <li>
-            <label for="p.acc01_location">발생지역</label>
-            <input type="text" id="p.acc01_location" placeholder="검색어">
+            <label for="location">발생지역</label>
+            <input type="text" id="location" placeholder="검색어">
           </li>
           <li>
             <button type="button" class="btn btn_gray">검색</button>
@@ -766,7 +767,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_admin01-1">
+  <div class="pop_wrap p_admin01_1">
     <div class="pop_tit">
       <h1>사용자 추가 / 수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -776,62 +777,62 @@
         <table class="tbl_info">
           <caption>사용자 추가 / 수정</caption>
           <tr>
-            <th scope="row"><label for="user_id" class="required">ID</label></th>
+            <th scope="row"><label for="id" class="required">ID</label></th>
             <td>
-              <input type="text" id="user_id">
+              <input type="text" id="id">
               <!-- <p class="validity">이미 사용중인 아이디입니다.</p> -->
             </td>
             <td><button type="button" class="btn btn_gray">중복</button></td>
           </tr>
           <tr>
-            <th><label for="user_name" class="required">이름</label></th>
-            <td colspan="2"><input type="text" id="user_name"></td>
+            <th><label for="name" class="required">이름</label></th>
+            <td colspan="2"><input type="text" id="name"></td>
           </tr>
           <tr>
-            <th><label for="user_pw" class="required">비밀번호</label></th>
-            <td colspan="2"><input type="password" id="user_pw"></td>
+            <th><label for="pw" class="required">비밀번호</label></th>
+            <td colspan="2"><input type="password" id="pw"></td>
           </tr>
           <tr>
-            <th><label for="user_pwcheck" class="required">비밀번호 확인</label></th>
+            <th><label for="pwcheck" class="required">비밀번호 확인</label></th>
             <td colspan="2">
-              <input type="password" id="user_pwcheck">
+              <input type="password" id="pwcheck">
               <p class="validity">비밀번호가 일치하지 않습니다.</p>
             </td>
           </tr>
           <tr>
-            <th><label for="user_division" class="required">소속기관</label></th>
-            <td colspan="2"><input type="text" id="user_division"></td>
+            <th><label for="division" class="required">소속기관</label></th>
+            <td colspan="2"><input type="text" id="division"></td>
           </tr>
           <tr>
-            <th><label for="user_team" class="required">부서</label></th>
+            <th><label for="team" class="required">부서</label></th>
             <td colspan="2">
-              <input type="text" id="user_team">
+              <input type="text" id="team">
               <p class="validity">올바른 부서를 입력하세요</p>
             </td>
           </tr>
           <tr>
-            <th><label for="user_position">직급</label></th>
-            <td colspan="2"><input type="text" id="user_position"></td>
+            <th><label for="position">직급</label></th>
+            <td colspan="2"><input type="text" id="position"></td>
           </tr>
           <tr>
-            <th><label for="user_number">연락처</label></th>
-            <td colspan="2"><input type="text" id="user_number"></td>
+            <th><label for="number">연락처</label></th>
+            <td colspan="2"><input type="text" id="number"></td>
           </tr>
           <tr>
-            <th><label for="user_phonenumber" class="required">핸드폰</label></th>
+            <th><label for="phonenumber" class="required">핸드폰</label></th>
             <td colspan="2">
-              <input type="text" id="user_phonenumber">
+              <input type="text" id="phonenumber">
               <p class="validity">올바른 핸드폰 번호를 입력하세요.</p>
             </td>
           </tr>
           <tr>
-            <th><label for="user_email">이메일</label></th>
-            <td colspan="2"><input type="text" id="user_email"></td>
+            <th><label for="email">이메일</label></th>
+            <td colspan="2"><input type="text" id="email"></td>
           </tr>
           <tr>
-            <th><label for="user_authority" class="required">권한</label></th>
+            <th><label for="authority" class="required">권한</label></th>
             <td colspan="2">
-              <select name="authority" title="user_authority">
+              <select name="authority" title="authority">
                 <option value="권한선택">권한선택</option>
               </select>
               <p class="validity">사용자 권한을 선택하세요.</p>
@@ -846,7 +847,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_cmmn02-1-1">
+  <div class="pop_wrap p_cmmn02_1_1">
     <div class="pop_tit">
       <h1>내정보</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -856,44 +857,44 @@
         <table class="tbl_info">
           <caption>내정보</caption>
           <tr>
-            <th><label for="info_id">ID</label></th>
+            <th><label for="id">ID</label></th>
             <td colspan="2" class="alignL">admin</td>
           </tr>
           <tr>
-            <th scope="row"><label for="info_pw">비밀번호</label></th>
-            <td><input type="password" id="info_pw" value="************" disabled></td>
+            <th scope="row"><label for="pw">비밀번호</label></th>
+            <td><input type="password" id="pw" value="************" disabled></td>
             <td><button type="button" class="btn btn_gray">변경</button></td>
           </tr>
           <tr>
-            <th><label for="info_name">이름</label></th>
-            <td colspan="2"><input type="text" id="info_name" value="홍길동" disabled></td>
+            <th><label for="name">이름</label></th>
+            <td colspan="2"><input type="text" id="name" value="홍길동" disabled></td>
           </tr>
           <tr>
-            <th><label for="info_division">소속기관</label></th>
+            <th><label for="division">소속기관</label></th>
             <td colspan="2" class="alignL">경남도청</td>
           </tr>
           <tr>
-            <th><label for="info_team">부서 / 직급</label></th>
+            <th><label for="team">부서 / 직급</label></th>
             <td colspan="2">
               <span class="flex_wrap f_sb input_50">
-                <input type="text" id="info_team" value="시설물유지" disabled> /
-                <input type="text" id="info_position" value="과장" disabled>
+                <input type="text" id="team" value="시설물유지" disabled> /
+                <input type="text" id="position" value="과장" disabled>
               </span>
             </td>
           </tr>
           <tr>
-            <th rowspan="2"><label for="info_number">연락처</label></th>
-            <td colspan="2" class="info_number">
-              <input type="text" id="info_number" placeholder="부서전화" value="02-899-7894" disabled>
+            <th rowspan="2"><label for="number">연락처</label></th>
+            <td colspan="2" class="number">
+              <input type="text" id="number" placeholder="부서전화" value="02-899-7894" disabled>
             </td>
           </tr>
           <tr>
-            <td colspan="2" class="info_phonenumber">
-              <input type="text" id="info_phonenumber" placeholder="휴대전화" value="010-1234-5678" disabled>
+            <td colspan="2" class="phonenumber">
+              <input type="text" id="phonenumber" placeholder="휴대전화" value="010-1234-5678" disabled>
             </td>
           </tr>
           <tr>
-            <th><label for="info_authority">권한</label></th>
+            <th><label for="authority">권한</label></th>
             <td colspan="2" class="alignL">사용자</td>
           </tr>
         </table>
@@ -905,7 +906,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_cmmn02-1-2">
+  <div class="pop_wrap p_cmmn02_1_2">
     <div class="pop_tit">
       <h1>내정보</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -915,46 +916,46 @@
         <table class="tbl_info">
           <caption>내정보</caption>
           <tr>
-            <th><label for="info_id">ID</label></th>
+            <th><label for="id">ID</label></th>
             <td colspan="2" class="alignL">admin</td>
           </tr>
           <tr>
-            <th scope="row"><label for="info_pw">비밀번호</label></th>
-            <td><input type="password" id="info_pw" value="************" disabled></td>
+            <th scope="row"><label for="pw">비밀번호</label></th>
+            <td><input type="password" id="pw" value="************" disabled></td>
             <td><button type="button" class="btn btn_gray">변경</button></td>
           </tr>
           <tr>
-            <th><label for="info_name">이름</label></th>
-            <td colspan="2"><input type="text" id="info_name"></td>
+            <th><label for="name">이름</label></th>
+            <td colspan="2"><input type="text" id="name"></td>
           </tr>
           <tr>
-            <th><label for="info_division">소속기관</label></th>
+            <th><label for="division">소속기관</label></th>
             <td colspan="2" class="alignL">경남도청</td>
           </tr>
           <tr>
-            <th><label for="info_team">부서 / 직급</label></th>
+            <th><label for="team">부서 / 직급</label></th>
             <td colspan="2">
               <span class="flex_wrap f_sb input_50">
-                <input type="text" id="info_team" placeholder="부서"> /
-                <input type="text" id="info_position" placeholder="직급">
+                <input type="text" id="team" placeholder="부서"> /
+                <input type="text" id="position" placeholder="직급">
               </span>
             </td>
           </tr>
           <tr>
-            <th rowspan="2"><label for="info_number">연락처</label></th>
-            <td colspan="2" class="info_number">
-              <input type="text" id="info_number" placeholder="부서전화">
+            <th rowspan="2"><label for="number">연락처</label></th>
+            <td colspan="2" class="number">
+              <input type="text" id="number" placeholder="부서전화">
             </td>
           </tr>
           <tr>
-            <td colspan="2" class="info_phonenumber">
-              <input type="text" id="info_phonenumber" placeholder="휴대전화">
+            <td colspan="2" class="phonenumber">
+              <input type="text" id="phonenumber" placeholder="휴대전화">
             </td>
           </tr>
           <tr>
-            <th><label for="info_authority">권한</label></th>
+            <th><label for="authority">권한</label></th>
             <td colspan="2">
-              <select name="authority" title="info_authority">
+              <select name="authority" title="authority">
                 <option value="">권한선택</option>
                 <option value="">사용자</option>
                 <option value="">관리자</option>
@@ -970,7 +971,7 @@
   </div>
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_cmmn02-1-3">
+  <div class="pop_wrap p_cmmn02_1_3">
     <div class="pop_tit">
       <h1>비밀번호 변경</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -980,16 +981,16 @@
         <table class="tbl_row">
           <caption>비밀번호 변경</caption>
           <tr>
-            <th scope="row"><label for="userinfo_pwchange">현재 비밀번호</label></th>
-            <td><input type="password" id="userinfo_pwchange"></td>
+            <th scope="row"><label for="pwchange">현재 비밀번호</label></th>
+            <td><input type="password" id="pwchange"></td>
           </tr>
           <tr>
-            <th scope="row"><label for="userinfo_newpw">새 비밀번호</label></th>
-            <td><input type="password" id="userinfo_newpw"></td>
+            <th scope="row"><label for="newpw">새 비밀번호</label></th>
+            <td><input type="password" id="newpw"></td>
           </tr>
           <tr>
-            <th scope="row"><label for="userinfo_newpwcheck">비밀번호 확인</label></th>
-            <td><input type="password" id="userinfo_newpwcheck"></td>
+            <th scope="row"><label for="newpwcheck">비밀번호 확인</label></th>
+            <td><input type="password" id="newpwcheck"></td>
           </tr>
         </table>
         <div class="btn_wrap alignR">

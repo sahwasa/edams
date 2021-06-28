@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* Reset */
 *{margin:0;padding:0;}
 body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a{color:#333;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;font-size:12px;font-weight:normal;word-spacing:.02em;letter-spacing:-.05em;margin:0;padding:0;}
@@ -36,30 +38,6 @@ select{min-width:50px;padding-right:20px;}
 .f_sb .section_r{flex:1;margin-left:30px;}
 
 .t_upper{text-transform:uppercase;}
-
-/* pop_common */
-.pop_overlay{position:fixed;z-index:8000;top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
-.pop_wrap{width:800px;position:fixed;top:50%;left:50%;background-color:#fff;transform:translateX(-50%) translateY(-50%);}
-.pop_body{margin:0.5px;padding:22px 20px;}
-.pop_tit{display:flex;justify-content:space-between;padding:10px 15px;background-color:#005aab;}
-.pop_tit h1{font-size:16px;font-weight:bold;color:#fff;}
-.btn_pop_close{position:relative;top:1px;width:17px;height:17px;}
-.btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../images/btn_pop_close.png);}
-.pop_wrap .search.f_sb{justify-content:space-between;}
-.pop_wrap .btn_wrap{padding-top:16px;}
-.pop_wrap table{border:1px solid #d7d7d7;}
-.pop_wrap th{width:20%;}
-.pop_wrap .tbl_row th,
-.pop_wrap .tbl_row td{height:25px;padding:3px;border:1px solid #d7d7d7;}
-.pop_wrap table textarea{line-height:22px;}
-.pop_wrap table label{font-weight:600;}
-.tbl_info table,.tbl_info th,.tbl_info td{height:30px;padding:3px;background-color:transparent;border:1px solid transparent;}
-.p_cmmn02-1-2 .pop_body, .p_cmmn02-1-3 .pop_body, .p_acc01-1 .pop_body, .p_acc03-1 .pop_body,
-.p_fac01-1-1 .pop_body, .p_cmmn02-1-1 .pop_body, .p_dam01-1 .pop_body{margin:0px;}
-.p_fac01-1-1, .p_fac01-1-2, .p_acc04-1-1, .p.fac01-1-2{width:500px;}
-.p_acc04-1-2, .p_admin01-1, .p_cmmn02-1-1, .p_cmmn02-1-2, .p_cmmn02-1-3{width:380px;}
-.pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
-.pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
 
 /* btn */
 .btn_axi,
@@ -366,7 +344,6 @@ color:#ccc;transform:translate(-50%, -50%);}
 .mag8::before{background:#642424;}
 .mag9::before{background:#4a2602;}
 .mag10::before{background:#000;}
-
 
 .i_status::before{display:inline-block;content:"";width:14px;height:14px;background:url(../images/ico_legend.png) 0 0 no-repeat;margin-right:3px;vertical-align:top;border-radius:50%;border:none;}
 .i_noreceive::before{background-position-y:1px;top:0;}

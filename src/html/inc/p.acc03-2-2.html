@@ -1,5 +1,5 @@
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc03-2-2">
+  <div class="pop_wrap p_acc03_2_2">
     <div class="pop_tit">
       <h1>센서 등록/수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -12,106 +12,106 @@
         <table class="tbl_row">
           <caption>센서 등록/수정</caption>
           <tr>
-            <th scope="row"><label for="sensor_number">기록계 고유번호</label></th>
-            <td title="sensor_number">GS_IC_R01</td>
+            <th scope="row"><label for="number">기록계 고유번호</label></th>
+            <td title="number">GS_IC_R01</td>
             <th>
-              <label for="sensor_number_2" required>센서 고유번호</label>
+              <label for="number_2" required>센서 고유번호</label>
             </th>
             <td>
-              <select name="number" id="sensor_number_2">
+              <select name="number" id="number_2">
                 <option value="">선택</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="sensor_latitude" required>위도</label>
+              <label for="latitude" required>위도</label>
             </th>
             <td>
-              <input type="text" id="sensor_latitude">
+              <input type="text" id="latitude">
             </td>
             <th>
-              <label for="sensor_longitude" required>경도</label>
+              <label for="longitude" required>경도</label>
             </th>
             <td>
-              <input type="text" id="sensor_longitude">
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label for="sensor_make" required>제작사</label>
-            </th>
-            <td>
-              <select name="make" id="sensor_make">
-                <option value="">선택</option>
-              </select>
-            </td>
-            <th>
-              <label for="sensor_model" required>모델</label>
-            </th>
-            <td>
-              <select name="model" id="sensor_model">
-                <option value="">선택</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-          <tr>
-            <th>
-              <label for="sensor_state">운영상태</label>
-            </th>
-            <td>
-              <select name="state" id="sensor_state">
-                <option value="">선택</option>
-              </select>
-            </td>
-            <th>
-              <label for="sensor_serial">serial</label>
-            </th>
-            <td>
-              <input type="text" id="sensor_serial">
+              <input type="text" id="longitude">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="sensor_purpose">센서용도</label>
+              <label for="make" required>제작사</label>
             </th>
             <td>
-              <select name="purpose" id="sensor_purpose">
+              <select name="make" id="make">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="model" required>모델</label>
+            </th>
+            <td>
+              <select name="model" id="model">
+                <option value="">선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <th>
+              <label for="state">운영상태</label>
+            </th>
+            <td>
+              <select name="state" id="state">
+                <option value="">선택</option>
+              </select>
+            </td>
+            <th>
+              <label for="serial">serial</label>
+            </th>
+            <td>
+              <input type="text" id="serial">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="purpose">센서용도</label>
+            </th>
+            <td>
+              <select name="purpose" id="purpose">
                 <option value="">자유장</option>
               </select>
             </td>
             <th>
-              <label for="sensor_sort">센서구분</label>
+              <label for="sort">센서구분</label>
             </th>
             <td>
-              <select name="sort" id="sensor_sort">
+              <select name="sort" id="sort">
                 <option value="">속도</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="sensor_start">시작일</label>
+              <label for="start">시작일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="sensor_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="from" required></span>
             </td>
             <th>
-              <label for="sensor_end">종료일</label>
+              <label for="end">종료일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="sensor_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
           </tr>
           <tr>
-            <th><label for="sensor_remarks">비고</label></th>
+            <th><label for="remarks">비고</label></th>
             <td colspan="3">
-              <textarea name="remarks" id="sensor_remarks" cols="70" rows="1"></textarea>
+              <textarea name="remarks" id="remarks" cols="70" rows="1"></textarea>
             </td>
           </tr>
         </table>

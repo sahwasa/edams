@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
@@ -119,7 +120,7 @@
 
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_admin01-1">
+  <div class="pop_wrap p_admin01_1">
     <div class="pop_tit">
       <h1>사용자 추가 / 수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -129,62 +130,62 @@
         <table class="tbl_info">
           <caption>사용자 추가 / 수정</caption>
           <tr>
-            <th scope="row"><label for="user_id" class="required">ID</label></th>
+            <th scope="row"><label for="id" class="required">ID</label></th>
             <td>
-              <input type="text" id="user_id">
+              <input type="text" id="id">
               <!-- <p class="validity">이미 사용중인 아이디입니다.</p> -->
             </td>
             <td><button type="button" class="btn btn_gray">중복</button></td>
           </tr>
           <tr>
-            <th><label for="user_name" class="required">이름</label></th>
-            <td colspan="2"><input type="text" id="user_name"></td>
+            <th><label for="name" class="required">이름</label></th>
+            <td colspan="2"><input type="text" id="name"></td>
           </tr>
           <tr>
-            <th><label for="user_pw" class="required">비밀번호</label></th>
-            <td colspan="2"><input type="password" id="user_pw"></td>
+            <th><label for="pw" class="required">비밀번호</label></th>
+            <td colspan="2"><input type="password" id="pw"></td>
           </tr>
           <tr>
-            <th><label for="user_pwcheck" class="required">비밀번호 확인</label></th>
+            <th><label for="pwcheck" class="required">비밀번호 확인</label></th>
             <td colspan="2">
-              <input type="password" id="user_pwcheck">
+              <input type="password" id="pwcheck">
               <p class="validity">비밀번호가 일치하지 않습니다.</p>
             </td>
           </tr>
           <tr>
-            <th><label for="user_division" class="required">소속기관</label></th>
-            <td colspan="2"><input type="text" id="user_division"></td>
+            <th><label for="division" class="required">소속기관</label></th>
+            <td colspan="2"><input type="text" id="division"></td>
           </tr>
           <tr>
-            <th><label for="user_team" class="required">부서</label></th>
+            <th><label for="team" class="required">부서</label></th>
             <td colspan="2">
-              <input type="text" id="user_team">
+              <input type="text" id="team">
               <p class="validity">올바른 부서를 입력하세요</p>
             </td>
           </tr>
           <tr>
-            <th><label for="user_position">직급</label></th>
-            <td colspan="2"><input type="text" id="user_position"></td>
+            <th><label for="position">직급</label></th>
+            <td colspan="2"><input type="text" id="position"></td>
           </tr>
           <tr>
-            <th><label for="user_number">연락처</label></th>
-            <td colspan="2"><input type="text" id="user_number"></td>
+            <th><label for="number">연락처</label></th>
+            <td colspan="2"><input type="text" id="number"></td>
           </tr>
           <tr>
-            <th><label for="user_phonenumber" class="required">핸드폰</label></th>
+            <th><label for="phonenumber" class="required">핸드폰</label></th>
             <td colspan="2">
-              <input type="text" id="user_phonenumber">
+              <input type="text" id="phonenumber">
               <p class="validity">올바른 핸드폰 번호를 입력하세요.</p>
             </td>
           </tr>
           <tr>
-            <th><label for="user_email">이메일</label></th>
-            <td colspan="2"><input type="text" id="user_email"></td>
+            <th><label for="email">이메일</label></th>
+            <td colspan="2"><input type="text" id="email"></td>
           </tr>
           <tr>
-            <th><label for="user_authority" class="required">권한</label></th>
+            <th><label for="authority" class="required">권한</label></th>
             <td colspan="2">
-              <select name="authority" title="user_authority">
+              <select name="authority" title="authority">
                 <option value="권한선택">권한선택</option>
               </select>
               <p class="validity">사용자 권한을 선택하세요.</p>

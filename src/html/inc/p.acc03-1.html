@@ -1,5 +1,5 @@
 <div class="pop_overlay">
-  <div class="pop_wrap p_acc03-1">
+  <div class="pop_wrap p_acc03_1">
     <div class="pop_tit">
       <h1>관측소 추가</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -9,41 +9,41 @@
         <table class="tbl_row">
           <caption>관측소 추가</caption>
           <tr>
-            <th scope="row"><label for="mgt_code">기관코드</label></th>
+            <th scope="row"><label for="code">기관코드</label></th>
             <td>
-              <select name="code" id="mgt_code">
+              <select name="code" id="code">
                 <option value="">선택</option>
               </select>
             </td>
             <th>
-              <label for="mgt_state">운영상태</label>
+              <label for="state">운영상태</label>
             </th>
             <td>
-              <select name="state" id="mgt_state">
+              <select name="state" id="state">
                 <option value="">선택</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_name">관측소명</label>
+              <label for="name">관측소명</label>
             </th>
             <td>
-              <input type="text" id="mgt_name">
+              <input type="text" id="name">
             </td>
             <th>
-              <label for="mgt_code_2">관측소코드</label>
+              <label for="code_2">관측소코드</label>
             </th>
             <td>
-              <input type="text" id="mgt_code_2">
+              <input type="text" id="code_2">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_type">관측소종류</label>
+              <label for="type">관측소종류</label>
             </th>
             <td>
-              <select name="type" id="mgt_type">
+              <select name="type" id="type">
                 <option value="">선택</option>
               </select>
             </td>
@@ -52,70 +52,70 @@
           </tr>
           <tr>
             <th>
-              <label for="mgt_longitude">경도</label>
+              <label for="longitude">경도</label>
             </th>
             <td>
-              <input type="text" id="mgt_longitude">
+              <input type="text" id="longitude">
             </td>
             <th>
-              <label for="mgt_latitude">위도</label>
+              <label for="latitude">위도</label>
             </th>
             <td>
-              <input type="text" id="mgt_latitude">
+              <input type="text" id="latitude">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_start">시작일</label>
+              <label for="start">시작일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="mgt_start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="start" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
             <th>
-              <label for="mgt_end">종료일</label>
+              <label for="end">종료일</label>
             </th>
             <td>
               <span class="date_wrap">
-                <input type="text" id="mgt_end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                <input type="text" id="end" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
                   class="from date" dataformat="to" required></span>
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_floor">건물 층 수</label>
+              <label for="floor">건물 층 수</label>
             </th>
             <td>
-              <input type="text" id="mgt_floor">
+              <input type="text" id="floor">
             </td>
             <th>
-              <label for="mgt_m">표고(M)</label>
+              <label for="m">표고(M)</label>
             </th>
             <td>
-              <input type="text" id="mgt_m">
+              <input type="text" id="m">
             </td>
           </tr>
           <tr>
             <th>
-              <label for="mgt_lacation">관측소위치</label>
+              <label for="location">관측소위치</label>
             </th>
             <td colspan="3">
               <span class="area">
-                <select id="mgt_lacation">
+                <select id="location">
                   <option value="">경상남도</option>
                 </select>
-                <select title="mgt_lacation">
+                <select title="location">
                   <option value="">상주시</option>
                 </select>
-                <input type="text" title="mgt_lacation">
+                <input type="text" title="location">
               </span>
             </td>
           </tr>
           <tr>
-            <th><label for="mgt_remarks">비고</label></th>
+            <th><label for="remarks">비고</label></th>
             <td colspan="3">
-              <textarea name="remarks" id="mgt_remarks" cols="70" rows="3"></textarea>
+              <textarea name="remarks" id="remarks" cols="70" rows="3"></textarea>
             </td>
           </tr>
         </table>

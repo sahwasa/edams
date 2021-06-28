@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
@@ -168,7 +169,7 @@
 
 </div>
 <div class="pop_overlay">
-  <div class="pop_wrap p_dam01-1">
+  <div class="pop_wrap p_dam01_1">
     <div class="pop_tit">
       <h1>지진선택</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -185,8 +186,8 @@
             </span>
           </li>
           <li>
-            <label for="p.acc01_scale">규모</label>
-            <select id="p.acc01_scale" title="전체">
+            <label for="scale">규모</label>
+            <select id="scale" title="전체">
               <option value="">전체</option>
             </select> ~
             <select title="전체">
@@ -194,8 +195,8 @@
             </select>
           </li>
           <li>
-            <label for="p.acc01_location">발생지역</label>
-            <input type="text" id="p.acc01_location" placeholder="검색어">
+            <label for="location">발생지역</label>
+            <input type="text" id="location" placeholder="검색어">
           </li>
           <li>
             <button type="button" class="btn btn_gray">검색</button>
