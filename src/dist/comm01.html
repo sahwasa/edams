@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상남도:지진피해평가관리시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+  <script src="../js/file_attach.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="util">
+  <b>관리자님 반갑습니다.</b>
+  <ul class="util_list">
+    <li><button type="button">내정보</button></li>
+    <li><button type="button">로그아웃</button></li>
+  </ul>
+</div>
+<div class="nav">
+  <h1><a href="">지진피해평가 · 관리시스템</a></h1>
+  <ul class="gnb" role="navigation">
+    <li><a href="../dist/acc01.html">가속도 계측자료 관리</a>
+      <ul class="sub">
+        <li><a href="../dist/acc01.html">계측 가속도 DB</a></li>
+        <li><a href="../dist/acc02.html">지진 통보문 관리</a></li>
+        <li><a href="../dist/acc03.html">관측소 관리</a></li>
+        <li><a href="../dist/acc04.html">관측자료 업로드</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="../dist/fac01.html">시설물 관리</a>
+      <ul class="sub">
+        <li class="on"><a href="../dist/fac01.html">시설물정보 관리</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/dam01.html">지진피해평가</a>
+      <ul class="sub">
+        <li><a href="../dist/dam01.html">안전성 평가 모니터링</a></li>
+        <li><a href="../dist/dam02.html">지진피해평가 실행</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/admin01.html">관리자 지원</a>
+      <ul class="sub">
+        <li><a href="../dist/admin01.html">사용자관리</a></li>
+        <li><a href="../dist/admin02.html">코드관리</a></li>
+        <li><a href="../dist/admin03.html">매뉴얼(자료실)</a></li>
+      </ul>
+    </li>
+    <li><a href="">안전성평가 훈련</a>
+      <ul class="sub">
+        <li><a href="">지진피해평가 시뮬레이션</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="cont comm01">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">관리자지원</a></li>
+        <li>사용자관리</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>코드관리</h2>
+    </div>
+    <div class="link_h">
+            <div class="section tbl_wrap">
+              <div class="tit_h3">
+                <h3>그룹코드</h3>
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blue">추가</button>
+                  <button type="button" class="btn btn_gray">삭제</button>
+                  <button type="button" class="btn btn_blueline">미사용</button>
+                </div>
+              </div>
+              <table id="jqGrid" class="jq-grid"></table>
+            </div>
+            <div class="section tbl_wrap">
+              <div class="tit_h3">
+                <h3>상세코드</h3>
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blue">추가</button>
+                  <button type="button" class="btn btn_gray">삭제</button>
+                  <button type="button" class="btn btn_blueline">미사용</button>
+                </div>
+              </div>
+              <table id="jqGrid2" class="jq-grid"></table>
+            </div>
+          </div>
+          
+  </div>
+  <div class="footer">
+  <p>Copyright(c) Gyeongsangnamdo All Rights Reserved.</p>
+</div>
+
+</div>
+
+
+<div class="pop_overlay">
+  <div class="pop_wrap p_admin02_1">
+    <div class="pop_tit">
+      <h1>코드 그룹수정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row">
+          <caption>코드 그룹수정</caption>
+          <tr>
+            <th scope="row"><label for="code">상위 그룹코드</label></th>
+            <td class="alignL"><span>C00</span></td>
+          </tr>
+          <tr>
+            <th><label for="group_code">그룹코드</label></th>
+            <td colspan="2"><input type="text" id="group_code"></td>
+          </tr>
+          <tr>
+            <th><label for="group_code_name">그룹코드명</label></th>
+            <td colspan="2"><input type="text" id="group_code_name"></td>
+          </tr>
+          <tr>
+            <th><label for="code_expl">코드 설명</label></th>
+            <td colspan="2"><input type="text" id="code_expl"></td>
+          </tr>
+          <tr>
+            <th><label for="order_number">순번</label></th>
+            <td colspan="2">
+              <select name="order_number">
+                <option value="16">16</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="usage">사용여부</label></th>
+            <td colspan="2" class="alignL">
+              <span class="radio_check">
+                <input type="radio" id="use" name="usage">
+                <label for="use">유</label>
+              </span>
+              <span>
+                <input type="radio" id="notused" name="usage">
+                <label for="notused">무</label>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pop_overlay">
+  <div class="pop_wrap p_admin02_1">
+    <div class="pop_tit">
+      <h1>코드 수정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row">
+          <caption>코드 수정</caption>
+          <tr>
+            <th scope="row"><label for="group_code">그룹코드</label></th>
+            <td class="alignL"><span>C00</span></td>
+          </tr>
+          <tr>
+            <th><label for="code">코드</label></th>
+            <td colspan="2"><input type="text" id="code"></td>
+          </tr>
+          <tr>
+            <th><label for="code_name">코드명</label></th>
+            <td colspan="2"><input type="text" id="code_name"></td>
+          </tr>
+          <tr>
+            <th><label for="code_expl">코드 설명</label></th>
+            <td colspan="2"><input type="text" id="code_expl"></td>
+          </tr>
+          <tr>
+            <th><label for="order_number">순번</label></th>
+            <td colspan="2">
+              <select name="order_number" title="order_number">
+                <option value="16">16</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="usage">사용여부</label></th>
+            <td colspan="2" class="alignL">
+              <span class="radio_check">
+                <input type="radio" id="use_2" name="usage">
+                <label for="use_2">유</label>
+              </span>
+              <span>
+                <input type="radio" id="notused_2" name="usage">
+                <label for="notused_2">무</label>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var mydata = [
+  {"t1": "L001", "t2": "", "t3": "", "t4": "case2"},
+  {"t1": "L002", "t2": "", "t3": "", "t4": "case1"},
+  {"t1": "L003", "t2": "", "t3": "", "t4": "case2"},
+  {"t1": "L004", "t2": "", "t3": "", "t4": "case1"}
+];
+$("#jqGrid").jqGrid({
+  data: mydata,
+  datatype: "local",
+  colModel: [
+    {label:'코드',name:'t1',width:190},
+    {label:'그룹코드',name:'t2',width:190},
+    {label:'설명',name:'t3',width:300},
+    {label:'사용여부',name:'t4',width:100, formatter:useBtn}
+  ],
+  multiselect:true,
+  loadonce : true,
+  viewrecords: true,
+  height: 552,
+  rowTotal: -1
+});
+
+var mydata2 = [
+  {"t1": "L001", "t2": "", "t3": "", "t4": "case1"},
+  {"t1": "L002", "t2": "", "t3": "", "t4": "case2"},
+  {"t1": "L003", "t2": "", "t3": "", "t4": "case1"},
+  {"t1": "L004", "t2": "", "t3": "", "t4": "case2"}
+];
+$("#jqGrid2").jqGrid({
+  data: mydata2,
+  datatype: "local",
+  colModel: [
+    {label:'코드',name:'t1',width:190},
+    {label:'그룹코드',name:'t2',width:190},
+    {label:'설명',name:'t3',width:300},
+    {label:'사용여부',name:'t4',width:100, align:'center', formatter:useBtn}
+  ],
+  multiselect:true,
+  loadonce : true,
+  viewrecords: true,
+  height: 552,
+  rowTotal: -1
+});
+</script>
+</body>
+
+</html>

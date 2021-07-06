@@ -1,0 +1,96 @@
+@@include('inc/top.html')
+<div class="wrap">
+  <div class="header">
+    @@include('inc/header.html')
+  </div>
+  <div class="cont comm01">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">관리자지원</a></li>
+        <li>사용자관리</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>코드관리</h2>
+    </div>
+    <div class="link_h">
+            <div class="section tbl_wrap">
+              <div class="tit_h3">
+                <h3>그룹코드</h3>
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blue">추가</button>
+                  <button type="button" class="btn btn_gray">삭제</button>
+                  <button type="button" class="btn btn_blueline">미사용</button>
+                </div>
+              </div>
+              <table id="jqGrid" class="jq-grid"></table>
+            </div>
+            <div class="section tbl_wrap">
+              <div class="tit_h3">
+                <h3>상세코드</h3>
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blue">추가</button>
+                  <button type="button" class="btn btn_gray">삭제</button>
+                  <button type="button" class="btn btn_blueline">미사용</button>
+                </div>
+              </div>
+              <table id="jqGrid2" class="jq-grid"></table>
+            </div>
+          </div>
+          
+  </div>
+  @@include('inc/footer.html')
+</div>
+
+
+@@include('inc/P.comm01-1.html')
+@@include('inc/P.comm01-2.html')
+<script>
+var mydata = [
+  {"t1": "L001", "t2": "", "t3": "", "t4": "case2"},
+  {"t1": "L002", "t2": "", "t3": "", "t4": "case1"},
+  {"t1": "L003", "t2": "", "t3": "", "t4": "case2"},
+  {"t1": "L004", "t2": "", "t3": "", "t4": "case1"}
+];
+$("#jqGrid").jqGrid({
+  data: mydata,
+  datatype: "local",
+  colModel: [
+    {label:'코드',name:'t1',width:190},
+    {label:'그룹코드',name:'t2',width:190},
+    {label:'설명',name:'t3',width:300},
+    {label:'사용여부',name:'t4',width:100, formatter:useBtn}
+  ],
+  multiselect:true,
+  loadonce : true,
+  viewrecords: true,
+  height: 552,
+  rowTotal: -1
+});
+
+var mydata2 = [
+  {"t1": "L001", "t2": "", "t3": "", "t4": "case1"},
+  {"t1": "L002", "t2": "", "t3": "", "t4": "case2"},
+  {"t1": "L003", "t2": "", "t3": "", "t4": "case1"},
+  {"t1": "L004", "t2": "", "t3": "", "t4": "case2"}
+];
+$("#jqGrid2").jqGrid({
+  data: mydata2,
+  datatype: "local",
+  colModel: [
+    {label:'코드',name:'t1',width:190},
+    {label:'그룹코드',name:'t2',width:190},
+    {label:'설명',name:'t3',width:300},
+    {label:'사용여부',name:'t4',width:100, align:'center', formatter:useBtn}
+  ],
+  multiselect:true,
+  loadonce : true,
+  viewrecords: true,
+  height: 552,
+  rowTotal: -1
+});
+</script>
+</body>
+
+</html>

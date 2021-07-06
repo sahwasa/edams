@@ -1,0 +1,71 @@
+<div class="pop_overlay">
+  <div class="pop_wrap p_fac03">
+    <div class="pop_tit">
+      <h1>시설별 해석모델 파일(MCT)</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_blackTop">
+          <tr>
+            <th><label for="">시설 번호</label></th>
+            <td>Br2008_0000028</td>
+            <th><label for="">시설명</label></th>
+            <td>명곡교</td>
+          </tr>
+          <tr>
+            <th><label for="">구분</label></th>
+            <td></td>
+            <th><label for="">시설 위치</label></th>
+            <td>경상남도 양산시 명곡로 306-14</td>
+          </tr>
+        </table>
+        <textarea name="" id="" style="resize: none;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.</textarea>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+        <script>
+          var mydata12 = [
+            { 't1': '2019009233', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' }
+          ]
+          $("#jqGrid12").jqGrid({
+            data: mydata12,
+            datatype: "local",
+            colModel: [
+              { label: '지진번호', name: 't1', width: 60 },
+              { label: '발생시각', name: 't2', width: 110 },
+              { label: '위도', name: 't3', width: 35 },
+              { label: '경도', name: 't4', width: 35 },
+              { label: '규모', name: 't5', width: 35 },
+              { label: '발생위치', name: 't6' }
+            ],
+            multiselect:true,
+            viewrecords: true,
+            width: 758,
+            height: 311,
+            rowNum: 20,
+            gridview: true
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>

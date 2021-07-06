@@ -55,7 +55,8 @@
     <li><a href="../dist/admin01.html">관리자 지원</a>
       <ul class="sub">
         <li><a href="../dist/admin01.html">사용자관리</a></li>
-        <li><a href="../dist/admin02.html">매뉴얼(자료실)</a></li>
+        <li><a href="../dist/admin02.html">코드관리</a></li>
+        <li><a href="../dist/admin03.html">매뉴얼(자료실)</a></li>
       </ul>
     </li>
     <li><a href="">안전성평가 훈련</a>
@@ -242,7 +243,8 @@
               <caption class="blind">구조물 상세자료</caption>
               <thead>
                 <tr>
-                  <th scope="col">파일명</th>
+                  <th scope="col">제목</th>
+                  <th>파일명</th>
                   <th>작성일</th>
                   <th>작성자</th>
                   <th style="width:50px;">다운로드</th>
@@ -251,16 +253,64 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>MCT1</td>
-                  <td>2021-05-27 12:34:56</td>
+                  <td>모델</td>
+                  <td>aaa.mct</td>
+                  <td>2021-05-27 12:34</td>
                   <td>홍길동</td>
                   <td><button class="btn_file"></button></td>
                   <td><button class="btn_del"></button></td>
                 </tr>
               </tbody>
             </table>
-            <textarea name="MCT_preview" cols="30"
-              rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</textarea>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tit_h3">
+            <h3>인근관측소</h3>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">수정</button>
+            </div>
+          </div>
+          <div class="tbl_wrap">
+            <table class="tbl_blackTop tbl_td_alignC">
+              <caption class="blind">인근관측소</caption>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th>관측소명</th>
+                  <th>관측소 위치</th>
+                  <th>위도</th>
+                  <th>경도</th>
+                  <th>거리(㎞)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>교량</td>
+                  <td>양산시청</td>
+                  <td>양산시</td>
+                  <td>38.82</td>
+                  <td>125.56</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>건축물</td>
+                  <td>김해시청</td>
+                  <td>김해시</td>
+                  <td>38.82</td>
+                  <td>125.56</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>건축물</td>
+                  <td>남해시청</td>
+                  <td>남해시</td>
+                  <td>38.82</td>
+                  <td>125.56</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -303,6 +353,133 @@
           <button type="button" class="btn btn_blue">업로드</button>
           <button type="button" class="btn btn_gray">취소</button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pop_overlay">
+  <div class="pop_wrap p_fac02">
+    <div class="pop_tit">
+      <h1>시설물 인근 관측소 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_blackTop">
+          <tr>
+            <th><label for="">시설 번호</label></th>
+            <td>Br2008_0000028</td>
+            <th><label for="">시설명</label></th>
+            <td>명곡교</td>
+          </tr>
+          <tr>
+            <th><label for="">구분</label></th>
+            <td></td>
+            <th><label for="">시설 위치</label></th>
+            <td>경상남도 양산시 명곡로 306-14</td>
+          </tr>
+        </table>
+        <table id="jqGrid12"></table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+        <script>
+          var mydata12 = [
+            { 't1': '교량', 't2': '양산시청', 't3': '양산시', 't4': '38.82', 't5': '125.56', 't6': '' },
+            { 't1': '건축물', 't2': '김해시청', 't3': '김해시', 't4': '38.82', 't5': '125.56', 't6': '' },
+            { 't1': '건축물', 't2': '남해시청', 't3': '남해시', 't4': '38.82', 't5': '125.56', 't6': '' }
+          ]
+          $("#jqGrid12").jqGrid({
+            data: mydata12,
+            datatype: "local",
+            colModel: [
+              { label: '구분', name: 't1', width: 45 },
+              { label: '관측소명', name: 't2', width: 60 },
+              { label: '관측소 위치', name: 't3', width: 70 },
+              { label: '위도', name: 't4', width: 35 },
+              { label: '경도', name: 't5', width: 35 },
+              { label: '거리(㎞)', name: 't6', width: 35}
+            ],
+            multiselect:true,
+            viewrecords: true,
+            width: 758,
+            height: 311,
+            rowNum: 20,
+            gridview: true
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pop_overlay">
+  <div class="pop_wrap p_fac03">
+    <div class="pop_tit">
+      <h1>시설별 해석모델 파일(MCT)</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_blackTop">
+          <tr>
+            <th><label for="">시설 번호</label></th>
+            <td>Br2008_0000028</td>
+            <th><label for="">시설명</label></th>
+            <td>명곡교</td>
+          </tr>
+          <tr>
+            <th><label for="">구분</label></th>
+            <td></td>
+            <th><label for="">시설 위치</label></th>
+            <td>경상남도 양산시 명곡로 306-14</td>
+          </tr>
+        </table>
+        <textarea name="" id="" style="resize: none;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat sem a consectetur eleifend.</textarea>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+        <script>
+          var mydata12 = [
+            { 't1': '2019009233', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' },
+            { 't1': '', 't2': '2013-05-15 22:12:32', 't3': '38.82', 't4': '125.56', 't5': '2.0', 't6': '인천 웅진군 연평도 남서쪽 50㎞ 해역' }
+          ]
+          $("#jqGrid12").jqGrid({
+            data: mydata12,
+            datatype: "local",
+            colModel: [
+              { label: '지진번호', name: 't1', width: 60 },
+              { label: '발생시각', name: 't2', width: 110 },
+              { label: '위도', name: 't3', width: 35 },
+              { label: '경도', name: 't4', width: 35 },
+              { label: '규모', name: 't5', width: 35 },
+              { label: '발생위치', name: 't6' }
+            ],
+            multiselect:true,
+            viewrecords: true,
+            width: 758,
+            height: 311,
+            rowNum: 20,
+            gridview: true
+          });
+        </script>
       </div>
     </div>
   </div>

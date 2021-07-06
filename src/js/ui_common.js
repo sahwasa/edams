@@ -163,3 +163,62 @@ function evtDivision(cellValue, options, rowdata, action) {
   
   return html;
 }
+
+function evtDivision2(cellValue) {
+  var html, txt = "";
+  switch (cellValue) {
+    case "i_safe":
+      txt = "안전";
+      break;
+    case "i_needcheck":
+      txt = "점검필요";
+      break;
+    case "i_waiting":
+      html = '평가 대기중</p>'+'<button type="button" class="btn btn_s btn_redline">취소</button>';
+      break;
+    case "i_ing":
+      html = '<p>평가중</p>';
+      break;
+    default:
+      txt = cellValue;
+  }
+  if(cellValue != "i_ing") html = '<span class="btn_s i_status ' + cellValue + '">' + txt + '</span>';
+  
+  return html;
+}
+
+function useBtn(cellValue){
+  var html = "";
+  if(cellValue == "checked"){
+    html = `<div class="toggle_switch">
+    <input type="checkbox" id="chkTog"` + cellValue + `>
+    <label for="chkTog">
+      <span class="toggle_track"></span>
+    </label>
+  </div>`;
+  }else{
+    html = `<div class="toggle_switch">
+    <input type="checkbox" id="chkTog">
+    <label for="chkTog">
+      <span class="toggle_track"></span>
+    </label>
+  </div>`
+  }
+  return html;
+}
+
+function useBtn(cellValue) {
+  var html, txt = "";
+  switch (cellValue) {
+    case "case1":
+      txt = "case1";
+      break;
+    case "case2":
+      txt = "case2";
+      break;
+    default:
+      txt = "none";
+  }
+  html = '<button class="alignC usage ' + txt + '"></button>'; 
+  return html;
+}

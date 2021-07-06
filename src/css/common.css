@@ -351,7 +351,6 @@ color:#ccc;transform:translate(-50%, -50%);}
 .i_needcheck::before{background-position-y:-45px;}
 .i_ing::before{background-position-y:-68px;}
 .i_unperformed::before{background-position-y:-91px;}
-
 .gis_area .i_status{position:absolute;width:15px;height:15px;font-size:0;overflow:hidden;text-indent:-9999px;}
 .gis_area .i_status::before{position:absolute;left:1px;top:1px;}
 
@@ -448,3 +447,12 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
 .ui-jqgrid-hdiv input[type = checkbox]{position:relative;top:-3px;}
 .td_padding{padding-left:13px !important;}
+
+/* toggle button */
+.toggle_switch input[type=checkbox]{display:none;}
+.toggle_track{background:#8b8b8b;border-radius:60px;display:inline-block;height:25px;position:relative;width:75px;}
+.toggle_track:before{background:#fff;border:1px solid #8b8b8b;border-radius:20px;content:'';display:block;height:19px;left:0px;margin:5px;position:absolute;top:-3px;transition:left 0.3s;width:25px;}
+.toggle_switch input[type=checkbox] + label .toggle_track:after{color:#fff;content:'미사용';display:inline-block;position:absolute;right:5px;top:4px;}
+.toggle_switch input[type=checkbox]:checked + label .toggle_track{background:#005aab;}
+.toggle_switch input[type=checkbox]:checked + label .toggle_track:before{border:1px solid #005aab;left:38px;}
+.toggle_switch input[type=checkbox]:checked + label .toggle_track:after{content:'사용';left:-15px;top:4px;}

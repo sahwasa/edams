@@ -18,20 +18,33 @@
 .pop_wrap table label{font-weight:600;}
 .tbl_info table,.tbl_info th,.tbl_info td{height:30px;padding:3px;background-color:transparent;border:1px solid transparent;}
 
-.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_acc04_1_1 .pop_body,.p_acc03_2_2 .pop_body,.p_acc03_2_1 .pop_body{margin:0.5px;}
-.p_fac01_1_1,.p_fac01_1_2,.p_acc04_1_1,.p.fac01_1_2{width:500px;}
-.p_acc04_1_2,.p_admin01_1,.p_cmmn02_1_1,.p_cmmn02_1_2, .p_cmmn02_1_3{width:380px;}
+.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_fac02 .pop_body, .p_acc03_2_2 .pop_body,.p_acc03_2_1 .pop_body{margin:0.5px;}
+.p_fac01_1_1,.p_fac01_1_2,.p.fac01_1_2{width:500px;}
+.p_acc04_1_2,.p_admin01_1,.p_cmmn02_1_1,.p_cmmn02_1_2, .p_cmmn02_1_3, .p_admin02_1,.p_admin02_2{width:380px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
 
+/* p.dam01-1, p.dam02 */
+.p_dam02 .tbl_row{border:none;}
+.p_dam02 .tbl_row th{width:14%;}
+.p_dam02 .tbl_row td{text-align:center;width:18%;}
+.p_dam02 .tbl_row tr:nth-child(2)>td{padding-left:10px;text-align:left;}
+.p_dam02 .fac_info{margin-top:15px;margin-bottom:10px;}
+.p_dam02 .fac_info dt, .p_dam02 .fac_info dd{display:inline-block;font-size:14px;}
+.p_dam02 .fac_info dt{font-weight:600;}
+.p_dam02 .fac_info dt::before{content:'\f192';font-family:'axicon';padding:0 5px;}
 
 /* 구조물상세자료 업로드(p_fac01-1-2) */
 .fac_file #upFile{display:none;}
-.fac_file .file_input{position:relative;display:block;width:450px;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.fac_file .file_input{position:relative;display:block;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
 .fac_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
 .fac_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
+.p_fac03 textarea{width:100%;height:350px;overflow-y:scroll;}
 
-/* 관측자료 업로드 완료(p_acc04-1-2) */
+/* 관측자료 업로드 완료(p_acc04-1-1, p_acc04-1-2) */
+.p_acc03_1 textarea{height:80px;}
+.p_acc04_1_1 .tbl_blackTop, .p_fac02 .tbl_blackTop, .p_fac03 .tbl_blackTop{margin-bottom:20px;}
+.p_acc04_1_1 .tbl_blackTop td, .p_fac02 .tbl_blackTop td, .p_fac03 .tbl_blackTop td{padding-left:10px;text-align:left;}
 .p_acc04_1_2 .upload_done{font-size:14px;text-align:center;padding-bottom:20px;}
 .p_acc04_1_2 .upload_done::before{display:block;content:'\e6c6';font-family:'axicon';font-size:45px;color:#555;padding-bottom:10px;}
 
@@ -52,3 +65,16 @@
 .p_admin01_1 table th, .p_cmmn02_1_1 table th, .p_cmmn02_1_2 table th{width:30%;text-align:left;}
 .p_cmmn02_1_3 table th{width:30%;}
 .input_50{line-height:20px;}
+.p_admin02_1.pop_wrap th,
+.p_admin02_2.pop_wrap th{width:35%;}
+.p_admin02_1 .tbl_row .alignL,
+.p_admin02_2 .tbl_row .alignL{padding-left:8px;}
+.radio_check{padding-right:10px;}
+.group_ch{display:flex;align-items:center;justify-content:space-between;}
+.group_ch label{display:flex;align-items:center;width:27%;}
+.group_ch input{width:85%;margin-left:5px;}
+.p_acc03_2_1 textarea,
+.p_acc03_2_2 textarea{height:50px;}
+
+/* admin */
+.p_admin01_1 .required_info{margin:0 0 10px;color:#f35857;}

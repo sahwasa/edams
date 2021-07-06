@@ -87,11 +87,6 @@
                   <button type="button" class="btn btn_gray">검색</button>
                 </li>
               </ul>
-              <div class="tbl_top">
-                <div class="btn_wrap">
-                  <button type="button" class="btn btn_blueline">추정가속도 생성</button>
-                </div>
-              </div>
               <div class="tbl_wrap">
                 <table id="jqGrid" class="jq-grid"></table>
               </div>
@@ -141,6 +136,7 @@
   @@include('inc/footer.html')
 </div>
 @@include('inc/P.dam01-1.html')
+@@include('inc/P.dam02.html')
 <script>
   var mydata = [
     { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "", "t5": "2021-05-27 12:34:56" },
@@ -165,20 +161,21 @@
   });
 
   var mydata2 = [
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_safe", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_needcheck", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "i_ing", "t5": "2021-05-27 12:34:56" },
-    { "t1": "BR2018_00000089", "t2": "교량", "t3": "명곡교", "t4": "evt5", "t5": "2021-05-27 12:34:56" }
+    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_safe", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_needcheck", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_ing", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_waiting", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"}
   ];
   $("#jqGrid2").jqGrid({
     data: mydata2,
     datatype: "local",
     colModel: [
-      { label: '시설물 번호', name: 't1', width: 163 },
+      { label: '시설물명', name: 't1', width: 100 },
       { label: '시설물 종류', name: 't2', width: 109 },
-      { label: '시설물명', name: 't3', width: 105 },
-      { label: '평가결과', name: 't4', width: 100, formatter: evtDivision },
-      { label: '평가시간', name: 't5', width: 230 }
+      { label: '가속도 생성여부', name: 't3', width: 70, formatter: tblBtn },
+      { label: '작업내역', name: 't4', width: 100, formatter: evtDivision2 },
+      { label: '작업시작', name: 't5', width: 140 },
+      { label: '작업종료', name: 't5', width: 140 }
     ],
     loadonce: true,
     viewrecords: true,

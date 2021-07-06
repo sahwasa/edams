@@ -55,7 +55,8 @@
     <li><a href="../dist/admin01.html">관리자 지원</a>
       <ul class="sub">
         <li><a href="../dist/admin01.html">사용자관리</a></li>
-        <li><a href="../dist/admin02.html">매뉴얼(자료실)</a></li>
+        <li><a href="../dist/admin02.html">코드관리</a></li>
+        <li><a href="../dist/admin03.html">매뉴얼(자료실)</a></li>
       </ul>
     </li>
     <li><a href="">안전성평가 훈련</a>
@@ -236,16 +237,33 @@
     </div>
   </div>
 </div>
+<div class="pop_overlay">
+  <div class="pop_wrap p_dam01_2">
+    <div class="pop_tit">
+      <h1>피해예측결과 보고서</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <p>추가 예정</p>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   var mydata = [
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_safe'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_needcheck'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_ing'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_unperformed'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': ''}
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_safe'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_needcheck'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_ing'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_unperformed'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''}
   ]
   $("#jqGrid").jqGrid({
     data: mydata,
@@ -257,7 +275,6 @@
       { label: '위치', name: 't4', width: 300, align:"left", classes:"td_padding"},
       { label: '평가결과', name: 't5', width: 100, formatter: evtDivision}
     ],
-    multiselect: true,
     loadonce: true,
     viewrecords: true,
     height: 339,

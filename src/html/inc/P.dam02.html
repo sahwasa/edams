@@ -1,0 +1,58 @@
+<div class="pop_overlay">
+  <div class="pop_wrap p_dam02">
+    <div class="pop_tit">
+      <h1>시설물 인근 관측소 가속도 정보</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row">
+          <caption class="blind">시설물 인근 관측소 가속도 정보</caption>
+          <tr>
+            <th><label for="">지진번호</label></th>
+            <td>Br2008_0000028</td>
+            <th><label for="">규모</label></th>
+            <td>2.6</td>
+            <th><label for="">발생시각</label></th>
+            <td>2021-03-16 02:51:42</td>
+          </tr>
+          <tr>
+            <th><label for="">발생위치</label></th>
+            <td colspan="5">경상남도 양산시 명곡로 306-14</td>
+          </tr>
+        </table>
+        <dl class="fac_info">
+          <dt>시설명 :</dt>
+          <dd>개곡교</dd>
+        </dl>
+        <table id="jqGrid14"></table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+        <script>
+          var mydata14 = [
+            { 't1': '양산시청', 't2': '7', 't3': '10.5', 't4': '2021-06-20 11:10:10', 't5': 'file'},
+            { 't1': '김해시청', 't2': '10', 't3': '15.2', 't4': '', 't5': 'file'},
+            { 't1': '남해시청', 't2': '15', 't3': '', 't4': '', 't5': 'file'}
+          ]
+          $("#jqGrid14").jqGrid({
+            data: mydata14,
+            datatype: "local",
+            colModel: [ 
+              { label: '관측소명', name: 't1', width: 40 },
+              { label: '거리(㎞)', name: 't2', width: 15 },
+              { label: '최대가속도(gal)', name: 't3', width: 30 },
+              { label: '수신시각', name: 't4', width: 40 },
+              { label: '관측자료', name: 't5', width: 15, formatter:tblBtn }
+            ],
+            viewrecords: true,
+            width: 758,
+            height: 311,
+            rowNum: 20,
+            gridview: true
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>

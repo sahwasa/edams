@@ -1,0 +1,56 @@
+<div class="pop_overlay">
+  <div class="pop_wrap p_fac02">
+    <div class="pop_tit">
+      <h1>시설물 인근 관측소 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_blackTop">
+          <tr>
+            <th><label for="">시설 번호</label></th>
+            <td>Br2008_0000028</td>
+            <th><label for="">시설명</label></th>
+            <td>명곡교</td>
+          </tr>
+          <tr>
+            <th><label for="">구분</label></th>
+            <td></td>
+            <th><label for="">시설 위치</label></th>
+            <td>경상남도 양산시 명곡로 306-14</td>
+          </tr>
+        </table>
+        <table id="jqGrid12"></table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_gray">닫기</button>
+        </div>
+        <script>
+          var mydata12 = [
+            { 't1': '교량', 't2': '양산시청', 't3': '양산시', 't4': '38.82', 't5': '125.56', 't6': '' },
+            { 't1': '건축물', 't2': '김해시청', 't3': '김해시', 't4': '38.82', 't5': '125.56', 't6': '' },
+            { 't1': '건축물', 't2': '남해시청', 't3': '남해시', 't4': '38.82', 't5': '125.56', 't6': '' }
+          ]
+          $("#jqGrid12").jqGrid({
+            data: mydata12,
+            datatype: "local",
+            colModel: [
+              { label: '구분', name: 't1', width: 45 },
+              { label: '관측소명', name: 't2', width: 60 },
+              { label: '관측소 위치', name: 't3', width: 70 },
+              { label: '위도', name: 't4', width: 35 },
+              { label: '경도', name: 't5', width: 35 },
+              { label: '거리(㎞)', name: 't6', width: 35}
+            ],
+            multiselect:true,
+            viewrecords: true,
+            width: 758,
+            height: 311,
+            rowNum: 20,
+            gridview: true
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
