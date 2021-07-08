@@ -24,7 +24,7 @@
                   <button type="button" class="btn btn_blueline">미사용</button>
                 </div>
               </div>
-              <table id="jqGrid" class="jq-grid"></table>
+              <table id="jqGrid1" class="jq-grid"></table>
             </div>
             <div class="section tbl_wrap">
               <div class="tit_h3">
@@ -48,19 +48,19 @@
 @@include('inc/P.comm01-2.html')
 <script>
 var mydata = [
-  {"t1": "L001", "t2": "", "t3": "", "t4": "case2"},
-  {"t1": "L002", "t2": "", "t3": "", "t4": "case1"},
-  {"t1": "L003", "t2": "", "t3": "", "t4": "case2"},
-  {"t1": "L004", "t2": "", "t3": "", "t4": "case1"}
+  {"t1": "L001", "t2": "", "t3": "", "t4": true},
+  {"t1": "L002", "t2": "", "t3": "", "t4": true},
+  {"t1": "L003", "t2": "", "t3": "", "t4": true},
+  {"t1": "L004", "t2": "", "t3": "", "t4": true}
 ];
-$("#jqGrid").jqGrid({
+$("#jqGrid1").jqGrid({
   data: mydata,
   datatype: "local",
   colModel: [
     {label:'코드',name:'t1',width:190},
     {label:'그룹코드',name:'t2',width:190},
     {label:'설명',name:'t3',width:300},
-    {label:'사용여부',name:'t4',width:100, formatter:useBtn}
+    {label:'사용여부',name:'t4',width:100, formatter:btnUsage}
   ],
   multiselect:true,
   loadonce : true,
@@ -70,10 +70,10 @@ $("#jqGrid").jqGrid({
 });
 
 var mydata2 = [
-  {"t1": "L001", "t2": "", "t3": "", "t4": "case1"},
-  {"t1": "L002", "t2": "", "t3": "", "t4": "case2"},
-  {"t1": "L003", "t2": "", "t3": "", "t4": "case1"},
-  {"t1": "L004", "t2": "", "t3": "", "t4": "case2"}
+  {"t1": "L001", "t2": "", "t3": "", "t4": false},
+  {"t1": "L002", "t2": "", "t3": "", "t4": false},
+  {"t1": "L003", "t2": "", "t3": "", "t4": false},
+  {"t1": "L004", "t2": "", "t3": "", "t4": false}
 ];
 $("#jqGrid2").jqGrid({
   data: mydata2,
@@ -82,7 +82,7 @@ $("#jqGrid2").jqGrid({
     {label:'코드',name:'t1',width:190},
     {label:'그룹코드',name:'t2',width:190},
     {label:'설명',name:'t3',width:300},
-    {label:'사용여부',name:'t4',width:100, align:'center', formatter:useBtn}
+    {label:'사용여부',name:'t4',width:100, align:'center', formatter:btnUsage}
   ],
   multiselect:true,
   loadonce : true,
@@ -90,6 +90,29 @@ $("#jqGrid2").jqGrid({
   height: 552,
   rowTotal: -1
 });
+
+
+  function addOn(sel){
+    (sel.prop('checked')) ?
+    sel.parent('label').addClass('on') :
+    sel.parent('label').removeClass('on');
+  }
+  $("#jqGrid1 ,#jqGrid2").on('change','[role="toggle"]',function(){
+    var sel = $(this)
+    ;addOn(sel);
+  })
+  function btnUsage(cellValue,rowData){
+    var rowNum = rowData.rowId;
+    var html = '<label for="btnUsage'+ rowNum +'" class='
+    if(cellValue){html += "'toggle_wrap usage on'"}else{html+= "'toggle_wrap usage'"} ;
+    html += ' role="toggle">';
+    html += '<input type="checkbox" name="marsSd" id="btnUsage'+ rowNum +'" role="toggle"';
+    if(cellValue) html += "checked" ;
+    html += '/><span class="txt axi_only btn_usage">'
+    html += '</span>';
+    html += '</label>'; 
+    return html;
+  }
 </script>
 </body>
 

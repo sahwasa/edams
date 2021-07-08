@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상남도:지진피해평가관리시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+  <script src="../js/file_attach.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="util">
+  <b>관리자님 반갑습니다.</b>
+  <ul class="util_list">
+    <li><button type="button">내정보</button></li>
+    <li><button type="button">로그아웃</button></li>
+  </ul>
+</div>
+<div class="nav">
+  <h1><a href="">지진피해평가 · 관리시스템</a></h1>
+  <ul class="gnb" role="navigation">
+    <li><a href="../dist/acc01.html">가속도 계측자료 관리</a>
+      <ul class="sub">
+        <li><a href="../dist/acc01.html">계측 가속도 DB</a></li>
+        <li><a href="../dist/acc02.html">지진 통보문 관리</a></li>
+        <li><a href="../dist/acc03.html">관측소 관리</a></li>
+        <li><a href="../dist/acc04.html">관측자료 업로드</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="../dist/fac01.html">시설물 관리</a>
+      <ul class="sub">
+        <li class="on"><a href="../dist/fac01.html">시설물정보 관리</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/dam01.html">지진피해평가</a>
+      <ul class="sub">
+        <li><a href="../dist/dam01.html">안전성 평가 모니터링</a></li>
+        <li><a href="../dist/dam02.html">지진피해평가 실행</a></li>
+      </ul>
+    </li>
+    <li><a href="../dist/admin01.html">관리자 지원</a>
+      <ul class="sub">
+        <li><a href="../dist/admin01.html">사용자관리</a></li>
+        <li><a href="../dist/admin02.html">코드관리</a></li>
+        <li><a href="../dist/admin03.html">매뉴얼(자료실)</a></li>
+      </ul>
+    </li>
+    <li><a href="">안전성평가 훈련</a>
+      <ul class="sub">
+        <li><a href="">지진피해평가 시뮬레이션</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="cont admin02">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">관리자지원</a></li>
+        <li>매뉴얼</li>
+      </ul>
+    </div>
+    <div class="tit">
+      <h2>매뉴얼</h2>
+    </div>
+    <div class="section">
+      <div class="article">
+        <div class="search">
+          <ul class="flex_wrap f_sb">
+            <li>
+              <ul class="manual_sort">
+                <li><a href="#" class="on">전체</a></li>
+                <li><a href="#">매뉴얼</a></li>
+                <li><a href="#">참고자료</a></li>
+                <li><a href="#">도움말</a></li>
+              </ul>
+            </li>
+            <li>
+              <select name="search_sort" title="검색 분류">
+                <option value="전체">전체</option>
+                <option value="제목">제목</option>
+                <option value="내용">내용</option>
+                <option value="작성자">작성자</option>
+              </select>
+              <input type="text">
+              <button type="button" class="btn btn_gray">검색</button>
+            </li>
+          </ul>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap">
+              <p>총 <b class="text_orange">100</b>건의 게시물이 검색되었습니다.</p>
+              <button onclick="location.href='d.admin03-2.html'" class="btn btn_blue">저는 글쓰기 입니다. 저를 눌러보세요.</button>
+            </div>
+            <table class="tbl_manual">
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>제목</th>
+                  <th>등록일</th>
+                  <th>작성자</th>
+                  <th>조회수</th>
+                  <th>첨부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[공지]</td>
+                  <!--<td>매뉴얼 공지사항 (2021.06.18
+                    수정)</td>-->
+                  <td><a href="./d.admin03-1.html"><b>*★,°*:. 저를 클릭해보세요 :*.°★* 。*★,°*:. 저를 클릭해보세요 :*.°★* 。</b></a></td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>4256</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>32</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>665</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>234</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>완전 긴 제목을 위해 만들어진 문장입니다. 완전 긴 제목을 위해 만들어진 문장입니다. </td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>867</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>546</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>짧은 제목도? 있어야 되니까.</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>653</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>24</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>조금 더 긴 제목이요? 무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>458</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>짧은 제목도? 있어야 되니까.</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>78</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>완전 긴 제목을 위해 만들어진 문장입니다. 완전 긴 제목을 위해 만들어진 문장입니다. 이렇게나 긴 게시글 제목이 있을까요? 있다면 생략되시길 바랍니다.</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>587</td>
+                  <td><span class="ico_addfile"></span></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>조금 더 긴 제목이요? 무슨 제목을 넣어야 하나요? 네에? 네? 조금 더 긴 제목이요? 무슨 제목을 넣어야 하나요? 네에? 네?</td>
+                  <td>2021-06-21</td>
+                  <td>관리자</td>
+                  <td>32</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#" class="on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <p>Copyright(c) Gyeongsangnamdo All Rights Reserved.</p>
+</div>
+
+</div>
+</body>
+
+</html>
