@@ -42,16 +42,16 @@
             <img src="http://placehold.it/651x505" width="100%" height="100%" alt="지도 영역" />
             <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
             <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
-            <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
-            <i class="i_status i_unperformed" style="left:200px;top:350px;">미수행</i> 
+            <i class="i_status i_progress" style="left:100px;top:250px;">평가중</i>     
+            <i class="i_status i_waiting" style="left:200px;top:350px;">평가대기중</i> 
           </div>
           <div class="legend">
             <h3>범례</h3>
             <ul>
               <li class="i_status i_safe">안전</li>
               <li class="i_status i_needcheck">점검필요</li>
-              <li class="i_status i_ing">수행중</li>
-              <li class="i_status i_unperformed">미수행</li>
+              <li class="i_status i_progress">평가중</li>
+              <li class="i_status i_waiting">평가대기중</li>
             </ul>
           </div>
         </div>
@@ -163,7 +163,7 @@
   var mydata2 = [
     { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_safe", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
     { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_needcheck", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
-    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_ing", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_progress", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
     { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_waiting", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"}
   ];
   $("#jqGrid2").jqGrid({

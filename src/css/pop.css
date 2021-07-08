@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* pop */
+/* pop common */
 .pop_overlay{position:fixed;z-index:8000;top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
 .pop_wrap{width:800px;position:fixed;top:50%;left:50%;background-color:#fff;transform:translateX(-50%) translateY(-50%);}
 .pop_body{margin:1px;padding:22px 20px;}
@@ -18,13 +18,13 @@
 .pop_wrap table label{font-weight:600;}
 .tbl_info table,.tbl_info th,.tbl_info td{height:30px;padding:3px;background-color:transparent;border:1px solid transparent;}
 
-.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_fac02 .pop_body, .p_acc03_2_2 .pop_body,.p_acc03_2_1 .pop_body{margin:0.5px;}
+.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_fac02 .pop_body{margin:0.5px;}
 .p_fac01_1_1,.p_fac01_1_2,.p.fac01_1_2{width:500px;}
 .p_acc04_1_2,.p_admin01_1,.p_cmmn02_1_1,.p_cmmn02_1_2, .p_cmmn02_1_3, .p_admin02_1,.p_admin02_2{width:380px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
 
-/* p.dam01-1, p.dam02 */
+/* 지진피해평가(p.dam01-1, p.dam02) */
 .p_dam02 .tbl_row{border:none;}
 .p_dam02 .tbl_row th{width:14%;}
 .p_dam02 .tbl_row td{text-align:center;width:18%;}
@@ -43,6 +43,7 @@
 
 /* 관측자료 업로드 완료(p_acc04-1-1, p_acc04-1-2) */
 .p_acc03_1 textarea{height:80px;}
+.p_acc03_2_2 .tbl_row .only_txt{padding-left:10px;}
 .p_acc04_1_1 .tbl_blackTop, .p_fac02 .tbl_blackTop, .p_fac03 .tbl_blackTop{margin-bottom:20px;}
 .p_acc04_1_1 .tbl_blackTop td, .p_fac02 .tbl_blackTop td, .p_fac03 .tbl_blackTop td{padding-left:10px;text-align:left;}
 .p_acc04_1_2 .upload_done{font-size:14px;text-align:center;padding-bottom:20px;}
@@ -76,5 +77,5 @@
 .p_acc03_2_1 textarea,
 .p_acc03_2_2 textarea{height:50px;}
 
-/* admin */
+/* 사용자 추가/수정(admin) */
 .p_admin01_1 .required_info{margin:0 0 10px;color:#f35857;}

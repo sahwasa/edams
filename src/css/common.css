@@ -226,7 +226,7 @@ td .in_label{margin-left:-10px;}
 h5{font-size:14px;line-height:28px;}
 
 /* footer */
-.footer{display:flex;align-items:center;justify-content:center;min-width:150px; height:70px;border-top:1px solid #333;margin-top:70px;background:url(/images/logo_mono.png) 40px 50% no-repeat;}
+.footer{display:flex;align-items:center;justify-content:center;min-width:150px; height:70px;border-top:1px solid #333;margin-top:70px;}
 .footer p{color:#999;font-size:14px;}
 
 /* table */
@@ -351,6 +351,9 @@ color:#ccc;transform:translate(-50%, -50%);}
 .i_needcheck::before{background-position-y:-45px;}
 .i_ing::before{background-position-y:-68px;}
 .i_unperformed::before{background-position-y:-91px;}
+.i_progress::before{background-position-y:-140px;}
+.i_waiting::before{background-position-y:-164px;}
+
 .gis_area .i_status{position:absolute;width:15px;height:15px;font-size:0;overflow:hidden;text-indent:-9999px;}
 .gis_area .i_status::before{position:absolute;left:1px;top:1px;}
 

@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
   /*calendar*/
   $.datepicker.setDefaults({
     buttonImageOnly: true,
@@ -7,24 +7,24 @@ $(function(){
     changeMonth: true,
     changeYear: true,
     numberOfMonths: 1,
-    regional : ["ko"],
-    dateFormat : "yy-mm-dd"
+    regional: ["ko"],
+    dateFormat: "yy-mm-dd"
   });
-  $( "[dataformat='datepic']" ).datepicker({
+  $("[dataformat='datepic']").datepicker({
     buttonText: "날짜를 선택해주세요."
   });
-  var from = $( "[dataformat='from']" ).datepicker({
+  var from = $("[dataformat='from']").datepicker({
     buttonText: "시작날짜를 선택해주세요.",
-    onClose: function( selectedDate ) {
-      var getName=$(this).attr('name');
-      $("input[name='"+ getName +"'].to").datepicker( "option", "minDate", selectedDate );
-    }  
+    onClose: function (selectedDate) {
+      var getName = $(this).attr('name');
+      $("input[name='" + getName + "'].to").datepicker("option", "minDate", selectedDate);
+    }
   });
-  var to = $( "[dataformat='to']" ).datepicker({
+  var to = $("[dataformat='to']").datepicker({
     buttonText: "종료날짜를 선택해주세요.",
-    onClose: function( selectedDate ) {
-      var getName=$(this).attr('name');
-      $("input[name='"+ getName +"'].from").datepicker( "option", "maxDate", selectedDate );
+    onClose: function (selectedDate) {
+      var getName = $(this).attr('name');
+      $("input[name='" + getName + "'].from").datepicker("option", "maxDate", selectedDate);
     }
   });
 
@@ -32,40 +32,40 @@ $(function(){
   var tabBtn = $('[tabBtn] li'),
     tabBtnFirst = $('[tabBtn]').find('li:first'),
     tab_conts = $('[tabConts]');
-  
-  function tabInit(){
+
+  function tabInit() {
     tabBtnFirst.addClass('on');
     tab_conts.children('[tabCont]').hide();
     tab_conts.children('[tabCont]:first').show();
     jqgridInit();
   }
-  tabBtn.on('click',function(e){
+  tabBtn.on('click', function (e) {
     e.preventDefault();
     var cur = $(this).index(),
-        thisBtns = $(this).parents('[tabBtn]');
-        thisCont =  thisBtns.next('[tabConts]').children('[tabCont]');
+      thisBtns = $(this).parents('[tabBtn]');
+    thisCont = thisBtns.next('[tabConts]').children('[tabCont]');
     thisBtns.find('li').removeClass('on');
     $(this).addClass('on');
     thisCont.hide();
     thisCont.eq(cur).show();
     jqgridInit();
-  });    
+  });
   tabInit();
 
   // pop
   var popBtn = $('[openpop]');
-  popBtn.on('click',function(){
+  popBtn.on('click', function () {
     var target = $(this).attr('openpop');
-    $('#'+target).show();
+    $('#' + target).show();
   })
   var closePop = $('[closePop]');
-  closePop.on('click',function(){
+  closePop.on('click', function () {
     $(this).parents('.pop_overlay').hide();
   })
 
   // accordion
   $('[role="acc"] > div').accordion({
-    header : "h4",
+    header: "h4",
     collapsible: true,
     heightStyle: "content",
     icons: {
@@ -74,14 +74,14 @@ $(function(){
     },
     // active: true
   });
-  
+
 });
-function jqgridInit(){
-  $('.jq-grid').each(function(){
+function jqgridInit() {
+  $('.jq-grid').each(function () {
     $(this).setGridWidth($(this).parents('.tbl_wrap').width() - 2);
   });
 }
-$(window).on('resize', function() {
+$(window).on('resize', function () {
   jqgridInit();
 });
 
@@ -134,7 +134,7 @@ function tagAxi(cellValue, options, rowdata, action) {
     default:
       txt = "none";
   }
-  html = '<button type="button" class="axi btn_' + txt + '"></button>'; 
+  html = '<button type="button" class="axi btn_' + txt + '"></button>';
   return html;
 }
 
@@ -159,8 +159,8 @@ function evtDivision(cellValue, options, rowdata, action) {
     default:
       txt = cellValue;
   }
-  if(cellValue != "evt5") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
-  
+  if (cellValue != "evt5") html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';
+
   return html;
 }
 
@@ -173,52 +173,29 @@ function evtDivision2(cellValue) {
     case "i_needcheck":
       txt = "점검필요";
       break;
-    case "i_waiting":
-      html = '평가 대기중</p>'+'<button type="button" class="btn btn_s btn_redline">취소</button>';
+    case "i_progress":
+      html = '<p class="i_status i_progress">평가중</p>';
       break;
-    case "i_ing":
-      html = '<p>평가중</p>';
+    case "i_waiting":
+      html = `<p class="i_status i_waiting">평가대기중</p>
+            <button class="btn_waiting">취소</button>`;
       break;
     default:
       txt = cellValue;
   }
-  if(cellValue != "i_ing") html = '<span class="btn_s i_status ' + cellValue + '">' + txt + '</span>';
-  
+  if (cellValue != "i_waiting" && cellValue != "i_progress")
+  html = `<p class="status_result">평가완료</p>
+          <span class="i_status `+ cellValue +'">'+ txt + '</span>'
   return html;
 }
-
 function useBtn(cellValue){
-  var html = "";
-  if(cellValue == "checked"){
-    html = `<div class="toggle_switch">
-    <input type="checkbox" id="chkTog"` + cellValue + `>
-    <label for="chkTog">
-      <span class="toggle_track"></span>
-    </label>
-  </div>`;
-  }else{
-    html = `<div class="toggle_switch">
-    <input type="checkbox" id="chkTog">
-    <label for="chkTog">
-      <span class="toggle_track"></span>
-    </label>
-  </div>`
-  }
-  return html;
-}
-
-function useBtn(cellValue) {
-  var html, txt = "";
-  switch (cellValue) {
+  var html;
+  switch(cellValue){
     case "case1":
-      txt = "case1";
-      break;
+    break;
     case "case2":
-      txt = "case2";
-      break;
-    default:
-      txt = "none";
+    break;
   }
-  html = '<button class="alignC usage ' + txt + '"></button>'; 
+  html = '<div class="usage ' + cellValue + '"></div>';
   return html;
 }
