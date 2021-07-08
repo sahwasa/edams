@@ -56,8 +56,12 @@
 textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 
 /* dam */
-.dam01 .f_sb .section_l{width:calc(100% - 749px);}
-.dam01 .section_l .tab{margin-top:26px;}
+.dam01 .f_sb .section_l,
+.dam01 .quake_wrap,
+.dam01 .tab{width:calc(100% - 749px);}
+.dam01 .cont_wrap{position:relative;}
+.dam01 .tab_area{margin-top:26px;}
+.dam01 .tab_area .section_r{position:absolute;top:35px;right:0;width:719px;}
 .ipt_facname{width:320px;}
 .dam_count{margin-bottom:5px;}
 .dam_count li{position:relative;width:118px;height:38px;font-size:13px;color:#fff;font-weight:600;line-height:38px;border-radius:3px;margin-left:10px;text-align:center;padding-right:55px;letter-spacing:-.1em;}
@@ -67,6 +71,13 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .dam_count li:nth-child(4){background-color:#fa6e1a;}
 .dam_count li:nth-child(5){background-color:#f00}
 .dam_count li span{position:absolute;top:50%;right:6px;width:50px;line-height:24px;background-color:#fff;border-radius:12px;text-align:center;color:#777;transform:translateY(-50%);}
+.dam_dtl .tbl_row th{width:100px;}
+.file_viewer{margin-top:4px;}
+.file_viewer td{border-left-color:#ccc;}
+.file_viewer .file_list{padding:4px 8px;}
+.file_list button{border:1px solid #727272;color:#555;line-height:18px;padding:0 10px;border-radius:3px;margin:2px 4px;}
+.file_list button:hover{color:#000;box-shadow:0 1px 1px rgba(0,0,0,.2);}
+.file_list button.on{background-color:#727272;color:#fff;}
 .dam01 .tbl_wrap .i_status,
 .dam02 .tbl_wrap .i_status{display:inline-block;width:70px;text-align:left;}
 .dam02 .f_sb .section_r{width:calc(100% - 681px);}
@@ -92,7 +103,7 @@ textarea[name ="MCT_preview"]{width:100%;height:165px;font-size:13px;}
 .tbl_evt.evt5{background-color:#ff0000;}
 
 .dam02 .ui-jqgrid tr.jqgrow td, .ui-jqgrid tr.jqgroup td{white-space: inherit;}
-.dam02 .tbl_wrap .i_status{display:inline-block;width:auto;}
+.dam02 .tbl_wrap .i_status{display:inline-block;width:auto;vertical-align:middle;}
 .dam01 .tbl_wrap .i_status::before,
 .dam02 .tbl_wrap .i_status::before{position:relative;top:1px;}
 .status_result{margin-bottom:3px;}

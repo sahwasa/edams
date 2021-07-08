@@ -14,126 +14,256 @@
     <div class="tit">
       <h2>안전성평가 모니터링</h2>
     </div>
-    <div class="flex_wrap f_sb">
-      <div class="section section_l">
-        <div class="article">
-          <div class="tit_h3">
-              <h3 class="blind">진도분포도</h3>
-              <div class="btn_wrap">
-                <button type="button" class="btn btn_blueline">다른 지진 선택</button>
-              </div>
-          </div>
-          <table class="tbl_row tbl_quakeinfo">
-              <caption>지진정보</caption>
-              <tr>
-                <th scope="row">지진번호</th>
-                <td>20210602001</td>
-                <th scope="row">규모</th>
-                <td>2.6</td>
-                <th scope="row">발생시각</th>
-                <td>2021-06-02 12:34:56</td>
-              </tr>
-              <tr>
-                <th scope="row">발생위치</th>
-                <td colspan="6">경북 포항시 북구 북쪽 9km지역</td>
-              </tr>
-          </table>
-        </div>
-        <div class="article">
-          <div class="tab">
-            <ul class="tab_list">
-              <li class="on"><a href="">안전성평가 분포</a></li>
-              <li><a href="">피해예측결과</a></li>
-            </ul>
-          </div>
-          <ul class="search flex_wrap f_sb">
-            <li>
-              <select title="시설물 종류">
-                <option value="">시설물종류</option>
-              </select>
-            </li>
-            <li>
-              <select title="평가결과">
-                <option value="">평가결과</option>
-              </select>
-            </li>
-            <li>
-              <input type="text" name="" id="" title="시설물명" class="ipt_facname" placeholder="시설물명" />
-            </li>
-            <li>
-              <button type="button" class="btn btn_gray">검색</button>
-            </li>
-          </ul>
-          <div class="tbl_wrap">
-            <table id="jqGrid" class="jq-grid"></table>
+    <div class="section cont_wrap">
+      <div class="article quake_wrap">
+        <div class="tit_h3">
+          <h3 class="blind">진도분포도</h3>
+          <div class="btn_wrap">
+            <button type="button" class="btn btn_blueline">다른 지진 선택</button>
           </div>
         </div>
+        <table class="tbl_row tbl_quakeinfo">
+          <caption>지진정보</caption>
+          <tr>
+            <th scope="row">지진번호</th>
+            <td>20210602001</td>
+            <th scope="row">규모</th>
+            <td>2.6</td>
+            <th scope="row">발생시각</th>
+            <td>2021-06-02 12:34:56</td>
+          </tr>
+          <tr>
+            <th scope="row">발생위치</th>
+            <td colspan="6">경북 포항시 북구 북쪽 9km지역</td>
+          </tr>
+        </table>
       </div>
-      <div class="section section_r">
-        <div class="dam_count">
-          <ul class="flex_wrap">
-            <li>총건수<span>150건</span></li>
-            <li>안전<span>150건</span></li>
-            <li>점검필요<span>150건</span></li>
-            <li>수행중<span>150건</span></li>
-            <li>미수행<span>150건</span></li>
+      <div class="article tab_area">
+        <div class="tab" tabBtn>
+          <ul class="tab_list">
+            <li class="on"><a href="">안전성평가 분포</a></li>
+            <li><a href="">피해예측결과</a></li>
           </ul>
         </div>
-        <div class="gis_wrap">
-            <div class="gis_area">
-              <img src="http://placehold.it/719x637" width="100%" height="100%" alt="지도 영역" />
-              <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
-              <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
-              <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
-              <i class="i_status i_unperformed" style="left:200px;top:350px;">미수행</i> 
-            </div>
-            <div class="legend">
-              <h3>범례</h3>
-              <ul>
-               <li class="i_status i_safe">안전</li>
-               <li class="i_status i_needcheck">점검필요</li>
-               <li class="i_status i_ing">수행중</li>
-                <li class="i_status i_unperformed">미수행</li>
+        <div class="tab_conts" tabConts>
+          <div class="tab_cont flex_wrap f_sb" tabCont>
+            <div class="section section_l">
+              <ul class="search flex_wrap f_sb">
+                <li>
+                  <select title="시설물 종류">
+                    <option value="">시설물종류</option>
+                  </select>
+                </li>
+                <li>
+                  <select title="평가결과">
+                    <option value="">평가결과</option>
+                  </select>
+                </li>
+                <li class="search_li">
+                  <input type="text" name="" id="" title="시설물명" placeholder="시설물명" />
+                </li>
+                <li>
+                  <button type="button" class="btn btn_gray">검색</button>
+                </li>
               </ul>
+              <div class="tbl_wrap">
+                <table id="dam01" class="jq-grid"></table>
+              </div>              
+            </div>
+            <div class="section section_r">
+              <div class="dam_count">
+                <ul class="flex_wrap">
+                  <li>총건수<span>150건</span></li>
+                  <li>안전<span>150건</span></li>
+                  <li>점검필요<span>150건</span></li>
+                  <li>수행중<span>150건</span></li>
+                  <li>미수행<span>150건</span></li>
+                </ul>
+              </div>
+              <div class="gis_wrap">
+                <div class="gis_area">
+                  <img src="http://placehold.it/717x518" width="100%" height="100%" alt="지도 영역" />
+                  <i class="i_status i_safe" style="left:100px;top:150px;">안전</i>     
+                  <i class="i_status i_needcheck" style="left:200px;top:150px;">점검필요</i>     
+                  <i class="i_status i_ing" style="left:100px;top:250px;">수행중</i>     
+                  <i class="i_status i_unperformed" style="left:200px;top:350px;">미수행</i> 
+                </div>
+                <div class="legend">
+                  <h3>범례</h3>
+                  <ul>
+                    <li class="i_status i_safe">안전</li>
+                    <li class="i_status i_needcheck">점검필요</li>
+                    <li class="i_status i_ing">수행중</li>
+                    <li class="i_status i_unperformed">미수행</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-      </div>
+          <div class="tab_cont  flex_wrap f_sb" tabCont>
+            <div class="section section_l">
+              <ul class="search flex_wrap f_sb">
+                <li>
+                  <select title="시설물 종류">
+                    <option value="">시설물종류</option>
+                  </select>
+                </li>
+                <li>
+                  <select title="평가결과">
+                    <option value="">평가결과</option>
+                  </select>
+                </li>
+                <li class="search_li">
+                  <input type="text" name="" id="" title="시설물명" placeholder="시설물명" />
+                </li>
+                <li>
+                  <button type="button" class="btn btn_gray">검색</button>
+                </li>
+              </ul>
+              <div class="tbl_top">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">보고서 인쇄</button>
+            </div>
+          </div>
+              <div class="tbl_wrap">
+                <table id="dam02" class="jq-grid"></table>
+              </div>
+            </div>
+            <!-- 화살표 배경이 자리를 너무 차지해서 생략 -->
+            <div class="section section_r box_bluetop dam_dtl">
+              <div class="tit">
+                <h1>상세 피해 예측 결과</h1>
+              </div>
+              <table class="tbl_row">
+                <tr>
+                  <th scope="row">시설명</th>
+                  <td>소석교</td>
+                  <th scope="row">시설구분</th>
+                  <td>교량(2종)</td>
+                </tr>
+                <tr>
+                  <th scope="row">관리주체</th>
+                  <td>양산시청 도로관리과</td>
+                  <th scope="row">관리번호</th>
+                  <td>BR2018-0000236</td>
+                </tr>
+                <tr>
+                  <th scope="row">준공년도</th>
+                  <td>2018</td>
+                  <th scope="row">설치위치</th>
+                  <td>경상남도 양산시 상북면 소석리</td>
+                </tr>
+              </table>
+              <table class="tbl_row file_viewer">
+                <tr>
+                  <th scope="row">파일목록</th>
+                  <td class="file_list">
+                    <button type="button" class="on">설계보고서</button>                    
+                    <button type="button">구조계산서</button>                    
+                    <button type="button">도면</button>                    
+                    <button type="button">진단보고서</button>                    
+                    <button type="button">점검보고서</button>                    
+                    <button type="button">구조계산서</button>                    
+                    <button type="button">도면</button>                    
+                    <button type="button">진단보고서</button>                    
+                    <button type="button">점검보고서</button>                    
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <!-- 파일이 이미지여서 이미지 뷰어인지,, PDF뷰어인지
+                    애매함..
+                    이미지 뷰어라면 슬라이드 기능이 필요할지도
+                    확정되면 피드백 주세요 -->
+                    <img src="http://placehold.it/300x300" alt="">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>      
     </div>
   </div>
   @@include('inc/footer.html')
 </div>
 @@include('inc/P.dam01-1.html')
 @@include('inc/P.dam01-2.html')
-
 <script>
-  var mydata = [
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_safe'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_needcheck'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_ing'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': 'i_unperformed'},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''},
-    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경북 포항시 북구', 't5': ''}
+  var dam01 = [
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_safe'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_needcheck'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_ing'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_unperformed'},
+    { 't1': 'BR2018_0000089', 't2': '교량',  't3': '명곡교',  't4': '경상남도 양산시 명곡로 306-14', 't5': 'i_safe'},
   ]
-  $("#jqGrid").jqGrid({
-    data: mydata,
+  $("#dam01").jqGrid({
+    data: dam01,
     datatype: "local",
     colModel: [
       { label: '시설물번호', name: 't1', width: 120 },
       { label: '시서물종류', name: 't2', width: 120 },
       { label: '시설물명', name: 't3', width: 150 },
-      { label: '위치', name: 't4', width: 300, align:"left", classes:"td_padding"},
-      { label: '평가결과', name: 't5', width: 100, formatter: evtDivision}
+      { label: '위치', name: 't4', width: 250, align:'left' },
+      { label: '평가결과', name: 't5', width: 100, formatter: evtDivision }
     ],
+    multiselect: true,
     loadonce: true,
     viewrecords: true,
-    height: 339,
+    height: 334,
     rowTotal: -1
+  });
+
+  function evtDivision(cellValue, options, rowdata, action) {
+    var html, txt = "";
+    switch (cellValue) {
+      case "i_safe":
+        txt = "안전";
+        break;
+      case "i_needcheck":
+        txt = "점검필요";
+        break;
+      case "i_ing":
+        txt = "수행중";
+        break;
+      case "i_unperformed":
+        txt = "미수행";
+        break;
+      default:
+        txt = cellValue;
+    }
+    html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';    
+    return html;
+  }
+
+  var dam02 = [
+    { 't1': '명곡교', 't2-1': '6', 't2-2': '12', 't2-3': '1',  't3': '19',  't4': 'E', }
+  ]
+  $("#dam02").jqGrid({
+    data: dam02,
+    datatype: "local",
+    colModel: [
+      { label: '시설물명', name: 't1', width: 120 },
+      { label: 'C', name: 't2-1', width: 120 },
+      { label: 'B', name: 't2-2', width: 120 },
+      { label: 'S', name: 't2-3', width: 120 },
+      { label: '위험도', name: 't3', width: 150 },
+      { label: '상태추정', name: 't4', width: 100}
+    ],
+    multiselect: true,
+    loadonce: true,
+    viewrecords: true,
+    height: 274,
+    rowTotal: -1
+  })
+  .setGroupHeaders({
+    useColSpanStyle: true,
+    groupHeaders: [
+      { "numberOfColumns": 3, "titleText":"피해정도", "startColumnName": "t2-1" }
+    ]
   });
 
   jqgridInit();
 </script>
 </body>
-
 </html>

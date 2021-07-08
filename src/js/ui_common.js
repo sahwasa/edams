@@ -184,18 +184,6 @@ function evtDivision2(cellValue) {
       txt = cellValue;
   }
   if (cellValue != "i_waiting" && cellValue != "i_progress")
-  html = `<p class="status_result">평가완료</p>
-          <span class="i_status `+ cellValue +'">'+ txt + '</span>'
-  return html;
-}
-function useBtn(cellValue){
-  var html;
-  switch(cellValue){
-    case "case1":
-    break;
-    case "case2":
-    break;
-  }
-  html = '<div class="usage ' + cellValue + '"></div>';
+  html = `<span class="i_status `+ cellValue +'">'+ txt + '</span>'
   return html;
 }
