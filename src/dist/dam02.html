@@ -346,16 +346,16 @@
     ],
     loadonce: true,
     viewrecords: true,
-    height: 415,
+    height: 446,
     rowTotal: -1,
     multiselect: true
   });
 
   var mydata2 = [
-    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_safe", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
-    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_needcheck", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
-    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_progress", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
-    { "t1": "명곡교", "t2": "교량", "t3": "dtl", "t4": "i_waiting", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"}
+    { "t1": "명곡교", "t2": "교량", "t3": "ok", "t4": "i_safe", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "ok", "t4": "i_needcheck", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "no", "t4": "i_progress", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"},
+    { "t1": "명곡교", "t2": "교량", "t3": "no", "t4": "i_waiting", "t5": "21/05/21 12:23", "t6": "21/05/21 15:30"}
   ];
   $("#jqGrid2").jqGrid({
     data: mydata2,
@@ -363,17 +363,23 @@
     colModel: [
       { label: '시설물명', name: 't1', width: 100 },
       { label: '시설물 종류', name: 't2', width: 109 },
-      { label: '가속도 생성여부', name: 't3', width: 70, formatter: tblBtn },
-      { label: '작업내역', name: 't4', width: 100, formatter: evtDivision2 },
-      { label: '작업시작', name: 't5', width: 140 },
-      { label: '작업종료', name: 't5', width: 140 }
+      { label: '가속도 생성여부', name: 't3', width: 100, formatter: tblDtl},
+      { label: '작업내역', name: 't4', width: 150, formatter: evtDivision2 },
+      { label: '작업시작', name: 't5', width: 120 },
+      { label: '작업종료', name: 't5', width: 120 }
     ],
     loadonce: true,
     viewrecords: true,
-    height: 372,
+    height: 370,
     rowTotal: -1,
     multiselect: true
   });
+
+  function tblDtl(cellValue, options, rowdata, action) {
+    var html = "";
+    (cellValue != "no") ? html = '<span class="i_status i_safe"></span> <button type="button" class="btn btn_ss btn_blueline" onclick=' + cellValue +'>상세</button>' : html = '<span class="i_status i_unperformed"></span>';
+    return html;
+  }
 
 
   jqgridInit();

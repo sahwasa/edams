@@ -174,7 +174,6 @@ function deleteFile(fIndex) {
   // 파일 사이즈 배열 삭제
   delete fileSizeList[fIndex];
 
-  console.log(totalFileSize)
   // 업로드 파일 테이블 목록에서 삭제
   $("#fileTr_" + fIndex).remove();
 

@@ -45,6 +45,7 @@ select{min-width:50px;padding-right:20px;}
 .btn{border:1px solid transparent;background-color:#fff;color:#fff;text-align:center;text-indent:0;padding:0 16px;vertical-align:middle;border-radius:3px;font-size:14px;letter-spacing:-.1em;white-space:nowrap;line-height:26px;}
 .btn:hover{color:#fff;}
 .btn_s{padding:0 15px 1px;border-radius:2px;font-size:13px;border-width:1px;line-height:17px;}
+.btn_ss{padding:0 5px 1px;border-radius:2px;font-size:12px;border-width:1px;line-height:17px;}
 .btn_line{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.5);}
 .btn_white{color:#666;border-color:#d7d7d7;background-color:#fff;}
 .btn_red{background-color:#f14a4a;}
@@ -128,7 +129,7 @@ td .axi{margin-right:0;}
 .period{display:inline-flex;align-items:center;justify-content:space-between;line-height:22px;vertical-align:middle;}
 .period label,
 .period input{vertical-align:top;}
-.period_multi{position:relative;width:229px;}
+.period_multi{position:relative;width:232px;}
 .period_multi::after{content:"~";position:absolute;left:50%;top:0;transform:translateX(-50%);}
 .period_multi input{width:45.8%;}
 .date_wrap{position:relative;}
@@ -301,19 +302,9 @@ td, th{font-size:13px;}
 .paginate a:hover,.paginate a:active,.paginate a.on{background-color:#333;color:#fff;}
 
 /* box */
-.box_help{position:relative;border:1px dashed #ababab;margin-top:25px;padding:20px 15px 10px;border-radius:5px;}
-.box_help h3{position:absolute;left:15px;top:-12px;background-color:#094fa3;
-color:#fff;border-radius:8px;padding:4px 15px;}
-.box_help p{color:#777;font-size:13px;letter-spacing:-.1em;}
-.help_list li,
-.box_help .bot{padding-left:20px;text-indent:-15px;}
-.help_list li::before,
-.box_help .bot::before{content:"-";margin-right:5px;}
-.box_help .figure{display:flex;align-items:center;justify-content:center;}
-.box_help .figure images{max-width:100%;}
-
-.box_help,
-.box_gray{background-color:#f7f7f7;border:1px solid #c7c7c7;padding:20px;box-sizing:border-box;}
+.box_bluetop{border:1px solid #005aab;border-top-width:4px;padding:10px 20px 20px;box-sizing: border-box;}
+.box_bluetop .tit{margin-bottom:20px;}
+.box_bluetop h1{font-size:16px;color:#005aab;font-weight:600;line-height:25px;}
 .link_h{position:relative;display:flex;justify-content:space-between;}
 .link_h .tbl_wrap,
 .link_h .section{width:47%;}
@@ -321,7 +312,7 @@ color:#fff;border-radius:8px;padding:4px 15px;}
 color:#ccc;transform:translate(-50%, -50%);}
 .link_h .section:last-of-type{margin-left:auto;}
 
-.box_grayline{border:1px solid #e8e8e8;}
+/* gis */
 .gis_wrap{position:relative;border:1px solid #e0e0e0;box-sizing:border-box;background-color:#81bdfb;}
 .gis_wrap .gis_area{display:flex;align-items:center;justify-content:center;width:100%;height:100%;}
 .gis_area .i_mag,
@@ -358,28 +349,6 @@ color:#ccc;transform:translate(-50%, -50%);}
 .gis_area .i_status::before{position:absolute;left:1px;top:1px;}
 
 /* list */
-.dot_dl_list{display:flex;flex-wrap:wrap;}
-.dot_dl_list dt,
-.dot_dl_list dd{margin:2px 0;}
-.dot_dl_list dt{width:40%;font-weight:600;}
-.dot_dl_list dd{width:60%;}
-.dot_dl_list .blind + dd{width:100%;font-weight:600;}
-.dot_dl_list dt:before{content:"·";margin:0 3px;}
-.dot_dl_list dt,
-.dot_dl_list dd,
-.dot_dl_list dt label,
-.dl_list.inline dt,
-.dl_list.inline dd{line-height:25px;}
-.dl_list dt{font-size:13px;color:#000;font-weight:600;margin:15px 0 5px;}
-.dl_list dt:first-of-type{margin-top:0;}
-.dl_list dd .period_multi{width:100%;}
-.dl_list dd input[type="text"],
-.dl_list dd textarea{border-color:#000;}
-.dl_list.inline{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
-.dl_list.inline dt{width:40px;line-height:25px;margin:0;}
-.dl_list.inline dd{width:calc(100% - 50px);}
-.validity{color:#f35857;font-size:11px;margin-top:4px;line-height:1;text-align:left;}
-dd.btn_wrap{display:flex;align-items:center;}
 .ipt_full input[type="text"],
 .ipt_full select,
 .ipt_full textarea,
@@ -433,7 +402,6 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-hdiv{border-radius:0;margin-top:0;background:transparent;border-bottom-color:#333;}
 .ui-jqgrid .jqgrid-rownum,
 .ui-jqgrid .ui-jqgrid-hbox th{background:#fff;color:#333;font-weight:600;border-color:#e8e8e8;vertical-align:middle;height:30px;}
-.ui-jqgrid .ui-jqgrid-hbox th[colspan]{background:#e0e6ec;}
 .ui-jqgrid tr{border-color:#e8e8e8;}
 .ui-jqgrid tr.ui-row-ltr td{text-align:center;border-top:1px solid transparent;}
 .ui-jqgrid tr.jqgrow td, .ui-jqgrid tr.jqgroup td{height:26px;}
@@ -450,12 +418,3 @@ dd.btn_wrap{display:flex;align-items:center;}
 .ui-jqgrid .ui-jqgrid-htable .ui-th-div{margin-top:3px;}
 .ui-jqgrid-hdiv input[type = checkbox]{position:relative;top:-3px;}
 .td_padding{padding-left:13px !important;}
-
-/* toggle button */
-.toggle_switch input[type=checkbox]{display:none;}
-.toggle_track{background:#8b8b8b;border-radius:60px;display:inline-block;height:25px;position:relative;width:75px;}
-.toggle_track:before{background:#fff;border:1px solid #8b8b8b;border-radius:20px;content:'';display:block;height:19px;left:0px;margin:5px;position:absolute;top:-3px;transition:left 0.3s;width:25px;}
-.toggle_switch input[type=checkbox] + label .toggle_track:after{color:#fff;content:'미사용';display:inline-block;position:absolute;right:5px;top:4px;}
-.toggle_switch input[type=checkbox]:checked + label .toggle_track{background:#005aab;}
-.toggle_switch input[type=checkbox]:checked + label .toggle_track:before{border:1px solid #005aab;left:38px;}
-.toggle_switch input[type=checkbox]:checked + label .toggle_track:after{content:'사용';left:-15px;top:4px;}
