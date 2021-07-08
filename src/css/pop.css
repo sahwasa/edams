@@ -18,7 +18,7 @@
 .pop_wrap table label{font-weight:600;}
 .tbl_info table,.tbl_info th,.tbl_info td{height:30px;padding:3px;background-color:transparent;border:1px solid transparent;}
 
-.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_fac02 .pop_body{margin:0.5px;}
+.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_fac02 .pop_body, .p_acc03_1 .pop_body{margin:0.5px;}
 .p_fac01_1_1,.p_fac01_1_2,.p.fac01_1_2{width:500px;}
 .p_acc04_1_2,.p_admin01_1,.p_cmmn02_1_1,.p_cmmn02_1_2, .p_cmmn02_1_3, .p_admin02_1,.p_admin02_2{width:380px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
