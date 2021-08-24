@@ -58,7 +58,7 @@ $(function () {
     var target = $(this).attr('openpop');
     $('#' + target).show();
   })
-  var closePop = $('[closePop]');
+  var closePop = $('.btn_pop_close');
   closePop.on('click', function () {
     $(this).parents('.pop_overlay').hide();
   })
@@ -177,13 +177,13 @@ function evtDivision2(cellValue) {
       html = '<p class="i_status i_progress">평가중</p>';
       break;
     case "i_waiting":
-      html = `<p class="i_status i_waiting">평가대기중</p>
-            <button class="btn btn_ss btn_redline btn_waiting">취소</button>`;
+      html = '<p class="i_status i_waiting">평가대기중</p>'+
+            '<button class="btn btn_ss btn_redline btn_waiting">취소</button>';
       break;
     default:
       txt = cellValue;
   }
   if (cellValue != "i_waiting" && cellValue != "i_progress")
-  html = `<span class="i_status `+ cellValue +'">'+ txt + '</span>'
+  html = '<span class="i_status '+ cellValue +'">'+ txt + '</span>'
   return html;
 }

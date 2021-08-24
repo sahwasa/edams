@@ -3,28 +3,55 @@
 /* pop common */
 .pop_overlay{position:fixed;z-index:8000;top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
 .pop_wrap{width:800px;position:fixed;top:50%;left:50%;background-color:#fff;transform:translateX(-50%) translateY(-50%);}
-.pop_body{margin:1px;padding:22px 20px;}
+.pop_body{max-height:695px;margin:1px;padding:22px 20px 0;overflow-y:auto;}
 .pop_tit{display:flex;justify-content:space-between;padding:10px 15px;background-color:#005aab;}
 .pop_tit h1{font-size:16px;font-weight:bold;color:#fff;}
 .btn_pop_close{position:relative;top:1px;width:17px;height:17px;}
 .btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../images/btn_pop_close.png);}
 .pop_wrap .search.f_sb{justify-content:space-between;}
-.pop_wrap .btn_wrap{padding-top:16px;}
-.pop_wrap table{border:1px solid #d7d7d7;}
-.pop_wrap th{width:20%;}
+.pop_wrap .btn_wrap{padding:16px 0;}
 .pop_wrap .tbl_row th,
 .pop_wrap .tbl_row td{height:25px;padding:3px;border:1px solid #d7d7d7;}
 .pop_wrap table textarea{line-height:22px;}
-.pop_wrap table label{font-weight:600;}
-.tbl_info table,.tbl_info th,.tbl_info td{height:30px;padding:3px;background-color:transparent;border:1px solid transparent;}
+.tbl_info label{font-weight:600;}
+.tbl_info th,.tbl_info td{height:30px;padding:3px;background-color:transparent;border:1px solid transparent;text-align:left;}
 
-.p_admin01_1 .pop_body,.p_fac01_1_2 .pop_body,.p_fac02 .pop_body, .p_acc03_1 .pop_body{margin:0.5px;}
-.p_fac01_1_1,.p_fac01_1_2,.p.fac01_1_2{width:500px;}
-.p_acc04_1_2,.p_admin01_1,.p_cmmn02_1_1,.p_cmmn02_1_2, .p_cmmn02_1_3, .p_admin02_1,.p_admin02_2{width:380px;}
+.p_fac01_1_1,.p_fac01_1_2,
+.p_fac01_1_2{width:500px;}
+.p_acc04_1_2,.p_admin01_1,
+.p_cmmn02_1_1,.p_cmmn02_1_2,
+.p_cmmn02_1_3, .p_admin02_1,
+.p_admin02_2{width:380px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
 
 /* 지진피해평가(p.dam01-1, p.dam02) */
+.p_dam01_1 .pop_body{margin-top:0\0;}
+.p_dam01_2{width:880px;}
+.report .tit{border-bottom:none;}
+.report .tit h2{color:#333;font-size:17px;}
+.report .tit h2::before{position:relative;top:-1px; content:"\f096";font-family:'axicon';font-weight:normal;margin-right:5px;vertical-align:middle;font-size:15px;}
+.date_txt{text-align:right;margin-bottom:5px;}
+.report_top{text-align:center;margin-bottom:40px;}
+.report_top h1{font-size:20px;text-align:center;font-weight:600;;}
+.eq_present{width:400px;margin-right:20px;}
+.eq_present .eq_info{width:100%;flex-wrap:wrap;margin-top:-10px;padding-left:10px;}
+.eq_present .eq_info dt,
+.eq_present .eq_info dd{margin-top:15px;font-size:14px;}
+.eq_present .eq_info dt{width:100px;font-weight:600;}
+.eq_present .eq_info dt::before{content:"\e049";font-family:'axicon';margin-right:5px;font-weight:normal;}
+.eq_present .eq_info dd{width:calc(100% - 100px);}
+.mag_distribution{width:calc(100% - 420px);text-align:center;}
+.mag_distribution p{margin-top:5px;}
+.p_dam01_2 .tbl_blackTop th,
+.p_dam01_2 .tbl_blackTop td{word-break:keep-all;padding:5px;}
+@media print{
+  .pop_wrap{position:static;transform:translate(0, 0);width:100%;}
+  .p_dam01_2 .pop_tit,
+  .p_dam01_2 .btn_wrap{display:none;}
+  .pop_body{overflow-y:visible;min-height:auto;}
+  .report_top h1{font-size:30px;}
+}
 .p_dam02 .tbl_row{border:none;}
 .p_dam02 .tbl_row th{width:14%;}
 .p_dam02 .tbl_row td{text-align:center;width:18%;}
@@ -36,7 +63,7 @@
 
 /* 구조물상세자료 업로드(p_fac01-1-2) */
 .fac_file #upFile{display:none;}
-.fac_file .file_input{position:relative;display:block;height:30px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
+.fac_file .file_input{position:relative;display:block;height:25px;margin:0 auto;border:1px solid #ccc;color:#000;background:url(../images/ico_upload.png) no-repeat 98%;background-size:3%;cursor:pointer;text-align:left;}
 .fac_file label {position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;cursor:pointer;}
 .fac_file input[type = text]{position:absolute;top:2px;left:5px;z-index:0;width:100%;border:none;background:none;}
 .p_fac03 textarea{width:100%;height:350px;overflow-y:scroll;}
@@ -44,26 +71,36 @@
 /* 관측자료 업로드 완료(p_acc04-1-1, p_acc04-1-2) */
 .p_acc03_1 textarea{height:80px;}
 .p_acc03_2_2 .tbl_row .only_txt{padding-left:10px;}
-.p_acc04_1_1 .tbl_blackTop, .p_fac02 .tbl_blackTop, .p_fac03 .tbl_blackTop{margin-bottom:20px;}
-.p_acc04_1_1 .tbl_blackTop td, .p_fac02 .tbl_blackTop td, .p_fac03 .tbl_blackTop td{padding-left:10px;text-align:left;}
+.p_acc04_1_1 .tbl_blackTop,
+.p_fac02 .tbl_blackTop,
+.p_fac03 .tbl_blackTop{margin-bottom:20px;}
+.p_acc04_1_1 .tbl_blackTop td,
+.p_fac02 .tbl_blackTop td,
+.p_fac03 .tbl_blackTop td{padding-left:10px;text-align:left;}
 .p_acc04_1_2 .upload_done{font-size:14px;text-align:center;padding-bottom:20px;}
 .p_acc04_1_2 .upload_done::before{display:block;content:'\e6c6';font-family:'axicon';font-size:45px;color:#555;padding-bottom:10px;}
 
 /* 내정보(p_cmmn02-1) */
 .p_cmmn02_1_1 input[type = text]{padding:0;border:1px solid transparent;}
 .pop_wrap #pw{padding-left:5px;color:#bbb;}
-.pop_wrap #number,.pop_wrap #phonenumber{padding-left:25px;}
-.pop_wrap .number,.pop_wrap .phonenumber{position:relative;}
+.pop_wrap #number,
+.pop_wrap #phonenumber{padding-left:25px;}
+.pop_wrap .number,
+.pop_wrap .phonenumber{position:relative;}
 .pop_wrap .number::before,.pop_wrap .phonenumber::before{position:absolute;top:45%;font-size:16px;font-family:'axicon';transform:translateY(-50%);color:#777;}
-.pop_wrap .number::before,.pop_wrap .number::before{content:'\f095';left:10px;}
-.pop_wrap .phonenumber::before,.pop_wrap .phonenumber::before{content:'\e865';left:7px;}
+.pop_wrap .number::before,
+.pop_wrap .number::before{content:'\f095';left:10px;}
+.pop_wrap .phonenumber::before,
+.pop_wrap .phonenumber::before{content:'\e865';left:7px;}
 .pop_wrap table input[type = text],
 .pop_wrap table input[type = date],
 .pop_wrap table input[type = password],
 .pop_wrap table select,
 .pop_wrap table textarea{width:100%;}
 .input_50 input{max-width:45%;}
-.p_admin01_1 table th, .p_cmmn02_1_1 table th, .p_cmmn02_1_2 table th{width:30%;text-align:left;}
+.p_admin01_1 table th,
+.p_cmmn02_1_1 table th,
+.p_cmmn02_1_2 table th{width:30%;text-align:left;}
 .p_cmmn02_1_3 table th{width:30%;}
 .input_50{line-height:20px;}
 .p_admin02_1.pop_wrap th,
@@ -78,4 +115,4 @@
 .p_acc03_2_2 textarea{height:50px;}
 
 /* 사용자 추가/수정(admin) */
-.p_admin01_1 .required_info{margin:0 0 10px;color:#f35857;}
+.p_admin01_1 .required_info{margin:0 0 9px;color:#f35857;}
