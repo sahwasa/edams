@@ -1,0 +1,79 @@
+@@include('inc/top.html')
+<div class="wrap">
+  <div class="header">
+    @@include('inc/header.html')
+  </div>
+  <div class="cont main">
+  <div class="tit blind">
+    <h2>메인</h2>
+  </div>
+   <div class="flex_wrap f_sb">
+      <div class="section section_l">
+         <div class="tit_h3">
+            <h3>최근 발생 지진정보</h3>
+         </div>
+         <div class="gis_wrap">
+            <div class="gis_area">
+              <img src="http://placehold.it/520x623" width="100%" height="100%" alt="지도 영역" />
+              <i class="i_epicenter" style="left:100px;top:150px;">진앙지</i>
+              <div class="recent_eq">
+                <dl class="flex_wrap">
+                  <dt>발생시각</dt>
+                  <dd>2013-05-15 22:12:32</dd>
+                  <dt class="fix4">규 모</dt>
+                  <dd>M 3.5</dd>
+                  <dt>발생위치</dt>
+                  <dd>경북 영덕군 북동쪽 24㎞ 해역경북 영덕군</dd>
+                  <dt>발생깊이</dt>
+                  <dd>10㎞</dd>
+                  <dt>계기진도</dt>
+                  <dd>최대진도 Ⅲ (경북)</dd>
+                </dl>
+                <div class="btn_wrap">
+                  <button type="button" class="btn btn_blueline btn_s">지진안전성 평가</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="section section_r">
+         <div class="article">
+            <div class="tit_h3">
+               <h3>시설물 지진 안전성평가 결과</h3>
+            </div>
+            <div class="tbl_wrap">
+               <table id="jqGrid" class="jq-grid"></table>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  @@include('inc/footer.html')
+</div>
+<script>
+var mydata = [
+  {"t1": "교량", "t2": "명곡교", "t3": "양산시청 도로관리과", "t4": "경상남도 양산시 명곡로 306-14", "t5": "2018", "t6": "36% (상부구조)", "t7": "점검필요" }
+];
+$("#jqGrid").jqGrid({
+  data: mydata,
+  datatype: "local",
+  colModel: [
+    {label:'시설물 종류',name:'t1',width:100},
+    {label:'시설물명',name:'t2',width:120},
+    {label:'관리주체',name:'t3',width:170},
+    {label:'위치',name:'t4',width:250},
+    {label:'준공년도',name:'t5',width:80},
+    {label:'위험도',name:'t6',width:130},
+    {label:'평가결과',name:'t7',width:80}
+  ],
+  loadonce : true,
+  viewrecords: true,
+  rownumbers:true,
+  height: 590,
+  rowTotal: -1
+});
+
+jqgridInit();  
+</script>
+</body>
+</html>
