@@ -34,6 +34,15 @@
                 </div>
               </div>
             </div>
+            <div class="legend">
+              <h3>범례</h3>
+              <ul>
+                <li class="i_status i_safe">안전</li>
+                <li class="i_status i_needcheck">점검필요</li>
+                <li class="i_status i_progress">평가중</li>
+                <li class="i_status i_waiting">평가대기중</li>
+              </ul>
+            </div>
         </div>
       </div>
       <div class="section section_r">
@@ -51,8 +60,31 @@
   @@include('inc/footer.html')
 </div>
 <script>
+function evtDivision(cellValue, options, rowdata, action) {
+  var html, txt = "";
+  switch (cellValue) {
+    case "i_safe":
+      txt = "안전";
+      break;
+    case "i_needcheck":
+      txt = "점검필요";
+      break;
+    case "i_ing":
+      txt = "수행중";
+      break;
+    case "i_unperformed":
+      txt = "미수행";
+      break;
+    default:
+      txt = cellValue;
+  }
+  html = '<span class="i_status ' + cellValue + '">' + txt + '</span>';    
+  return html;
+}
+
 var mydata = [
-  {"t1": "교량", "t2": "명곡교", "t3": "양산시청 도로관리과", "t4": "경상남도 양산시 명곡로 306-14", "t5": "2018", "t6": "36% (상부구조)", "t7": "점검필요" }
+  {"t1": "교량", "t2": "명곡교", "t3": "양산시청 도로관리과", "t4": "경상남도 양산시 명곡로 306-14", "t5": "2018", "t6": "36% (상부구조)", "t7": "i_safe" },
+  {"t1": "교량", "t2": "명곡교", "t3": "양산시청 도로관리과", "t4": "경상남도 양산시 명곡로 306-14", "t5": "2018", "t6": "36% (상부구조)", "t7": "i_needcheck" },
 ];
 $("#jqGrid").jqGrid({
   data: mydata,
@@ -64,7 +96,7 @@ $("#jqGrid").jqGrid({
     {label:'위치',name:'t4',width:250},
     {label:'준공년도',name:'t5',width:80},
     {label:'위험도',name:'t6',width:130},
-    {label:'평가결과',name:'t7',width:80}
+    {label:'평가결과',name:'t7',width:80, formatter: evtDivision}
   ],
   loadonce : true,
   viewrecords: true,

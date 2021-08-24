@@ -20,11 +20,15 @@
 /* main */
 .main .f_sb .section_l{width:520px;}
 .main .f_sb .section_r{width:calc(100% - 550px);}
-.recent_eq{position:absolute;right:5px;top:5px;background:rgba(255,255,255,.6);border:1px solid #005aab;width:220px;padding:5px;}
+.recent_eq{position:absolute;right:5px;top:5px;background:rgba(255,255,255,.6);border:1px solid #005aab;width:220px;padding:8px;box-shadow:2px 2px 1px rgba(0,0,0,.2);}
 .recent_eq dl{flex-wrap:wrap;}
-.recent_eq dt{width:60px;font-weight:600;font-size:13px;}
-.recent_eq dd{width:calc(100% - 60px);font-size:13px;}
+.recent_eq dt{width:70px;font-weight:600;font-size:13px;}
+.recent_eq dt::before{content:"-";margin-right:3px;}
+.recent_eq .fix4{word-spacing:21px;}
+.recent_eq dd{width:calc(100% - 70px);font-size:13px;}
 .recent_eq .btn_wrap{text-align:center;margin-top:10px;}
+.main .tbl_wrap .i_status::before{position:relative;top:2px;}
+.main .tbl_wrap .i_status{display:inline-block;width:70px;text-align:left;}
 
 /* acc */
 .acc01 .f_sb .section_r{width:calc(100% - 681px);}
